@@ -18,10 +18,8 @@
 
     <!-- cover page section -->
     <div class="coverpage">
-        <div class="container-fluid vh-70">
-            <div class="row h-100">
                 <!-- Content on the left -->
-                <div class="col-md-6 d-flex flex-column justify-content-center align-items-start text-left p-5 pt-0">
+                <div class="col-md-12  justify-content-center align-items-start text-left p-5 pt-5">
                     <h1>Struggling to Find <span style="font-style: italic;">Qualified</span> Resources?</h1>
                     <h4>Ascend effortlessly with <span><img src="assets/verbiq_logo.png" /></span> language precision.
                     </h4>
@@ -35,12 +33,10 @@
                     </div>
                 </div>
                 <!-- Image on the right -->
-                <div class="col-md-6 d-none d-md-flex justify-content-center align-items-center p-0">
+                <!-- <div class="col-md-6 d-none d-md-flex justify-content-center align-items-center p-0">
                     <img height="2rem" src="assets/cover_background.png" alt="Cover Image" class="img-fluid "
                         style="max-height: 70%;">
-                </div>
-            </div>
-        </div>
+                </div> -->
     </div>
     <div class="verbiq-page">
         <img src="assets/verbiq_big.png" />
@@ -49,7 +45,7 @@
 
             <div class="tabs">
                 <input class="input" name="tabs" type="radio" id="tab-1" checked="checked" />
-                <label class="label" for="tab-1">Advanced AI Algorithms</label>
+                <label class="label" for="tab-1" id="label1">Advanced AI Algorithms</label>
                 <div class="panel">
                     <p>
                         VerbIQ utilizes state-of-the-art AI algorithms to analyze candidate responses with unparalleled
@@ -69,7 +65,7 @@
                         of various roles, including customer support, interpretation, translation, and more.</p>
                 </div>
                 <input class="input" name="tabs" type="radio" id="tab-4" />
-                <label class="label" for="tab-4">Comprehensive Skill Evaluation</label>
+                <label class="label" for="tab-4" id="label4">Comprehensive Skill Evaluation</label>
                 <div class="panel">
                     <p>
                         Assess a wide range of linguistic skills, including language fluency, comprehension,
@@ -101,6 +97,7 @@
                               <li *ngFor="let item of faq.answerList">{{ item }}</li>
                             </ul>
                           </div>
+                          <hr>
                         </div>
                       </div>
                 </div>

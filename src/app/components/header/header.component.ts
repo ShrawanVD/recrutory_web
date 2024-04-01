@@ -28,7 +28,7 @@ export class HeaderComponent implements OnInit {
 
   faqList = [
     { 
-      question: 'Tailored Candidate Screening', 
+      question: 'TAILORED CANDIDATE SCREENING', 
       answerList: [
         'Language Mastery Assessment',
         'Cultural Adaptability Evaluation',
@@ -39,7 +39,7 @@ export class HeaderComponent implements OnInit {
       image: 'assets/vector1.svg'
     },
     { 
-      question: 'Comprehensive Candidate Assessment', 
+      question: 'COMPREHENSIVE CANDIDATE ASSESSMENT', 
       answerList: [
         'Complete Competency Assessment',
         'Comprehensive Skill Set Analysis',
@@ -52,7 +52,7 @@ export class HeaderComponent implements OnInit {
       image: 'assets/vector2.svg'
     },
     { 
-      question: 'Technical Proficiency and Communication Skills ', 
+      question: 'TECHNICAL PROFICIENCY AND COMMUNICATION SKILLS', 
       answerList: [
         'Tailored Technical Proficiency with Strong Communication',
         'Personalized Assistance and Effective Communication',
