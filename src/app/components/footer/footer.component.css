@@ -187,6 +187,10 @@
     padding: 0 2rem;
   }
 
+  #content2-first-card{
+    margin: 0 auto;
+  }
+
   .content1 .cards img,
   .content2 .cards img,
   .img-content2 {
@@ -519,6 +523,15 @@ footer {
     left: 0;
   }
 }
+
+@media screen and (max-width: 772px) {
+  .about-us {
+    text-align: left;
+  }
+}
+
+
+
 /* hover effect */
 a {
   color: #54b3d6;
