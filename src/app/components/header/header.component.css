@@ -274,13 +274,14 @@ p {
   max-width: 80%;
   background: white;
   box-shadow: 0 48px 80px -32px rgba(0, 0, 0, 0.3);
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.14);
   border-radius: 16px;
+  /* From https://css.glass */
+  /* background: rgba(255, 255, 255, 0.14);
+
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5.3px);
   -webkit-backdrop-filter: blur(5.3px);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.22); */
 }
 .input {
   position: absolute;
@@ -309,6 +310,7 @@ p {
 .input:checked + .label {
   background: #134662;
   color: white;
+  
 }
 @media (min-width: 600px) {
   .label {
