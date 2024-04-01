@@ -72,7 +72,7 @@ nav {
 
 /* Apply styles for active link when clicked */
 .navbar-links ul li a:active,
-.navbar-links ul li a:focus {
+.navbar-links ul li a:hover {
   padding: 0px 0px 10px;
   border-bottom: 3px solid #022b41;
   border-radius: 20%;
@@ -200,6 +200,11 @@ p {
   background-color: #02586F;
   color: white;
 }
+@media screen and (max-width: 1052px) {
+  .coverpage p{
+    font-size: 23px;
+  }
+}
 @media screen and (max-width: 915px) {
   .simple-button {
     margin-left: 0px;
@@ -207,6 +212,9 @@ p {
   }
   .coverpage{
     padding: 0rem 1rem;
+  }
+  .coverpage p{
+    font-size: 23px;
   }
 }
 @media screen and (max-width: 764px) {
@@ -220,6 +228,10 @@ p {
   .coverpage{
     padding: 0rem 2rem;
   }
+  .coverpage p{
+    font-size: 21px;
+  }
+  
 }
 @media screen and (max-width: 454px) {
   .simple-button {
@@ -229,6 +241,10 @@ p {
   .coverpage{
     padding: 0rem 0rem;
   }
+  .coverpage p{
+    font-size: 19px;
+  }
+  
 }
 
 
@@ -300,7 +316,7 @@ p {
   font-weight: bold;
   font-size: 18px;
   color: #02586f;
-  transition: background 0.1s, color 0.1s;
+  transition: background 0.8s, color 0.1s;
   border-radius: 0px 0px 20px 20px;
 }
 #label1{
@@ -332,12 +348,6 @@ p {
   display: none;
   padding: 20px 30px 30px;
   color: white;
-  /* background: rgba(255, 255, 255, 0.14);
-  border-radius: 16px 16px 0px 0px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.3px);
-  -webkit-backdrop-filter: blur(5.3px);
-  border: 1px solid rgba(255, 255, 255, 0.22); */
 }
 @media (min-width: 600px) {
   .panel {
@@ -363,6 +373,17 @@ p {
 }
 .know-more p:hover{
   color:black;
+}
+@media screen and (max-width: 594px){
+  .label{
+    border-radius: 20px 20px 20px 20px;
+  }
+  #label1{
+    border-radius: 20px 20px 20px 20px;
+  }
+  #label4{
+    border-radius: 20px 20px 0px 0px;
+  }
 }
 
 /*--------------------------- Pointers section------------------ */
@@ -421,6 +442,9 @@ p {
   cursor: pointer;
   color: black; 
 }
+.faq-question:focus{
+  color: white;
+}
 .faq-question hr{
   color: black;
   background-color: black;
@@ -436,9 +460,10 @@ p {
 
 .faq-answer {
   margin-top: 10px;
-  transition: max-height 0.3s ease-in-out;
+  transition: 1s ease-in-out;
   max-height: 0;
   overflow: hidden;
+  text-align: left;
 }
 
 .faq-answer.open {
@@ -449,3 +474,13 @@ p {
   margin-left: 20px; 
   font-size: 16px;
 }
+
+@media screen and (max-width: 970px){
+  .faq-answer{
+    text-align: left;
+  }
+  .content {
+    padding: 20px 10px 20px;
+  }
+}
+
