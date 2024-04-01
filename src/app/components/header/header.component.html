@@ -1,1 +1,118 @@
-<p>header works!</p>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<div class="background">
+    <nav>
+        <div class="logo">
+            <img src="assets/logo.png" height="60px" width="200px" />
+        </div>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="#">Why Recrutory ?</a></li>
+                <li><a href="#"><img src="assets/verbiq_logo.png" height="30px" width="85px" /></a></li>
+                <li><a href="#">Global Insights</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <!-- cover page section -->
+    <div class="coverpage">
+        <div class="container-fluid vh-70">
+            <div class="row h-100">
+                <!-- Content on the left -->
+                <div class="col-md-6 d-flex flex-column justify-content-center align-items-start text-left p-5 pt-0">
+                    <h1>Struggling to Find <span style="font-style: italic;">Qualified</span> Resources?</h1>
+                    <h4>Ascend effortlessly with <span><img src="assets/verbiq_logo.png" /></span> language precision.
+                    </h4>
+                    <p>Our linguistic virtuosos, fueled by VerbiQ AI, form the cornerstone of a winning formula.</p>
+                    <div style="margin: 2rem 0rem 0rem;" class="button-part">
+                        <button class="liquid-button">
+                            <span>For Candidates</span>
+                            <div class="liquid"></div>
+                        </button>
+                        <button class="simple-button">For Companies</button>
+                    </div>
+                </div>
+                <!-- Image on the right -->
+                <div class="col-md-6 d-none d-md-flex justify-content-center align-items-center p-0">
+                    <img height="2rem" src="assets/cover_background.png" alt="Cover Image" class="img-fluid "
+                        style="max-height: 70%;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="verbiq-page">
+        <img src="assets/verbiq_big.png" />
+        <h3>Revolutionizing Linguistic Expertise Assessment</h3>
+        <div class="multiple-tabs">
+
+            <div class="tabs">
+                <input class="input" name="tabs" type="radio" id="tab-1" checked="checked" />
+                <label class="label" for="tab-1">Advanced AI Algorithms</label>
+                <div class="panel">
+                    <p>
+                        VerbIQ utilizes state-of-the-art AI algorithms to analyze candidate responses with unparalleled
+                        accuracy, ensuring precise linguistic assessment.</p>
+                </div>
+                <input class="input" name="tabs" type="radio" id="tab-2" />
+                <label class="label" for="tab-2">Cultural Sanitation</label>
+                <div class="panel">
+                    <p>Our platform specializes in cultural sanitation, assessing candidates' sensitivity to cultural
+                        nuances to ensure seamless integration into diverse work environments.</p>
+                </div>
+                <input class="input" name="tabs" type="radio" id="tab-3" />
+                <label class="label" for="tab-3">Customized Evaluation</label>
+                <div class="panel">
+                    <p>
+                        VerbIQ offers tailored assessment modules designed to meet the specific linguistic requirements
+                        of various roles, including customer support, interpretation, translation, and more.</p>
+                </div>
+                <input class="input" name="tabs" type="radio" id="tab-4" />
+                <label class="label" for="tab-4">Comprehensive Skill Evaluation</label>
+                <div class="panel">
+                    <p>
+                        Assess a wide range of linguistic skills, including language fluency, comprehension,
+                        communication, and cultural adaptability, to identify the most qualified candidates.</p>
+                </div>
+
+            </div>
+            <div class="know-more">
+                <a><p>Know More > > > </p></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- pointer section -->
+<div class="pointers">
+   
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 d-flex align-items-center vector-left">
+                <div class="content">
+                    <div class="faq-accordion">
+                        <div *ngFor="let faq of faqList; let i = index" class="faq-item">
+                          <div class="faq-question" (click)="toggleAccordion(i)">
+                            <span class="toggle-icon">{{ activeIndex === i ? '-' : '+' }}</span>
+                            <h3>{{ faq.question }}</h3>
+                          </div>
+                          <div *ngIf="activeIndex === i" class="faq-answer" [ngClass]="{'open': activeIndex === i}">
+                            <ul>
+                              <li *ngFor="let item of faq.answerList">{{ item }}</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-center vector-right">
+                <img width="550px" height="500px" [src]="selectedImage" class="img-fluid" alt="Right Image">
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
