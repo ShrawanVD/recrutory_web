@@ -239,7 +239,7 @@ p {
     margin-top: 1rem;
   }
   .coverpage {
-    padding: 0rem 0rem;
+    padding: 5rem 0rem 10rem;
   }
   .coverpage p {
     font-size: 19px;
@@ -318,11 +318,11 @@ p {
 .label {
   width: 100%;
   padding: 20px 30px;
-  background: #c1d9e0;
   cursor: pointer;
   /* font-weight: bold; */
   font-size: 18px;
-  color: #02586f;
+  background:#02465b;
+  color: #c1d9e0;
   transition: background 0.8s, color 0.1s;
   border-radius: 20px 20px 20px 20px;
 }
@@ -333,8 +333,8 @@ p {
   border-radius: 20px 20px 20px 20px;
 }
 .label:hover {
-  background:#02465b;
-  color: #c1d9e0;
+  background:#b1d7e2;
+  color: #02465b;
 }
 .label:active {
   background: #ccc;
@@ -343,8 +343,8 @@ p {
   z-index: 1;
 }
 .input:checked + .label {
-  background: #134662;
-  color: white;
+  background: rgba(255, 255, 255, 0.21);
+  color: black;
   font-weight: bold;
 }
 
@@ -394,6 +394,7 @@ p {
   /* background-color: #aedceb; */
   background-color: #134662;
   padding: 1rem 1rem 0rem;
+  margin: 0rem 0rem 5rem;
   width: 80%;
   text-align: right;
   align-items: center;
