@@ -7,13 +7,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CandidateformComponent } from './components/candidateform/candidateform.component';
+// import { OverlayComponent } from './components/overlay/overlay.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    CandidateformComponent
+    CandidateformComponent,
+    // OverlayComponent
   ],
   imports: [
     BrowserModule,
