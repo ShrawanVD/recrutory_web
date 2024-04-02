@@ -1,0 +1,418 @@
+<div class="form_wrapper">
+  <div class="form_container">
+    <div class="title_container">
+      <h2>Registration Form</h2>
+    </div>
+    <div class="row clearfix">
+      <div class="">
+        <form>
+          <!-- first and last name -->
+          <div class="row clearfix">
+            <div class="col_half">
+              <div class="input_field">
+                <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                <input type="text" name="name" placeholder="First Name" />
+              </div>
+            </div>
+            <div class="col_half">
+              <div class="input_field">
+                <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- email and contact no -->
+          <div class="row clearfix">
+            <div class="col_half">
+              <div class="input_field">
+                <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                <input type="email" name="email" placeholder="Email" required />
+              </div>
+            </div>
+            <div class="col_half">
+              <div class="input_field">
+                <span><i aria-hidden="true" class="fa fa-phone"></i></span>
+                <input
+                  type="tel"
+                  name="mobile"
+                  placeholder="Contact No"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- location and company -->
+          <div class="row clearfix">
+            <div class="col_half">
+              <div class="input_field">
+                <span><i aria-hidden="true" class="fa fa-location"></i></span>
+                <input
+                  type="text"
+                  name="currentLocation"
+                  placeholder="Current Location"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col_half">
+              <div class="input_field">
+                <span><i aria-hidden="true" class="fa fa-building"></i></span>
+                <input
+                  type="text"
+                  name="companyname"
+                  placeholder="Current Company"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- role and ctc -->
+          <div class="row clearfix">
+            <div class="col_half">
+              <div class="input_field">
+                <span><i aria-hidden="true" class="fa fa-tasks"></i></span>
+                <input
+                  type="text"
+                  name="role"
+                  placeholder="Current Role"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col_half">
+              <div class="input_field">
+                <span><i aria-hidden="true" class="fa fa-inr"></i></span>
+                <input
+                  type="tel"
+                  name="ctc"
+                  placeholder="Current CTC"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Languages section -->
+          <label
+            style="
+              margin: 0 0 0.4rem;
+              font-size: 1rem;
+              font-family: Poppins, sans-serif;
+            "
+            >Language you may know:</label
+          >
+          <div class="checkbox_container">
+            <div class="input_field checkbox_option">
+              <input
+                type="checkbox"
+                id="russian"
+                name="languages[]"
+                value="russian"
+              />
+              <label for="russian">Russian</label>
+            </div>
+            <div class="input_field checkbox_option">
+              <input
+                type="checkbox"
+                id="Portuguese"
+                name="languages[]"
+                value="Portuguese"
+              />
+              <label for="Portuguese">Portuguese</label>
+            </div>
+            <div class="input_field checkbox_option">
+              <input
+                type="checkbox"
+                id="Dutch"
+                name="languages[]"
+                value="Dutch"
+              />
+              <label for="Dutch">Dutch</label>
+            </div>
+            <div class="input_field checkbox_option">
+              <input
+                type="checkbox"
+                id="English"
+                name="languages[]"
+                value="English"
+              />
+              <label for="English">English</label>
+            </div>
+            <div class="input_field checkbox_option">
+              <input
+                type="checkbox"
+                id="Hindi"
+                name="languages[]"
+                value="Hindi"
+              />
+              <label for="Hindi">Hindi</label>
+            </div>
+            <div class="input_field checkbox_option">
+              <input
+                type="checkbox"
+                id="Sanskrit"
+                name="languages[]"
+                value="Sanskrit"
+              />
+              <label for="Sanskrit">Sanskrit</label>
+            </div>
+            <div class="input_field checkbox_option">
+              <input
+                type="checkbox"
+                id="Italian"
+                name="languages[]"
+                value="Italian"
+              />
+              <label for="Italian">Italian</label>
+            </div>
+            <div class="input_field checkbox_option">
+              <input
+                type="checkbox"
+                id="Arabic"
+                name="languages[]"
+                value="Arabic"
+              />
+              <label for="Arabic">Arabic</label>
+            </div>
+            <div class="input_field checkbox_option">
+              <input
+                type="checkbox"
+                id="Korean"
+                name="languages[]"
+                value="Korean"
+              />
+              <label for="Korean">Korean</label>
+            </div>
+            <div class="input_field checkbox_option">
+              <input
+                type="checkbox"
+                id="Mandarin"
+                name="languages[]"
+                value="Mandarin"
+              />
+              <label for="Mandarin">Mandarin</label>
+            </div>
+            <div class="input_field checkbox_option">
+              <input
+                type="checkbox"
+                id="Japanese"
+                name="languages[]"
+                value="Japanese"
+              />
+              <label for="Japanese">Japanese</label>
+            </div>
+            <div class="input_field checkbox_option">
+              <input
+                type="checkbox"
+                id="French"
+                name="languages[]"
+                value="French"
+              />
+              <label for="French">French</label>
+            </div>
+            <div class="input_field checkbox_option">
+              <input
+                type="checkbox"
+                id="Spanish"
+                name="languages[]"
+                value="Spanish"
+              />
+              <label for="Spanish">Spanish</label>
+            </div>
+            <div class="input_field checkbox_option">
+              <input
+                type="checkbox"
+                id="German"
+                name="languages[]"
+                value="German"
+              />
+              <label for="German">German</label>
+            </div>
+          </div>
+
+          <!-- Educational section -->
+          <label
+            style="
+              margin: 0 0 0.4rem;
+              font-size: 1rem;
+              font-family: Poppins, sans-serif;
+            "
+            >How did you acquire you language skills?</label
+          >
+          <div class="checkbox_container" style="margin-bottom: 2rem">
+            <div class="input_field checkbox_option">
+              <input
+                type="checkbox"
+                id="certificate"
+                name="languages[]"
+                value="certificate"
+              />
+              <label for="certificate">Globally recongnised certificate</label>
+            </div>
+            <div class="input_field checkbox_option">
+              <input
+                type="checkbox"
+                id="Undergraduate"
+                name="languages[]"
+                value="Undergraduate"
+              />
+              <label for="Undergraduate">Undergraduate (B.A)</label>
+            </div>
+            <div class="input_field checkbox_option">
+              <input
+                type="checkbox"
+                id="Post"
+                name="languages[]"
+                value="Post"
+              />
+              <label for="Post">Post Graduation (M.A)</label>
+            </div>
+            <div class="input_field checkbox_option">
+              <input
+                type="checkbox"
+                id="Diploma"
+                name="languages[]"
+                value="Diploma"
+              />
+              <label for="Diploma">Diploma</label>
+            </div>
+            <div class="input_field checkbox_option">
+              <input type="checkbox" id="PG" name="languages[]" value="PG" />
+              <label for="PG">PG Diploma</label>
+            </div>
+            <div class="input_field checkbox_option">
+              <input
+                type="checkbox"
+                id="Native"
+                name="languages[]"
+                value="Native"
+              />
+              <label for="Native">Native Speaker</label>
+            </div>
+          </div>
+
+          <!-- descriptive questions and answers -->
+
+          <!-- question 1 -->
+          <div class="question_answer_field">
+            <label for="question"
+              >Briefly describe your previous role in terms of client support
+              role, If yes, Describe Briefly.</label
+            >
+            <textarea
+              id="answer1"
+              name="answer"
+              placeholder="Your answer goes here..."
+              value="answer1"
+              required
+            ></textarea>
+          </div>
+
+          <!-- question 2 -->
+          <div class="question_answer_field">
+            <label for="question"
+              >Methods for staying updated with language changes and
+              developments.</label
+            >
+            <textarea
+              id="answer2"
+              name="answer"
+              value="answer2"
+              placeholder="Your answer goes here..."
+              required
+            ></textarea>
+          </div>
+
+          <!-- question 3 -->
+          <div class="question_answer_field">
+            <label for="question"
+              >Are you familiar with different dialects or regional variations
+              of the languages you speak? Can you understand and communicate
+              effectively in these variations?</label
+            >
+            <textarea
+              id="answer3"
+              name="answer"
+              placeholder="Your answer goes here..."
+              value="answer3"
+              required
+            ></textarea>
+          </div>
+
+          <!-- question 4 -->
+          <div class="question_answer_field">
+            <label for="question"
+              >What tools or resources do you use to aid in translation or
+              language-related tasks</label
+            >
+            <textarea
+              id="answer4"
+              name="answer"
+              value="answer4"
+              placeholder="Your answer goes here..."
+              required
+            ></textarea>
+          </div>
+
+          <!-- question 5 -->
+          <div class="question_answer_field">
+            <label for="question"
+              >Can you explain complex grammatical concepts in the languages
+              you're proficient in? </label
+            >
+            <textarea
+              id="answer5"
+              name="answer"
+              placeholder="Your answer goes here..."
+              value="answer5"
+              required
+            ></textarea>
+          </div>
+
+          <!-- question 6 -->
+          <div class="question_answer_field">
+            <label for="question"
+              >Are you proficient in any specialization such as customer support
+              legal, medical, technical, or literary translation?  Please
+              describe your proficiency pertaining to the domain in brief</label
+            >
+            <textarea
+              id="answer6"
+              name="answer"
+              value="answer6"
+              placeholder="Your answer goes here..."
+              required
+            ></textarea>
+          </div>
+
+          <!-- question 7 -->
+          <div class="question_answer_field">
+            <label for="question"
+              >Can you demonstrate your proficiency in the languages you claim
+              to speak by engaging in a conversation with a native to provide a
+              simple translation or interpretation? </label
+            >
+            <textarea
+              id="answer7"
+              name="answer"
+              placeholder="Your answer goes here..."
+              value="answer7"
+              required
+            ></textarea>
+          </div>
+
+          <!-- submit button -->
+
+          <input class="button" type="submit" value="Register" />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
