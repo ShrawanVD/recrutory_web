@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { CandidateformComponent } from '../candidateform/candidateform.component';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class HeaderComponent implements OnInit {
+
+  @ViewChild(CandidateformComponent) candidateFormRef!: CandidateformComponent;
   // handleClick(event: MouseEvent): void {
   //   let el = event.target as HTMLElement;
 
@@ -22,6 +25,8 @@ export class HeaderComponent implements OnInit {
   //   }
   //   event.stopPropagation();
   // }
+  constructor() {}
+
   ngOnInit(): void {
     this.selectedImage = this.faqList[this.activeIndex].image;
   }
@@ -71,4 +76,12 @@ export class HeaderComponent implements OnInit {
     this.selectedImage = (this.activeIndex === index) ? this.faqList[index].image : null;
   }
 
+  displayStyle = "none"; 
+  
+  openPopup() { 
+    this.displayStyle = "block"; 
+  } 
+  closePopup() { 
+    this.displayStyle = "none"; 
+  } 
 }

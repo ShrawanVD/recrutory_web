@@ -90,13 +90,13 @@ h4,
 p {
   color: #02465b;
 }
-.coverpage h1{
+.coverpage h1 {
   margin-bottom: 40px;
 }
-.coverpage h4{
+.coverpage h4 {
   font-style: italic;
 }
-.coverpage p{
+.coverpage p {
   font-size: 25px;
   margin-bottom: 60px;
 }
@@ -128,7 +128,7 @@ p {
   left: 0;
   width: 100%;
   height: 200px;
-  background: #02586F;
+  background: #02586f;
   box-shadow: inset 0 0 50px white;
   z-index: -1;
   transition: 0.6s;
@@ -148,14 +148,14 @@ p {
 .liquid-button .liquid::after {
   border-radius: 45%;
   background: white;
-  box-shadow: 0 0 10px 5px #02586F, inset 0 0 5px #02586F;
+  box-shadow: 0 0 10px 5px #02586f, inset 0 0 5px #02586f;
   animation: animate 5s linear infinite;
   opacity: 0.8;
 }
 
 .liquid-button .liquid::before {
   border-radius: 40%;
-  background: #02586F;
+  background: #02586f;
   box-shadow: 0 0 10px rgba(26, 26, 26, 0.5),
     inset 0 0 5px rgba(26, 26, 26, 0.5);
   animation: animate 7s linear infinite;
@@ -197,11 +197,11 @@ p {
   margin-left: 2rem;
 }
 .simple-button:hover {
-  background-color: #02586F;
+  background-color: #02586f;
   color: white;
 }
 @media screen and (max-width: 1052px) {
-  .coverpage p{
+  .coverpage p {
     font-size: 23px;
   }
 }
@@ -210,44 +210,40 @@ p {
     margin-left: 0px;
     margin-top: 1rem;
   }
-  .coverpage{
+  .coverpage {
     padding: 0rem 1rem;
   }
-  .coverpage p{
+  .coverpage p {
     font-size: 23px;
   }
 }
 @media screen and (max-width: 764px) {
-  .col-md-6{
+  .col-md-6 {
     margin: 5rem 0rem 2rem;
   }
   .simple-button {
     margin-left: 25px;
     margin-top: 1rem;
   }
-  .coverpage{
+  .coverpage {
     padding: 0rem 2rem;
   }
-  .coverpage p{
+  .coverpage p {
     font-size: 21px;
   }
-  
 }
 @media screen and (max-width: 454px) {
   .simple-button {
     margin-left: 0px;
     margin-top: 1rem;
   }
-  .coverpage{
+  .coverpage {
     padding: 0rem 0rem;
   }
-  .coverpage p{
+  .coverpage p {
     font-size: 19px;
   }
-  
 }
-
-
 
 /* verbiQ page section */
 .verbiq-page {
@@ -270,7 +266,6 @@ p {
   }
 }
 
-
 /* multiple tabs  */
 
 .multiple-tabs {
@@ -287,20 +282,31 @@ p {
     padding: 60px 10px;
   }
 }
+
 .panel p {
   margin-top: 20px;
   margin-bottom: 0;
   padding: 0;
   font-size: 20px;
   line-height: 1.5;
-  color: white;
+  color: black;
 }
 .tabs {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0.5rem 0rem 0rem;
   max-width: 80%;
-  background-color: #134662;
-  color: white;
+  /* background-color: #134662; */
+  /* background-color: #aedceb; */
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.21);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  color: black;
   box-shadow: 0 48px 80px -32px rgba(0, 0, 0, 0.3);
   border-radius: 18px 18px 0px 0px;
 }
@@ -311,22 +317,23 @@ p {
 .label {
   width: 100%;
   padding: 20px 30px;
-  background: white;
+  background: #c1d9e0;
   cursor: pointer;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 18px;
   color: #02586f;
   transition: background 0.8s, color 0.1s;
-  border-radius: 0px 0px 20px 20px;
+  border-radius: 20px 20px 20px 20px;
 }
-#label1{
-  border-radius: 17px 0px 20px 20px;
+#label1 {
+  border-radius: 17px 20px 20px 20px;
 }
-#label4{
-  border-radius: 0px 20px 20px 20px;
+#label4 {
+  border-radius: 20px 20px 20px 20px;
 }
 .label:hover {
-  background: #c1d9e0;
+  background:#02465b;
+  color: #c1d9e0;
 }
 .label:active {
   background: #ccc;
@@ -337,29 +344,54 @@ p {
 .input:checked + .label {
   background: #134662;
   color: white;
-  
+  font-weight: bold;
 }
-@media (min-width: 600px) {
+
+
+@media (max-width: 1420px) {
+  .label {
+    padding: 15px 15px;
+    border-radius: 9px;
+  }
+  #label1, #label4{
+    border-radius: 9px;
+  }
+}
+@media (min-width: 1001px) and (max-width: 1269px) {
+  .label {
+    padding: 15px 11px;
+    border-radius: 9px;
+    font-size: 15px;
+  }
+  #label1, #label4{
+    border-radius: 7px;
+  }
+  .panel p{
+    font-size: 15px;
+  }
+}
+@media (min-width: 1000px) {
   .label {
     width: auto;
-  }
+  }  
 }
 .panel {
   display: none;
   padding: 20px 30px 30px;
-  color: white;
+  color: black;
 }
-@media (min-width: 600px) {
+@media (min-width: 1000px) {
   .panel {
     order: 99;
   }
 }
-.input:checked + .label + .panel{
+.input:checked + .label + .panel {
   display: block;
 }
 
-.know-more{
-  background-color: #aedceb;
+.know-more {
+  /* background-color: #aedceb; */
+  background-color: #134662;
   padding: 1rem 1rem 0rem;
   width: 80%;
   text-align: right;
@@ -368,37 +400,41 @@ p {
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
 }
-.know-more p{
+.know-more p {
   cursor: pointer;
+  color: white;
 }
-.know-more p:hover{
-  color:black;
+.know-more p:hover {
+  color: black;
 }
-@media screen and (max-width: 594px){
-  .label{
+@media screen and (max-width: 594px) {
+  .label {
     border-radius: 20px 20px 20px 20px;
   }
-  #label1{
+  #label1 {
     border-radius: 20px 20px 20px 20px;
   }
-  #label4{
-    border-radius: 20px 20px 0px 0px;
+  #label4 {
+    border-radius: 20px 20px 20px 20px;
   }
 }
 
 /*--------------------------- Pointers section------------------ */
 
-.vector-left{
+.vector-left {
   background-image: url("/assets/vector_left_bg.png");
   background-size: cover;
   background-position: center;
   font-family: "Poppins", sans-serif;
 }
 
-.vector-right{
+.vector-right {
   text-align: center;
   padding: 0rem 0rem;
   height: 82vh;
+  background-image: url("/assets/hr-solution - 1.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .content {
@@ -407,51 +443,50 @@ p {
 }
 
 @media (max-width: 1300px) {
-    .vector-right{
-      height: 55vh;
-    }
+  .vector-right {
+    height: 55vh;
+  }
 }
 
 @media (max-width: 768px) {
   .content {
-      text-align: center; 
+    text-align: center;
   }
-  .vector-right{
+  .vector-right {
     padding: 0rem;
-    height: 48vh;
+    height: 40vh;
   }
 }
 @media (max-width: 500px) {
-  .vector-right{
+  .vector-right {
     height: 30vh;
   }
 }
-
 
 /* FAQ Section */
 .faq-item {
   margin-bottom: 20px;
   overflow: hidden;
 }
-.faq-question h3{
+.faq-question h3 {
   font-size: 22px;
   text-decoration: underline;
 }
 
 .faq-question {
   cursor: pointer;
-  color: black; 
+  color: black;
 }
-.faq-question:focus{
+.faq-question:focus {
   color: white;
 }
-.faq-question hr{
+.faq-question hr {
   color: black;
   background-color: black;
 }
 
 .faq-question.active {
-  color: white; 
+  color: white;
 }
 
 .toggle-icon {
@@ -467,16 +502,16 @@ p {
 }
 
 .faq-answer.open {
-  max-height: 200px; 
+  max-height: 200px;
 }
 .faq-answer ul {
-  list-style-type: disc; 
-  margin-left: 20px; 
+  list-style-type: disc;
+  margin-left: 20px;
   font-size: 16px;
 }
 
-@media screen and (max-width: 970px){
-  .faq-answer{
+@media screen and (max-width: 970px) {
+  .faq-answer {
     text-align: left;
   }
   .content {
@@ -484,3 +519,17 @@ p {
   }
 }
 
+/* popup section css */
+.custom-modal .modal-dialog {
+  max-width: 70%;
+  height: 80vh; /* 80% of the viewport height */
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Additional styling to ensure content within the modal is scrollable if needed */
+.custom-modal .modal-content {
+  overflow-y: auto;
+}

@@ -1,6 +1,7 @@
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
+
 <div class="background">
     <nav>
         <div class="logo">
@@ -25,7 +26,7 @@
                     </h4>
                     <p>Our linguistic virtuosos, fueled by VerbiQ AI, form the cornerstone of a winning formula.</p>
                     <div style="margin: 2rem 0rem 0rem;" class="button-part">
-                        <button class="liquid-button">
+                        <button class="liquid-button" (click)="openPopup()">
                             <span>For Candidates</span>
                             <div class="liquid"></div>
                         </button>
@@ -38,7 +39,8 @@
                         style="max-height: 70%;">
                 </div> -->
     </div>
-    <div class="verbiq-page">
+    
+<div class="verbiq-page">
         <img src="assets/verbiq_big.png" />
         <h3>Revolutionizing Linguistic Expertise Assessment</h3>
         <div class="multiple-tabs">
@@ -108,6 +110,33 @@
         </div>
     </div>
     
+<!-- ------------- PopUp functionality----------------- -->
+
+<!-- <button style="margin: 50px; padding: 10px" type="button" class="btn btn-primary" (click)="openPopup()">Show Data</button> -->
+
+<!-- Modal -->
+<div class="modal custom-modal" tabindex="-1" role="dialog" [ngStyle]="{'display': displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Title</h4>
+        <button type="button" class="close" aria-label="Close" (click)="closePopup()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body content goes here.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa eligendi veniam ipsa adipisci aut incidunt vel autem. Facere sequi recusandae enim doloremque qui, deserunt voluptatum omnis a dolores? Suscipit, eos!</p>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closePopup()">Close</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+
+<!-- -------------------------------------------------- -->
 
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
