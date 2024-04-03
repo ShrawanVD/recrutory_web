@@ -4,18 +4,18 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CandidateformComponent } from './components/candidateform/candidateform.component';
 import { OverlayComponent } from './components/overlay/overlay.component';
+import { CompanyComponent } from './components/company/company.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
     CandidateformComponent,
-    OverlayComponent
+    OverlayComponent,
+    CompanyComponent
   ],
   imports: [
     BrowserModule,

@@ -422,7 +422,7 @@ nav {
 /*--------------------------- Pointers section------------------ */
 
 .vector-left {
-  background-image: url("/assets/vector_left_bg.png");
+  background-image: url("/assets/hr-solution - 2.png");
   background-size: cover;
   background-position: center;
   font-family: "Poppins", sans-serif;
@@ -477,7 +477,7 @@ nav {
 
 .faq-question {
   cursor: pointer;
-  color: black;
+  color: rgb(150, 189, 219);
 }
 .faq-question:focus {
   color: white;
