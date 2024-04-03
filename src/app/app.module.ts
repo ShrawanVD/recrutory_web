@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CandidateformComponent } from './components/candidateform/candidateform.component';
 import { OverlayComponent } from './components/overlay/overlay.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { OverlayComponent } from './components/overlay/overlay.component';
     NgbModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
