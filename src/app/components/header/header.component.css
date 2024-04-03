@@ -473,6 +473,7 @@ p {
 .faq-question h3 {
   font-size: 22px;
   text-decoration: underline;
+  transition: color 0.5s ease;
 }
 
 .faq-question {
@@ -497,7 +498,7 @@ p {
 
 .faq-answer {
   margin-top: 10px;
-  transition: 1s ease-in-out;
+  transition: max-height 0.5s ease;
   max-height: 0;
   overflow: hidden;
   text-align: left;
@@ -519,6 +520,10 @@ p {
   .content {
     padding: 20px 10px 20px;
   }
+}
+
+.faq-question.active h3, .faq-question.active {
+  color: white;
 }
 
 /* popup section css */

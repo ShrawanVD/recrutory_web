@@ -10,7 +10,7 @@ const routes: Routes = [
     component: HeaderComponent
   },
   {
-    path: 'company',
+    path: 'candidate',
     component: CandidateformComponent
   },
   {
