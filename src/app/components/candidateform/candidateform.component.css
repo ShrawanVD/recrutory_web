@@ -1,3 +1,78 @@
+nav {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  
+    /* position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: #ffffff; */
+  }
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #61bdee;
+    padding-bottom: 5px;
+    color: #022b41;
+  }
+  .navbar-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 0rem 0rem;
+  }
+  .navbar-links ul {
+    display: flex;
+    text-align: center;
+  }
+  .navbar-links ul li {
+    list-style-type: none;
+    padding: 0rem 4rem;
+  }
+  .navbar-links a {
+    text-decoration: none;
+    color: #022b41;
+  }
+  
+  @media screen and (max-width: 692px) {
+    .navbar-links ul li {
+      padding: 0rem 2rem;
+    }
+  }
+  @media screen and (max-width: 497px) {
+    .navbar-links ul {
+      padding-left: 0px;
+    }
+    .navbar-links ul li {
+      padding: 0rem 1rem;
+    }
+  }
+  @media screen and (max-width: 397px) {
+    .navbar-links ul {
+      padding-left: 0px;
+    }
+    .navbar-links ul li {
+      padding: 0rem 0.5rem;
+    }
+  }
+
+  /* Apply styles for active link when clicked */
+.navbar-links ul li a:active,
+.navbar-links ul li a:hover {
+  padding: 0px 0px 10px;
+  border-bottom: 3px solid #022b41;
+  border-radius: 20%;
+}
+
+
+
+/* ------------------------------- */
 body {
     font-size: 14px;
     background: #f2f2f2;

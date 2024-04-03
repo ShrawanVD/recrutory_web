@@ -1,3 +1,18 @@
+<nav>
+  <div class="logo">
+    <img src="assets/logo.png" height="60px" width="200px" />
+  </div>
+  <div class="navbar-links">
+    <ul>
+      <li><a href="#">Why Recrutory ?</a></li>
+      <li><a href="#"><img src="assets/verbiq_logo.png" height="30px" width="85px" /></a></li>
+      <li><a href="#">Global Insights</a></li>
+    </ul>
+  </div>
+
+</nav>
+
+
 <div class="form_wrapper">
   <div class="form_container">
     <div class="title_container">
@@ -11,7 +26,7 @@
             <div class="col_half">
               <div class="input_field">
                 <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                <input type="text" name="name" placeholder="First Name" />
+                <input type="text" name="firstname" placeholder="First Name" />
               </div>
             </div>
             <div class="col_half">
@@ -19,7 +34,7 @@
                 <span><i aria-hidden="true" class="fa fa-user"></i></span>
                 <input
                   type="text"
-                  name="name"
+                  name="lastname"
                   placeholder="Last Name"
                   required
                 />
@@ -251,7 +266,7 @@
               <input
                 type="checkbox"
                 id="certificate"
-                name="languages[]"
+                name="proficiency[]"
                 value="certificate"
               />
               <label for="certificate">Globally recongnised certificate</label>
@@ -260,7 +275,7 @@
               <input
                 type="checkbox"
                 id="Undergraduate"
-                name="languages[]"
+                name="proficiency[]"
                 value="Undergraduate"
               />
               <label for="Undergraduate">Undergraduate (B.A)</label>
@@ -269,7 +284,7 @@
               <input
                 type="checkbox"
                 id="Post"
-                name="languages[]"
+                name="proficiency[]"
                 value="Post"
               />
               <label for="Post">Post Graduation (M.A)</label>
@@ -278,20 +293,20 @@
               <input
                 type="checkbox"
                 id="Diploma"
-                name="languages[]"
+                name="proficiency[]"
                 value="Diploma"
               />
               <label for="Diploma">Diploma</label>
             </div>
             <div class="input_field checkbox_option">
-              <input type="checkbox" id="PG" name="languages[]" value="PG" />
+              <input type="checkbox" id="PG" name="proficiency[]" value="PG" />
               <label for="PG">PG Diploma</label>
             </div>
             <div class="input_field checkbox_option">
               <input
                 type="checkbox"
                 id="Native"
-                name="languages[]"
+                name="proficiency[]"
                 value="Native"
               />
               <label for="Native">Native Speaker</label>
@@ -304,11 +319,12 @@
           <div class="question_answer_field">
             <label for="question"
               >Briefly describe your previous role in terms of client support
-              role, If yes, Describe Briefly.</label
+              role, If yes, Describe Briefly</label
             >
             <textarea
               id="answer1"
-              name="answer"
+              name="Briefly describe your previous role in terms of client support
+              role, If yes, Describe Briefly."
               placeholder="Your answer goes here..."
               value="answer1"
               required
@@ -319,11 +335,12 @@
           <div class="question_answer_field">
             <label for="question"
               >Methods for staying updated with language changes and
-              developments.</label
+              developments</label
             >
             <textarea
               id="answer2"
-              name="answer"
+              name="Methods for staying updated with language changes and
+              developments"
               value="answer2"
               placeholder="Your answer goes here..."
               required
@@ -339,7 +356,9 @@
             >
             <textarea
               id="answer3"
-              name="answer"
+              name="Are you familiar with different dialects or regional variations
+              of the languages you speak? Can you understand and communicate
+              effectively in these variations?"
               placeholder="Your answer goes here..."
               value="answer3"
               required
@@ -354,7 +373,8 @@
             >
             <textarea
               id="answer4"
-              name="answer"
+              name="What tools or resources do you use to aid in translation or
+              language-related tasks"
               value="answer4"
               placeholder="Your answer goes here..."
               required
@@ -369,7 +389,8 @@
             >
             <textarea
               id="answer5"
-              name="answer"
+              name="Can you explain complex grammatical concepts in the languages
+              you're proficient in?"
               placeholder="Your answer goes here..."
               value="answer5"
               required
@@ -385,7 +406,9 @@
             >
             <textarea
               id="answer6"
-              name="answer"
+              name="Are you proficient in any specialization such as customer support
+              legal, medical, technical, or literary translation?  Please
+              describe your proficiency pertaining to the domain in brief"
               value="answer6"
               placeholder="Your answer goes here..."
               required
@@ -401,7 +424,9 @@
             >
             <textarea
               id="answer7"
-              name="answer"
+              name="Can you demonstrate your proficiency in the languages you claim
+              to speak by engaging in a conversation with a native to provide a
+              simple translation or interpretation?"
               placeholder="Your answer goes here..."
               value="answer7"
               required
