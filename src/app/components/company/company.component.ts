@@ -37,12 +37,57 @@ export class CompanyComponent implements OnInit {
   // button for visibility
   showChipList = false;
 
+// button for shwoing meeting box
+meetOpen = false;
+showMeeting(){
+  this.meetOpen = !this.meetOpen;
+}
 
-  // for input-grid to add new languages
+
+
+// slots for meeting
+
+
+isMeetingScheduled: boolean = false;
+
+  scheduleMeeting() {
+    this.isMeetingScheduled = true;
+  }
+
+
+
+// isMeetingScheduled: boolean = false;
+
+//   constructor(private candidate: CandidateService) {}
+
+//   async scheduleMeeting() {
+//     // Simulating scheduling of the meeting
+//     // Here, you can put your actual scheduling logic
+
+//     // Call email service to send email
+//     try {
+//       await this.candidate.sendEmail();
+
+//       // After email is sent, set the flag to true
+//       this.isMeetingScheduled = true;
+//     } catch (error) {
+//       console.error('Failed to send email:', error);
+//     }
+//   }
+
+// for input-grid to add new languages
   addOnBlur = true;
   readonly separatorKeysCodes = [ENTER, COMMA] as const;
   fruits: Fruit[] = [];
   announcer: any;
+  selected: any;
+
+
+ 
+  onDateSelected(selectedDate: Date) {
+    this.selected = selectedDate;
+  }
+ 
 
   constructor(public candidate: CandidateService, private _snackBar: MatSnackBar) { }
 

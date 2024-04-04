@@ -15,5 +15,8 @@ export class CandidateService {
   companyForm(data: any){
     return this.http.post('https://backendrecrutory.onrender.com/company',data);
   }
+  // sendEmail(){
+
+  // }
 
 }
