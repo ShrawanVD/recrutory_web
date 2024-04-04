@@ -1,1 +1,253 @@
-<p>company works!</p>
+<!-- Import necessary Angular Material modules -->
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
+
+<div class="card">
+  <div class="left-side">
+    <h2>
+      Hi, I'm
+      <span class="words words-1">
+        <span>Abhilasha,</span>
+        <span>Shubham,</span>
+        <span>Aditya,</span>
+        <span>Suhas,</span>
+      </span>
+      <br />
+      Lets discuss your requirement
+    </h2>
+    <div class="divider"></div>
+
+    <!-- form details -->
+
+    <form class="example-form" #formRef="ngForm">
+      <!-- <form
+      class="example-form"
+      #formRef="ngForm"
+      (ngSubmit)="submitForm(formRef)"
+    > -->
+      <!-- name and contact no -->
+      <div class="row">
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Suhas Patil" value="" required />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Contact No</mat-label>
+          <input
+            matInput
+            type="number"
+            placeholder="9808888089"
+            value=""
+            required
+          />
+        </mat-form-field>
+      </div>
+
+      <!-- company name and email -->
+      <div class="row">
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Company Name</mat-label>
+          <input matInput placeholder="XYZ Pvt Ltd" value="" required />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input
+            matInput
+            type="email"
+            placeholder="xyz@gmail.com"
+            value=""
+            required
+          />
+        </mat-form-field>
+      </div>
+
+      <!-- languages section -->
+      <div class="languages-section">
+        <p>Languages resources that you require</p>
+
+        <mat-chip-listbox aria-label="language selection" required multiple>
+          <mat-chip-option>French</mat-chip-option>
+          <mat-chip-option>German</mat-chip-option>
+          <mat-chip-option color="accent">Spanish</mat-chip-option>
+          <mat-chip-option color="warn">Dutch</mat-chip-option>
+          <mat-chip-option>Portuguese</mat-chip-option>
+          <mat-chip-option>Russian</mat-chip-option>
+          <mat-chip-option color="warn">Japanese</mat-chip-option>
+          <mat-chip-option color="warn">Mandarin</mat-chip-option>
+          <mat-chip-option color="accent">Korean</mat-chip-option>
+        </mat-chip-listbox>
+      </div>
+
+      <!-- grid options to add new languages -->
+
+      <button
+        class="open-button-for-grid"
+        *ngIf="!showChipList"
+        (click)="toggleChipList()"
+        mat-raised-button
+      >
+        Add More languages?
+      </button>
+
+      <mat-form-field
+        class="example-chip-list input-grid"
+        appearance="outline"
+        *ngIf="showChipList"
+      >
+        <mat-label>Type your languages here if not in the list</mat-label>
+        <mat-chip-grid #chipGrid aria-label="Enter fruits" appearance="outline">
+          <mat-chip-row
+            *ngFor="let fruit of fruits"
+            (removed)="remove(fruit)"
+            [editable]="true"
+            (edited)="edit(fruit, $event)"
+            [aria-description]="'press enter to edit ' + fruit.name"
+          >
+            {{ fruit.name }}
+            <button matChipRemove [attr.aria-label]="'remove ' + fruit.name">
+              <mat-icon>cancel</mat-icon>
+            </button>
+          </mat-chip-row>
+          <input
+            placeholder="Enter here"
+            [matChipInputFor]="chipGrid"
+            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+            [matChipInputAddOnBlur]="addOnBlur"
+            (matChipInputTokenEnd)="add($event)"
+          />
+        </mat-chip-grid>
+      </mat-form-field>
+
+      <button
+        class="close-button-for-grid"
+        (click)="toggleChipList()"
+        *ngIf="showChipList"
+        mat-raised-button
+      >
+        Submit
+      </button>
+
+      <!-- location and compensation -->
+      <div class="row">
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Location</mat-label>
+          <input
+            matInput
+            placeholder="For which location do you want to hire"
+            value=""
+            required
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Compensation Band (in LPA) </mat-label>
+          <mat-select name="ctc" required>
+            <mat-option>3.5LPA to 5LPA</mat-option>
+            <mat-option>5LPA to 6.5LPA</mat-option>
+            <mat-option>6.5LPA to 8LPA</mat-option>
+            <mat-option>Above 8LPA</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <!-- Mode of working and role type -->
+      <div class="row">
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Mode of working</mat-label>
+          <mat-select name="mode" required>
+            <mat-option>Remote</mat-option>
+            <mat-option>Onsite</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Role Type</mat-label>
+          <input matInput placeholder="Specialist" value="" required />
+        </mat-form-field>
+      </div>
+
+      <!-- timeline and communication channel -->
+      <div class="row">
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Timeline for hiring</mat-label>
+          <input matInput placeholder="Urgent" value="" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Communication Channel</mat-label>
+          <input matInput placeholder="" value="" required />
+        </mat-form-field>
+      </div>
+
+      <!-- Type of employement -->
+      <mat-form-field
+        appearance="outline"
+        class="example-full-width"
+        id="employment-type"
+      >
+        <mat-label>Type of Employement (Optional)</mat-label>
+        <mat-select name="employmentType">
+          <mat-option>Full Time</mat-option>
+          <mat-option>Contractual</mat-option>
+          <mat-option>Part-time</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- meeting button -->
+
+      
+
+      <div class="row-buttons">
+
+        <a  mat-raised-button href="https://www.google.com/" color="primary" class="meet-button example-full-width" target="_blank">Schedule a meeting</a>
+
+        <!-- <button
+          class="meet-button example-full-width"
+          color="primary"
+          mat-raised-button
+        >
+          Schedule a meeting
+        </button> -->
+
+        <!-- <div ng-app="companyApp" ng-controller="CompanyController as vm">
+        <button mat-raised-button (click)="vm.toggleDialog()">Pick one</button>
+
+        <div ng-show="vm.dialogOpened" class="dialog">
+          <h1>Hi {{ vm.data.name }}</h1>
+          <div>
+            <p>What's your favorite animal?</p>
+            <mat-form-field>
+              <mat-label>Favorite Animal</mat-label>
+              <input matInput [(ngModel)]="vm.data.animal" />
+            </mat-form-field>
+          </div>
+          <div>
+            <button mat-button (click)="vm.onNoClick()">No Thanks</button>
+            <button
+              mat-button
+              [mat-dialog-close]="vm.data.animal"
+              cdkFocusInitial
+            >
+              Ok
+            </button>
+          </div>
+        </div>
+      </div> -->
+
+        <!-- submit button -->
+
+        <button mat-raised-button>Submit</button>
+        <!-- <button mat-raised-button [disabled]="!isFormFilled">Submit</button>
+      <button mat-raised-button *ngIf="!isFormFilled" disabled>
+        Please fill the form
+      </button> -->
+      </div>
+    </form>
+  </div>
+
+  <!-- <div class="right-side">
+    <img src="assets/Group487.png" alt="" />
+  </div> -->
+</div>

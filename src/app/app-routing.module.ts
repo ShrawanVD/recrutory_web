@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CandidateformComponent } from './components/candidateform/candidateform.component';
 import { HeaderComponent } from './components/header/header.component';
 import { OverlayComponent } from './components/overlay/overlay.component';
+import { CompanyComponent } from './components/company/company.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'overlay',
     component: OverlayComponent
+  },
+  {
+    path: 'company',
+    component: CompanyComponent
   }
 ];
 

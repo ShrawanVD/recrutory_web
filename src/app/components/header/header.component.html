@@ -11,11 +11,14 @@
     <div class="navbar-links">
       <ul>
         <li><a href="#">Why Recrutory ?</a></li>
-        <li><a href="#"><img src="assets/verbiq_logo.png" height="30px" width="85px" /></a></li>
+        <li>
+          <a href="#"
+            ><img src="assets/verbiq_logo.png" height="30px" width="85px"
+          /></a>
+        </li>
         <li><a href="#">Global Insights</a></li>
       </ul>
     </div>
-
   </nav>
 
   <!-- cover page section -->
@@ -31,7 +34,9 @@
           <span>For Candidates</span>
           <div class="liquid"></div>
         </button>
-        <button class="simple-button" routerLink="/candidate">For Companies</button>
+        <button class="simple-button" routerLink="/company">
+          For Companies
+        </button>
       </div>
     </div>
     <!-- Image on the right -->
@@ -45,40 +50,57 @@
     <img src="assets/verbiq_big.png" />
     <h3>Revolutionizing Linguistic Expertise Assessment</h3>
     <div class="multiple-tabs">
-
       <div class="tabs">
-        <input class="input" name="tabs" type="radio" id="tab-1" checked="checked" />
-        <label class="label" for="tab-1" id="label1">Advanced AI Algorithms</label>
+        <input
+          class="input"
+          name="tabs"
+          type="radio"
+          id="tab-1"
+          checked="checked"
+        />
+        <label class="label" for="tab-1" id="label1"
+          >Advanced AI Algorithms</label
+        >
         <div class="panel">
           <p>
-            VerbIQ utilizes state-of-the-art AI algorithms to analyze candidate responses with unparalleled
-            accuracy, ensuring precise linguistic assessment.</p>
+            VerbIQ utilizes state-of-the-art AI algorithms to analyze candidate
+            responses with unparalleled accuracy, ensuring precise linguistic
+            assessment.
+          </p>
         </div>
         <input class="input" name="tabs" type="radio" id="tab-2" />
         <label class="label" for="tab-2">Cultural Sanitation</label>
         <div class="panel">
-          <p>Our platform specializes in cultural sanitation, assessing candidates' sensitivity to cultural
-            nuances to ensure seamless integration into diverse work environments.</p>
+          <p>
+            Our platform specializes in cultural sanitation, assessing
+            candidates' sensitivity to cultural nuances to ensure seamless
+            integration into diverse work environments.
+          </p>
         </div>
         <input class="input" name="tabs" type="radio" id="tab-3" />
         <label class="label" for="tab-3">Customized Evaluation</label>
         <div class="panel">
           <p>
-            VerbIQ offers tailored assessment modules designed to meet the specific linguistic requirements
-            of various roles, including customer support, interpretation, translation, and more.</p>
+            VerbIQ offers tailored assessment modules designed to meet the
+            specific linguistic requirements of various roles, including
+            customer support, interpretation, translation, and more.
+          </p>
         </div>
         <input class="input" name="tabs" type="radio" id="tab-4" />
-        <label class="label" for="tab-4" id="label4">Comprehensive Skill Evaluation</label>
+        <label class="label" for="tab-4" id="label4"
+          >Comprehensive Skill Evaluation</label
+        >
         <div class="panel">
           <p>
-            Assess a wide range of linguistic skills, including language fluency, comprehension,
-            communication, and cultural adaptability, to identify the most qualified candidates.</p>
+            Assess a wide range of linguistic skills, including language
+            fluency, comprehension, communication, and cultural adaptability, to
+            identify the most qualified candidates.
+          </p>
         </div>
-
       </div>
       <div class="know-more">
         <a>
-          <p>Know More > > > </p>
+          <p>Know More > > ></p>
         </a>
       </div>
     </div>
@@ -86,18 +108,27 @@
 </div>
 <!-- pointer section -->
 <div class="pointers">
-
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-6 d-flex align-items-center vector-left">
         <div class="content">
           <div class="faq-accordion">
             <div *ngFor="let faq of faqList; let i = index" class="faq-item">
-              <div class="faq-question"  [ngClass]="{'active': activeIndex === i}" (click)="toggleAccordion(i)">
-                <span class="toggle-icon">{{ activeIndex === i ? '-' : '+' }}</span>
+              <div
+                class="faq-question"
+                [ngClass]="{ active: activeIndex === i }"
+                (click)="toggleAccordion(i)"
+              >
+                <span class="toggle-icon">{{
+                  activeIndex === i ? "-" : "+"
+                }}</span>
                 <h3>{{ faq.question }}</h3>
               </div>
-              <div *ngIf="activeIndex === i" class="faq-answer" [ngClass]="{'open': activeIndex === i}">
+              <div
+                *ngIf="activeIndex === i"
+                class="faq-answer"
+                [ngClass]="{ open: activeIndex === i }"
+              >
                 <ul>
                   <li *ngFor="let item of faq.answerList">{{ item }}</li>
                 </ul>
@@ -107,8 +138,16 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 d-flex align-items-center justify-content-center vector-right">
-        <img width="550px" height="500px" [src]="selectedImage" class="img-fluid" alt="Right Image">
+      <div
+        class="col-md-6 d-flex align-items-center justify-content-center vector-right"
+      >
+        <img
+          width="550px"
+          height="500px"
+          [src]="selectedImage"
+          class="img-fluid"
+          alt="Right Image"
+        />
       </div>
     </div>
   </div>
@@ -118,19 +157,32 @@
   <!-- <button style="margin: 50px; padding: 10px" type="button" class="btn btn-primary" (click)="openPopup()">Show Data</button> -->
 
   <!-- Modal -->
-  <div class="modal custom-modal" tabindex="-1" role="dialog" [ngStyle]="{'display': displayStyle}">
+  <div
+    class="modal custom-modal"
+    tabindex="-1"
+    role="dialog"
+    [ngStyle]="{ display: displayStyle }"
+  >
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">Modal Title</h4>
-          <button type="button" class="close" aria-label="Close" (click)="closePopup()">
+          <button
+            type="button"
+            class="close"
+            aria-label="Close"
+            (click)="closePopup()"
+          >
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
           <p>Modal body content goes here.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa eligendi veniam ipsa adipisci aut incidunt
-            vel autem. Facere sequi recusandae enim doloremque qui, deserunt voluptatum omnis a dolores? Suscipit, eos!
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+            eligendi veniam ipsa adipisci aut incidunt vel autem. Facere sequi
+            recusandae enim doloremque qui, deserunt voluptatum omnis a dolores?
+            Suscipit, eos!
           </p>
         </div>
         <!-- <div class="modal-footer">
@@ -140,20 +192,13 @@
     </div>
   </div>
 
-
   <!-- -------------------------------------------------- -->
-
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-
-
-
-
 <!-- Footer Code Starts From Here -->
-
 
 <link
   rel="stylesheet"
@@ -385,7 +430,7 @@
   <div class="container pt-4 text-center">
     <section class="mb-4">
       <!-- Facebook -->
-      <a 
+      <a
         data-mdb-ripple-init
         class="btn btn-link btn-floating text-body m-1 random"
         target="_blank"
@@ -409,7 +454,7 @@
       <!-- Google -->
       <a
         data-mdb-ripple-init
-        class="btn btn-link btn-floating text-body m-1 random "
+        class="btn btn-link btn-floating text-body m-1 random"
         target="_blank"
         href="#!"
         role="button"
