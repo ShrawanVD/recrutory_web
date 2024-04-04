@@ -4,303 +4,315 @@
   rel="stylesheet"
 />
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  rel="stylesheet"
+/>
 
 <div class="background">
-<nav>
-  <div class="logo">
-    <img src="assets/logo.png" height="60px" width="200px" />
-  </div>
-  <div class="navbar-links">
-    <ul>
-      <li><a href="#">Why Recrutory ?</a></li>
-      <li>
-        <a href="#"
-          ><img src="assets/verbiq_logo.png" height="30px" width="85px"
-        /></a>
-      </li>
-      <li><a href="#">Global Insights</a></li>
-    </ul>
-  </div>
-</nav>
+  <nav>
+    <div class="logo">
+      <img src="assets/logo.png" height="60px" width="200px" />
+    </div>
+    <div class="navbar-links">
+      <ul>
+        <li><a href="#">Why Recrutory ?</a></li>
+        <li>
+          <a href="#"
+            ><img src="assets/verbiq_logo.png" height="30px" width="85px"
+          /></a>
+        </li>
+        <li><a href="#">Global Insights</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<div class="card">
-  <div class="left-side">
-    <h2>
-      Hi, I'm
-      <span class="words words-1">
-        <span>Abhilasha,</span>
-        <span>Shubham,</span>
-        <span>Aditya,</span>
-        <span>Suhas,</span>
-      </span>
-      <br />
-      Lets discuss your requirement
-    </h2>
-    <div class="divider"></div>
+  <div class="card">
+    <div class="left-side">
+      <h2>
+        Hi, I'm
+        <span class="words words-1">
+          <span>Abhilasha,</span>
+          <span>Shubham,</span>
+          <span>Aditya,</span>
+          <span>Suhas,</span>
+        </span>
+        <br />
+        Lets discuss your requirement
+      </h2>
+      <div class="divider"></div>
 
-    <!-- form details -->
+      <!-- form details -->
 
-    <form class="example-form" #formRef="ngForm">
-      <!-- <form
+      <form class="example-form" #formRef="ngForm">
+        <!-- <form
       class="example-form"
       #formRef="ngForm"
       (ngSubmit)="submitForm(formRef)"
     > -->
-      <!-- name and contact no -->
-      <div class="row">
-        <mat-form-field appearance="outline" class="example-full-width">
-          <mat-label>Name</mat-label>
-          <input matInput placeholder="Suhas Patil" value="" required />
-        </mat-form-field>
-        <mat-form-field appearance="outline" class="example-full-width">
-          <mat-label>Contact No</mat-label>
-          <input
-            matInput
-            type="number"
-            placeholder="9808888089"
-            value=""
-            required
-          />
-        </mat-form-field>
-      </div>
+        <!-- name and contact no -->
+        <div class="row">
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Suhas Patil" value="" required />
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Contact No</mat-label>
+            <input
+              matInput
+              type="number"
+              placeholder="9808888089"
+              value=""
+              required
+            />
+          </mat-form-field>
+        </div>
 
-      <!-- company name and email -->
-      <div class="row">
-        <mat-form-field appearance="outline" class="example-full-width">
-          <mat-label>Company Name</mat-label>
-          <input matInput placeholder="XYZ Pvt Ltd" value="" required />
-        </mat-form-field>
-        <mat-form-field appearance="outline" class="example-full-width">
-          <mat-label>Email</mat-label>
-          <input
-            matInput
-            type="email"
-            placeholder="xyz@gmail.com"
-            value=""
-            required
-          />
-        </mat-form-field>
-      </div>
+        <!-- company name and email -->
+        <div class="row">
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Company Name</mat-label>
+            <input matInput placeholder="XYZ Pvt Ltd" value="" required />
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input
+              matInput
+              type="email"
+              placeholder="xyz@gmail.com"
+              value=""
+              required
+            />
+          </mat-form-field>
+        </div>
 
-      <!-- languages section -->
-      <div class="languages-section">
-        <p>Languages resources that you require</p>
+        <!-- languages section -->
+        <div class="languages-section">
+          <p>Languages resources that you require</p>
 
-        <mat-chip-listbox aria-label="language selection" required multiple>
-          <mat-chip-option>French</mat-chip-option>
-          <mat-chip-option>German</mat-chip-option>
-          <mat-chip-option color="accent">Spanish</mat-chip-option>
-          <mat-chip-option color="warn">Dutch</mat-chip-option>
-          <mat-chip-option>Portuguese</mat-chip-option>
-          <mat-chip-option>Russian</mat-chip-option>
-          <mat-chip-option color="warn">Japanese</mat-chip-option>
-          <mat-chip-option color="warn">Mandarin</mat-chip-option>
-          <mat-chip-option color="accent">Korean</mat-chip-option>
-        </mat-chip-listbox>
-      </div>
+          <mat-chip-listbox aria-label="language selection" required multiple>
+            <mat-chip-option>French</mat-chip-option>
+            <mat-chip-option>German</mat-chip-option>
+            <mat-chip-option color="accent">Spanish</mat-chip-option>
+            <mat-chip-option color="warn">Dutch</mat-chip-option>
+            <mat-chip-option>Portuguese</mat-chip-option>
+            <mat-chip-option>Russian</mat-chip-option>
+            <mat-chip-option color="warn">Japanese</mat-chip-option>
+            <mat-chip-option color="warn">Mandarin</mat-chip-option>
+            <mat-chip-option color="accent">Korean</mat-chip-option>
+          </mat-chip-listbox>
+        </div>
 
-      <!-- grid options to add new languages -->
+        <!-- grid options to add new languages -->
 
-      <button
-        class="open-button-for-grid"
-        *ngIf="!showChipList"
-        (click)="toggleChipList()"
-        mat-raised-button
-      >
-        Add More languages?
-      </button>
+        <button
+          class="open-button-for-grid"
+          *ngIf="!showChipList"
+          (click)="toggleChipList()"
+          mat-raised-button
+        >
+          Add More languages?
+        </button>
 
-      <mat-form-field
-        class="example-chip-list input-grid"
-        appearance="outline"
-        *ngIf="showChipList"
-      >
-        <mat-label>Type your languages here if not in the list</mat-label>
-        <mat-chip-grid #chipGrid aria-label="Enter fruits" appearance="outline">
-          <mat-chip-row
-            *ngFor="let fruit of fruits"
-            (removed)="remove(fruit)"
-            [editable]="true"
-            (edited)="edit(fruit, $event)"
-            [aria-description]="'press enter to edit ' + fruit.name"
+        <mat-form-field
+          class="example-chip-list input-grid"
+          appearance="outline"
+          *ngIf="showChipList"
+        >
+          <mat-label>Type your languages here if not in the list</mat-label>
+          <mat-chip-grid
+            #chipGrid
+            aria-label="Enter fruits"
+            appearance="outline"
           >
-            {{ fruit.name }}
-            <button matChipRemove [attr.aria-label]="'remove ' + fruit.name">
-              <mat-icon>cancel</mat-icon>
-            </button>
-          </mat-chip-row>
-          <input
-            placeholder="Enter here"
-            [matChipInputFor]="chipGrid"
-            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-            [matChipInputAddOnBlur]="addOnBlur"
-            (matChipInputTokenEnd)="add($event)"
-          />
-        </mat-chip-grid>
-      </mat-form-field>
-
-      <button
-        class="close-button-for-grid"
-        (click)="toggleChipList()"
-        *ngIf="showChipList"
-        mat-raised-button
-      >
-        Submit
-      </button>
-
-      <!-- location and compensation -->
-      <div class="row">
-        <mat-form-field appearance="outline" class="example-full-width">
-          <mat-label>Location</mat-label>
-          <input
-            matInput
-            placeholder="For which location do you want to hire"
-            value=""
-            required
-          />
+            <mat-chip-row
+              *ngFor="let fruit of fruits"
+              (removed)="remove(fruit)"
+              [aria-description]="'press enter to edit ' + fruit.name"
+            >
+              {{ fruit.name }}
+              <button matChipRemove [attr.aria-label]="'remove ' + fruit.name">
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </mat-chip-row>
+            <input
+              placeholder="Enter here"
+              [matChipInputFor]="chipGrid"
+              [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+              [matChipInputAddOnBlur]="addOnBlur"
+              (matChipInputTokenEnd)="add($event)"
+            />
+          </mat-chip-grid>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" class="example-full-width">
-          <mat-label>Compensation Band (in LPA) </mat-label>
-          <mat-select name="ctc" required>
-            <mat-option>3.5LPA to 5LPA</mat-option>
-            <mat-option>5LPA to 6.5LPA</mat-option>
-            <mat-option>6.5LPA to 8LPA</mat-option>
-            <mat-option>Above 8LPA</mat-option>
+        <button
+          class="close-button-for-grid"
+          (click)="toggleChipList()"
+          *ngIf="showChipList"
+          mat-raised-button
+        >
+          Submit
+        </button>
+
+        <!-- location and compensation -->
+        <div class="row">
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Location</mat-label>
+            <input
+              matInput
+              placeholder="For which location do you want to hire"
+              value=""
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Compensation Band (in LPA) </mat-label>
+            <mat-select name="ctc" required>
+              <mat-option>3.5LPA to 5LPA</mat-option>
+              <mat-option>5LPA to 6.5LPA</mat-option>
+              <mat-option>6.5LPA to 8LPA</mat-option>
+              <mat-option>Above 8LPA</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <!-- Mode of working and role type -->
+        <div class="row">
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Mode of working</mat-label>
+            <mat-select name="mode" required>
+              <mat-option>Remote</mat-option>
+              <mat-option>Onsite</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Role Type</mat-label>
+            <input matInput placeholder="Specialist" value="" required />
+          </mat-form-field>
+        </div>
+
+        <!-- timeline and communication channel -->
+        <div class="row">
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Timeline for hiring</mat-label>
+            <input matInput placeholder="Urgent" value="" required />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Communication Channel</mat-label>
+            <input matInput placeholder="" value="" required />
+          </mat-form-field>
+        </div>
+
+        <!-- Type of employement -->
+        <mat-form-field
+          appearance="outline"
+          class="example-full-width"
+          id="employment-type"
+        >
+          <mat-label>Type of Employement (Optional)</mat-label>
+          <mat-select name="employmentType">
+            <mat-option>Full Time</mat-option>
+            <mat-option>Contractual</mat-option>
+            <mat-option>Part-time</mat-option>
           </mat-select>
         </mat-form-field>
-      </div>
 
-      <!-- Mode of working and role type -->
-      <div class="row">
-        <mat-form-field appearance="outline" class="example-full-width">
-          <mat-label>Mode of working</mat-label>
-          <mat-select name="mode" required>
-            <mat-option>Remote</mat-option>
-            <mat-option>Onsite</mat-option>
-          </mat-select>
-        </mat-form-field>
+        <!-- meeting button -->
 
-        <mat-form-field appearance="outline" class="example-full-width">
-          <mat-label>Role Type</mat-label>
-          <input matInput placeholder="Specialist" value="" required />
-        </mat-form-field>
-      </div>
+        <!-- <div class="row-calendar"> -->
 
-      <!-- timeline and communication channel -->
-      <div class="row">
-        <mat-form-field appearance="outline" class="example-full-width">
-          <mat-label>Timeline for hiring</mat-label>
-          <input matInput placeholder="Urgent" value="" required />
-        </mat-form-field>
+        <!-- https://calendly.com/shra1-jbs -->
 
-        <mat-form-field appearance="outline" class="example-full-width">
-          <mat-label>Communication Channel</mat-label>
-          <input matInput placeholder="" value="" required />
-        </mat-form-field>
-      </div>
-
-      <!-- Type of employement -->
-      <mat-form-field
-        appearance="outline"
-        class="example-full-width"
-        id="employment-type"
-      >
-        <mat-label>Type of Employement (Optional)</mat-label>
-        <mat-select name="employmentType">
-          <mat-option>Full Time</mat-option>
-          <mat-option>Contractual</mat-option>
-          <mat-option>Part-time</mat-option>
-        </mat-select>
-      </mat-form-field>
-
-
-
-      <!-- meeting button -->
-
-      
-
-      <div class="row-calendar">
         <!-- <mat-card class="demo-inline-calendar-card">
           <mat-calendar [(selected)]="selected" (selectedChange)="onDateSelected($event)"></mat-calendar>
         </mat-card> -->
 
-        <mat-form-field class="example-half-width" appearance="outline">
-          <mat-label>Choose a date</mat-label>
-          <input matInput [matDatepicker]="picker">
-          <mat-hint>MM/DD/YYYY</mat-hint>
-          <mat-datepicker-toggle matIconSuffix [for]="picker">
-            <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
-          </mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
-        
-  
-  
-        <mat-radio-group aria-label="Select an option" class="slots">
+        <!-- <mat-form-field
+            class="example-full-width date-picker"
+            appearance="outline"
+          >
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker" />
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker">
+              <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field> -->
+
+        <!-- <mat-radio-group aria-label="Select an option" class="slots">
           <mat-radio-button value="1">Option 1</mat-radio-button>
           <mat-radio-button value="2">Option 2</mat-radio-button>
           <mat-radio-button value="1">Option 1</mat-radio-button>
           <mat-radio-button value="2">Option 2</mat-radio-button>
-        </mat-radio-group>
+        </mat-radio-group> -->
+        <!-- <mat-checkbox
+            aria-label="Select an option"
+            class="slots"
+            [(ngModel)]="selectedOption"
+            [ngModelOptions]="{ standalone: true }"
+            *ngFor="let option of options"
+            [value]="option.value"
+          >
+            {{ option.label }}
+          </mat-checkbox>
+        </div> -->
+
+        <!-- submit button -->
+
+        <!-- <button mat-raised-button class="submit-button">Submit</button> -->
+
+        <div class="row-buttons">
+          <a
+            id="scheduleButton"
+            mat-raised-button
+            href="https://calendly.com/shra1-jbs"
+            color="primary"
+            class="meet-button example-full-width"
+            target="_blank"
+            [class.scheduled]="isMeetingScheduled"
+            >{{ isMeetingScheduled ? "Scheduled" : "Schedule a meeting" }}</a
+          >
+          <!-- <a
+            id="scheduleButton"
+            mat-raised-button
+            href="https://calendly.com/shra1-jbs"
+            color="primary"
+            class="meet-button example-full-width"
+            target="_blank"
+            [class.scheduled]="isMeetingScheduled"
+            (click)="scheduleMeeting()"
+            >{{ isMeetingScheduled ? "Scheduled" : "Schedule a meeting" }}</a
+          > -->
+
+          <button mat-raised-button>Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="image-container">
+      <img src="assets/Group487.png" alt="Your Image" />
+      <div class="text-overlay">
+        <p>
+          <i class="fas fa-home me-3" id="footer-address"></i>Corp. Off. No 16A,
+          Floor 2, Tower A, Downtown City Vista, Fountain Road, Ashoka Nagar,
+          Kharadi, Pune – 411014
+        </p>
+        <p>
+          <a
+            style="text-decoration: none; color: white"
+            href="mailto:hr@recrutory.com"
+            ><i class="fas fa-envelope me-3"></i>hr&#64;recrutory.com</a
+          >
+        </p>
+        <p><i class="fas fa-phone me-3"></i>+91 9373902341</p>
       </div>
-
-
-
-
-      <!-- submit button -->
-
-      <button mat-raised-button>Submit</button>
-
-      <div class="row-buttons">
-
-        <!-- <a  mat-raised-button href="https://www.google.com/" color="primary" class="meet-button example-full-width" target="_blank">Schedule a meeting</a> -->
-
-        <!-- <button
-          class="meet-button example-full-width"
-          color="primary"
-          (click)="showMeeting()"
-          *ngIf="!meetOpen"
-          mat-raised-button
-        >
-          Schedule a meeting
-        </button> -->
-
-
-        
-
-        <!-- meeting box -->
-
-        
-        <!-- <button mat-raised-button [disabled]="!isFormFilled">Submit</button>
-      <button mat-raised-button *ngIf="!isFormFilled" disabled>
-        Please fill the form
-      </button> -->
-      </div>
-    </form>
-  </div>
-
-  <div class="image-container">
-    <img src="assets/Group487.png" alt="Your Image" />
-    <div class="text-overlay">
-      <p>
-        <i class="fas fa-home me-3" id="footer-address"></i>Corp. Off. No 16A,
-        Floor 2, Tower A, Downtown City Vista, Fountain Road, Ashoka Nagar,
-        Kharadi, Pune – 411014
-      </p>
-      <p>
-        <a style="text-decoration: none; color: white;" href="mailto:hr@recrutory.com"><i class="fas fa-envelope me-3"></i>hr&#64;recrutory.com</a>
-      </p>
-      <p><i class="fas fa-phone me-3"></i>+91 9373902341</p>
     </div>
   </div>
-  
 </div>
-</div>
-
-
 
 <!-- Footer -->
 <footer

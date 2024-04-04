@@ -139,7 +139,7 @@ nav {
   position: absolute;
   bottom: 9%;
   left:0;
-  padding: 5px;
+  padding: 10px;
   width: 100%;
   color: white; /* Text color */
   box-sizing: border-box;
@@ -425,8 +425,19 @@ nav {
 
 /* alternate solution - on click display the boxes */
 
-.demo-inline-calendar-card {
-  width: 30%;
+.scheduled {
+  background-color: green !important; /* You might need !important to override MatButton's default styles */
+  pointer-events: none; /* Disable pointer events to prevent clicking */
+}
+
+
+
+
+/* submit button */
+
+.submit-button{
+  margin: 0 auto;
+  max-width: max-content;
 }
 
 

@@ -2,6 +2,7 @@ import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { ENTER, COMMA } from '@angular/cdk/keycodes';
 import { Component, OnInit, inject } from '@angular/core';
 import { MatChipInputEvent, MatChipEditedEvent } from '@angular/material/chips';
+import { CandidateService } from '../../services/candidate.service';
 
 
 interface Fruit {
@@ -29,6 +30,37 @@ showMeeting(){
 }
 
 
+
+// slots for meeting
+
+
+isMeetingScheduled: boolean = false;
+
+  scheduleMeeting() {
+    this.isMeetingScheduled = true;
+  }
+
+
+
+// isMeetingScheduled: boolean = false;
+
+//   constructor(private candidate: CandidateService) {}
+
+//   async scheduleMeeting() {
+//     // Simulating scheduling of the meeting
+//     // Here, you can put your actual scheduling logic
+
+//     // Call email service to send email
+//     try {
+//       await this.candidate.sendEmail();
+
+//       // After email is sent, set the flag to true
+//       this.isMeetingScheduled = true;
+//     } catch (error) {
+//       console.error('Failed to send email:', error);
+//     }
+//   }
+
 // for input-grid to add new languages
   addOnBlur = true;
   readonly separatorKeysCodes = [ENTER, COMMA] as const;
@@ -36,9 +68,8 @@ showMeeting(){
   announcer: any;
   selected: any;
 
-  constructor(){
-    // this.selected = new Date();
-  }
+
+ 
   onDateSelected(selectedDate: Date) {
     this.selected = selectedDate;
   }
@@ -70,21 +101,21 @@ showMeeting(){
     }
   }
 
-  edit(fruit: Fruit, event: MatChipEditedEvent) {
-    const value = event.value.trim();
+  // edit(fruit: Fruit, event: MatChipEditedEvent) {
+  //   const value = event.value.trim();
 
-    // Remove fruit if it no longer has a name
-    if (!value) {
-      this.remove(fruit);
-      return;
-    }
+  //   // Remove fruit if it no longer has a name
+  //   if (!value) {
+  //     this.remove(fruit);
+  //     return;
+  //   }
 
-    // Edit existing fruit
-    const index = this.fruits.indexOf(fruit);
-    if (index >= 0) {
-      this.fruits[index].name = value;
-    }
-  }
+  //   // Edit existing fruit
+  //   const index = this.fruits.indexOf(fruit);
+  //   if (index >= 0) {
+  //     this.fruits[index].name = value;
+  //   }
+  // }
 
 
 

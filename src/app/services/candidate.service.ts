@@ -12,4 +12,8 @@ export class CandidateService {
     return this.http.post('http://localhost:3000/candidate',data);
   }
 
+  // sendEmail(){
+
+  // }
+
 }
