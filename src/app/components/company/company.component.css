@@ -453,6 +453,16 @@ nav {
   .example-full-width, #employment-type {
     width: 100%;
   }
+  .row-buttons{
+    flex-direction: column;
+  }
+  .last-button{
+    max-width: max-content;
+  }
+  .last-button a{
+    width: 50%;
+    padding: 10px 5px;
+  }
 }
 
 
