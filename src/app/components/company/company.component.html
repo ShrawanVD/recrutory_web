@@ -4,6 +4,27 @@
   rel="stylesheet"
 />
 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+<div class="background">
+<nav>
+  <div class="logo">
+    <img src="assets/logo.png" height="60px" width="200px" />
+  </div>
+  <div class="navbar-links">
+    <ul>
+      <li><a href="#">Why Recrutory ?</a></li>
+      <li>
+        <a href="#"
+          ><img src="assets/verbiq_logo.png" height="30px" width="85px"
+        /></a>
+      </li>
+      <li><a href="#">Global Insights</a></li>
+    </ul>
+  </div>
+</nav>
+
 <div class="card">
   <div class="left-side">
     <h2>
@@ -195,50 +216,64 @@
         </mat-select>
       </mat-form-field>
 
+
+
       <!-- meeting button -->
 
       
 
+      <div class="row-calendar">
+        <!-- <mat-card class="demo-inline-calendar-card">
+          <mat-calendar [(selected)]="selected" (selectedChange)="onDateSelected($event)"></mat-calendar>
+        </mat-card> -->
+
+        <mat-form-field class="example-half-width" appearance="outline">
+          <mat-label>Choose a date</mat-label>
+          <input matInput [matDatepicker]="picker">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker">
+            <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+          </mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        
+  
+  
+        <mat-radio-group aria-label="Select an option" class="slots">
+          <mat-radio-button value="1">Option 1</mat-radio-button>
+          <mat-radio-button value="2">Option 2</mat-radio-button>
+          <mat-radio-button value="1">Option 1</mat-radio-button>
+          <mat-radio-button value="2">Option 2</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+
+
+
+      <!-- submit button -->
+
+      <button mat-raised-button>Submit</button>
+
       <div class="row-buttons">
 
-        <a  mat-raised-button href="https://www.google.com/" color="primary" class="meet-button example-full-width" target="_blank">Schedule a meeting</a>
+        <!-- <a  mat-raised-button href="https://www.google.com/" color="primary" class="meet-button example-full-width" target="_blank">Schedule a meeting</a> -->
 
         <!-- <button
           class="meet-button example-full-width"
           color="primary"
+          (click)="showMeeting()"
+          *ngIf="!meetOpen"
           mat-raised-button
         >
           Schedule a meeting
         </button> -->
 
-        <!-- <div ng-app="companyApp" ng-controller="CompanyController as vm">
-        <button mat-raised-button (click)="vm.toggleDialog()">Pick one</button>
 
-        <div ng-show="vm.dialogOpened" class="dialog">
-          <h1>Hi {{ vm.data.name }}</h1>
-          <div>
-            <p>What's your favorite animal?</p>
-            <mat-form-field>
-              <mat-label>Favorite Animal</mat-label>
-              <input matInput [(ngModel)]="vm.data.animal" />
-            </mat-form-field>
-          </div>
-          <div>
-            <button mat-button (click)="vm.onNoClick()">No Thanks</button>
-            <button
-              mat-button
-              [mat-dialog-close]="vm.data.animal"
-              cdkFocusInitial
-            >
-              Ok
-            </button>
-          </div>
-        </div>
-      </div> -->
+        
 
-        <!-- submit button -->
+        <!-- meeting box -->
 
-        <button mat-raised-button>Submit</button>
+        
         <!-- <button mat-raised-button [disabled]="!isFormFilled">Submit</button>
       <button mat-raised-button *ngIf="!isFormFilled" disabled>
         Please fill the form
@@ -247,7 +282,146 @@
     </form>
   </div>
 
-  <!-- <div class="right-side">
-    <img src="assets/Group487.png" alt="" />
-  </div> -->
+  <div class="image-container">
+    <img src="assets/Group487.png" alt="Your Image" />
+    <div class="text-overlay">
+      <p>
+        <i class="fas fa-home me-3" id="footer-address"></i>Corp. Off. No 16A,
+        Floor 2, Tower A, Downtown City Vista, Fountain Road, Ashoka Nagar,
+        Kharadi, Pune – 411014
+      </p>
+      <p>
+        <a style="text-decoration: none; color: white;" href="mailto:hr@recrutory.com"><i class="fas fa-envelope me-3"></i>hr&#64;recrutory.com</a>
+      </p>
+      <p><i class="fas fa-phone me-3"></i>+91 9373902341</p>
+    </div>
+  </div>
+  
 </div>
+</div>
+
+
+
+<!-- Footer -->
+<footer
+  class="text-center text-lg-start text-muted"
+  style="font-family: 'Poppins', sans-serif"
+>
+  <div class="text-center text-md-start m-5 p-4">
+    <!-- Grid row -->
+    <div class="row">
+      <!-- Grid column -->
+      <div class="col-lg-4 col-md-12 mb-5 mb-md-0 about-us">
+        <h6 class="text-uppercase fw-bold mb-4">About Us</h6>
+
+        <p class="footer-para-about-us">
+          Recrutory, powered by
+          <img class="logo-link" src="assets/verbiq_logo.png" alt="" /> AI,
+          specializes in the multilingual recruitment, global talent search, and
+          advanced assessment and screening. We connect businesses in India and
+          worldwide with top-tier professionals, leveraging our extensive
+          network and cutting-edge technology to ensure unparalleled talent
+          matches.
+        </p>
+      </div>
+      <!-- Grid column -->
+
+      <div
+        class="col-lg-4 col-md-12 mb-5 mb-md-0 quick-links about-us"
+        style="position: relative; right: -5rem"
+      >
+        <h6 class="text-uppercase fw-bold mb-4">Quick links</h6>
+        <p>
+          <a href="#!" class="text-reset text-decoration-none random"
+            ><img class="logo-link" src="assets/verbiq_logo.png" alt=""
+          /></a>
+        </p>
+        <p>
+          <a href="#!" class="text-reset text-decoration-none random">Blogs</a>
+        </p>
+        <p>
+          <a href="#!" class="text-reset text-decoration-none random"
+            >Media & Press Release</a
+          >
+        </p>
+      </div>
+
+      <!-- Grid column -->
+      <div class="col-lg-4 col-md-12 about-us">
+        <h6 class="text-uppercase fw-bold mb-4">Contact Us</h6>
+        <p>
+          <i class="fas fa-home me-3" id="footer-address"></i>Corp. Off. No 16A,
+          Floor 2, Tower A, Downtown City Vista, Fountain Road, Ashoka Nagar,
+          Kharadi, Pune – 411014
+        </p>
+        <p><i class="fas fa-envelope me-3"></i> hr&#64;recrutory.com</p>
+        <p><i class="fas fa-phone me-3"></i> +91 9373902341</p>
+      </div>
+      <!-- Grid column -->
+    </div>
+    <!-- Grid row -->
+  </div>
+
+  <div class="container pt-4 text-center">
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating text-body m-1 random"
+        target="_blank"
+        href="https://www.facebook.com/profile.php?id=61556404210113"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-facebook-f iconf"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating text-body m-1 random"
+        target="_blank"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><img width="22px" height="22px" src="assets/twitter.svg" />
+      </a>
+
+      <!-- Google -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating text-body m-1 random"
+        target="_blank"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><img width="15px" height="17px" src="assets/google.svg" />
+      </a>
+
+      <!-- Instagram -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating text-body m-1 random"
+        target="_blank"
+        href="https://www.instagram.com/recrutory/?hl=en"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-instagram iconinsta"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating text-body m-1 random"
+        target="_blank"
+        href="https://www.linkedin.com/company/recrutorycompany/"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-linkedin iconlinkdin"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+
+    <div class="text-center">&#64; 2024 TalentAxisPro Private Limited</div>
+  </div>
+</footer>
+<!-- Footer -->

@@ -16,14 +16,17 @@ interface Fruit {
 })
 export class CompanyComponent implements OnInit{
 
-  
 // button for visibility
 showChipList = false;
 toggleChipList() {
   this.showChipList = !this.showChipList;
 }
 
-
+// button for shwoing meeting box
+meetOpen = false;
+showMeeting(){
+  this.meetOpen = !this.meetOpen;
+}
 
 
 // for input-grid to add new languages
@@ -31,10 +34,20 @@ toggleChipList() {
   readonly separatorKeysCodes = [ENTER, COMMA] as const;
   fruits: Fruit[] = [];
   announcer: any;
+  selected: any;
+
+  constructor(){
+    // this.selected = new Date();
+  }
+  onDateSelected(selectedDate: Date) {
+    this.selected = selectedDate;
+  }
+ 
 
   ngOnInit(): void {
     console.log(this.fruits)
 }
+
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
 

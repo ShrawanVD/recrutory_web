@@ -1,35 +1,181 @@
+.background {
+  background-image: url("/assets/background.png");
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 0rem 5rem;
+  /* height: 150vh; */
+}
+
+nav {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  /* position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ffffff; */
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #61bdee;
+  padding-bottom: 5px;
+  color: #022b41;
+}
+.navbar-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem 0rem 0rem;
+}
+.navbar-links ul {
+  display: flex;
+  text-align: center;
+  align-items: baseline;
+}
+.navbar-links ul li {
+  list-style-type: none;
+  padding: 0rem 4rem;
+  font-family: "Poppins", sans-serif;
+}
+.navbar-links a {
+  text-decoration: none;
+  color: #022b41;
+}
+
+@media screen and (max-width: 692px) {
+  .navbar-links ul li {
+    padding: 0rem 2rem;
+  }
+}
+@media screen and (max-width: 497px) {
+  .navbar-links ul {
+    padding-left: 0px;
+  }
+  .navbar-links ul li {
+    padding: 0rem 0.8rem;
+  }
+}
+@media screen and (max-width: 397px) {
+  .navbar-links ul {
+    padding-left: 0px;
+  }
+  .navbar-links ul li {
+    padding: 0rem 0.5rem;
+
+  }
+}
+
+/* Apply styles for active link when clicked */
+.navbar-links ul li a:active,
+.navbar-links ul li a:hover {
+  padding: 0px 0px 10px;
+  border-bottom: 3px solid #022b41;
+  border-radius: 20%;
+}
+
+
+
+
+/* real content starts here */
+
 .card{
   background-color: whitesmoke;
   width: 80%;
-  height: fit-content;
-  margin: 7rem auto;
-  
-  border-radius: 16px;
+  /* height: 150vh; */
+  margin: 7rem auto 0rem;
+  border: none;
+  border-radius: 20px;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  padding-bottom: 3rem;
+
+}
+.card::before {
+  content: '';
+  border-left: 5px solid #90d1f4; /* Adjust the width and color as needed */
+  border-radius: 0 20px 20px 0; /* Adjust the border radius to match the card's border-radius */
 }
 
 /* image part */
 
-.right-side{
+.image-container {
+  flex: 1.5;
+  position: relative;
+  /* display: inline-block; */
+}
+
+.image-container img {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 104.5%;
+  border-top-right-radius: 20px; /* Adjust the radius value as needed */
+  border-bottom-right-radius: 20px; /* Adjust the radius value as needed */
+}
+
+@media screen and (max-width: 650px) {
+  .image-container{
+    display: none;
+  }
+}
+
+
+
+.text-overlay {
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  bottom: 9%;
+  left:0;
+  padding: 5px;
+  width: 100%;
+  color: white; /* Text color */
+  box-sizing: border-box;
+  
+}
+.text-overlay p{
+  text-align:  center;
+  line-height: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  
+  
+}
+
+
+/* .right-side{
   height: 90%;
 }
 
 .right-side img{
   margin-top: 2rem;
   height: 100%;
-  /* height: 111.4%; */
+  height: 111.4%;
   object-fit: cover;
   overflow: hidden;
-}
+} */
+
+
+
 
 
 /* content part */
 
 
 .left-side{
-  width: 80%;
+  flex: 3;
   margin: 4rem 1rem 1rem;
 }
 
@@ -175,9 +321,13 @@
   flex-direction: row;
 }
 
+
+
 .example-full-width {
   width: 50%;
 }
+
+
 
 
 .mat-form-field {
@@ -223,28 +373,6 @@
   /* padding: 10px; */
 }
 
-/* .open-button-for-grid{
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
-  border-radius: 10px;
-  max-width: 20%;
-  padding: 10px 5px;
-  color: black;
-  background: rgb(168,163,165);
-background: radial-gradient(circle, rgba(168,163,165,1) 6%, rgba(148,187,233,1) 100%);
-border: none;
-}
-.close-button-for-grid{
-  margin-bottom: 2rem;
-  margin-top: 0.5rem;
-  border-radius: 10px;
-  max-width: 20%;
-  padding: 10px;
-  color: black;
-  background: #a8a3a5;
-background: radial-gradient(circle, rgba(168,163,165,1) 6%, rgba(148,187,233,1) 100%);
-border: none;
-} */
 
 
 /* grid for adding more options: */
@@ -254,7 +382,7 @@ border: none;
 }
 
 #employment-type{
-  margin-right: 3rem;
+  /* margin-right: 3rem; */
   width: 49%;
 }
 
@@ -282,7 +410,7 @@ border: none;
 
 
 
-/* dialog box */
+/* dialog box for meeting */
 .dialog {
   border: 1px solid #ccc;
   padding: 20px;
@@ -292,3 +420,131 @@ border: none;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
+
+/* alternate solution - on click display the boxes */
+
+.demo-inline-calendar-card {
+  width: 30%;
+}
+
+
+
+
+@media screen and (max-width: 650px) {
+  .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .example-full-width, #employment-type {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer section */
+
+footer {
+  /* margin-top: -19rem; */
+  padding: 2rem 0;
+  background-color: #bce1eb;
+  font-size: 1rem;
+}
+
+.footer-para-about-us {
+  text-align: justify;
+  line-height: 1.5rem;
+}
+
+.about-us  h6{
+  font-size: 0.9rem;
+}
+
+.about-us p{
+  line-height: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.logo-link{
+  width: 3.5rem;
+  height: auto;
+  margin: 0 -3px 4px;
+  /* margin-bottom: 4px;
+  margin-left: -3px;
+  margin-right: -3px; */
+}
+
+.iconf {
+  color: #3b5998; /* Facebook blue */
+}
+.iconinsta {
+  color: #c13584; /* Instagram pink */
+}
+.iconlinkdin{
+  color: #0077b5;
+}
+
+@media screen and (max-width: 995px) {
+  .quick-links {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 772px) {
+  .about-us {
+    text-align: left;
+  }
+}
+
+
+
+/* hover effect */
+.random {
+  color: #54b3d6;
+  text-decoration: none;
+  position: relative;
+}
+
+.random::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.random:hover::after {
+  transform: scaleX(1);
+}
+
+#footer-address {
+  text-align: justify;
+}
+
