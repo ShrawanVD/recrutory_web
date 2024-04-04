@@ -26,6 +26,8 @@ import {MatChipEditedEvent, MatChipInputEvent} from '@angular/material/chips';
 import {MatIconModule} from '@angular/material/icon';
 import {NgFor} from '@angular/common';
 import {LiveAnnouncer} from '@angular/cdk/a11y';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 import {MatSelectModule} from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card';
@@ -61,6 +63,8 @@ import {NgIf} from '@angular/common';
     MatSelectModule,
     MatDialogModule,
     NgIf,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [
     provideClientHydration(),
@@ -69,5 +73,4 @@ import {NgIf} from '@angular/common';
   bootstrap: [AppComponent]
 })
 export class AppModule {
-
  }

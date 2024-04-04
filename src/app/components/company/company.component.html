@@ -21,7 +21,7 @@
 
     <!-- form details -->
 
-    <form class="example-form" #formRef="ngForm">
+    <form class="example-form" #formRef="ngForm" >
       <!-- <form
       class="example-form"
       #formRef="ngForm"
@@ -31,7 +31,7 @@
       <div class="row">
         <mat-form-field appearance="outline" class="example-full-width">
           <mat-label>Name</mat-label>
-          <input matInput placeholder="Suhas Patil" value="" required />
+          <input matInput placeholder="Suhas Patil" value="" required [(ngModel)]="name" name="name"/>
         </mat-form-field>
         <mat-form-field appearance="outline" class="example-full-width">
           <mat-label>Contact No</mat-label>
@@ -41,6 +41,7 @@
             placeholder="9808888089"
             value=""
             required
+            [(ngModel)]="contactno" name="contactno"
           />
         </mat-form-field>
       </div>
@@ -49,7 +50,7 @@
       <div class="row">
         <mat-form-field appearance="outline" class="example-full-width">
           <mat-label>Company Name</mat-label>
-          <input matInput placeholder="XYZ Pvt Ltd" value="" required />
+          <input matInput placeholder="XYZ Pvt Ltd" value="" required [(ngModel)]="companyName" name="companyName"/>
         </mat-form-field>
         <mat-form-field appearance="outline" class="example-full-width">
           <mat-label>Email</mat-label>
@@ -59,6 +60,7 @@
             placeholder="xyz@gmail.com"
             value=""
             required
+            [(ngModel)]="email" name="email"
           />
         </mat-form-field>
       </div>
@@ -67,22 +69,33 @@
       <div class="languages-section">
         <p>Languages resources that you require</p>
 
-        <mat-chip-listbox aria-label="language selection" required multiple>
-          <mat-chip-option>French</mat-chip-option>
-          <mat-chip-option>German</mat-chip-option>
-          <mat-chip-option color="accent">Spanish</mat-chip-option>
-          <mat-chip-option color="warn">Dutch</mat-chip-option>
-          <mat-chip-option>Portuguese</mat-chip-option>
-          <mat-chip-option>Russian</mat-chip-option>
-          <mat-chip-option color="warn">Japanese</mat-chip-option>
-          <mat-chip-option color="warn">Mandarin</mat-chip-option>
-          <mat-chip-option color="accent">Korean</mat-chip-option>
+        <mat-chip-listbox aria-label="language selection" required multiple [(ngModel)]="language" name="language">
+          <mat-chip-option value="French">French</mat-chip-option>
+          <mat-chip-option value="German">German</mat-chip-option>
+          <mat-chip-option color="accent" value="Spanish">Spanish</mat-chip-option>
+          <mat-chip-option color="warn" value="Dutch">Dutch</mat-chip-option>
+          <mat-chip-option value="Portuguese">Portuguese</mat-chip-option>
+          <mat-chip-option value="Russian">Russian</mat-chip-option>
+          <mat-chip-option color="warn" value="Japanese">Japanese</mat-chip-option>
+          <mat-chip-option color="warn" value="Mandarin">Mandarin</mat-chip-option>
+          <mat-chip-option color="accent" value="Korean" >Korean</mat-chip-option>
         </mat-chip-listbox>
       </div>
 
       <!-- grid options to add new languages -->
 
-      <button
+      <mat-form-field appearance="outline" class="example-full-width addLanguage">
+        <mat-label>Add Additional Languages</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Type Your Language"
+          value=""
+          [(ngModel)]="additionalLanguage" name="additionalLanguage"
+        />
+      </mat-form-field>
+
+      <!-- <button
         class="open-button-for-grid"
         *ngIf="!showChipList"
         (click)="toggleChipList()"
@@ -101,25 +114,26 @@
           <mat-chip-row
             *ngFor="let fruit of fruits"
             (removed)="remove(fruit)"
-            [editable]="true"
-            (edited)="edit(fruit, $event)"
-            [aria-description]="'press enter to edit ' + fruit.name"
+            [aria-description]="'press enter to edit ' + fruit.language"
           >
-            {{ fruit.name }}
-            <button matChipRemove [attr.aria-label]="'remove ' + fruit.name">
+            {{ fruit.language }}
+            <button matChipRemove [attr.aria-label]="'remove ' + fruit.language">
               <mat-icon>cancel</mat-icon>
             </button>
           </mat-chip-row>
           <input
+            [(ngModel)]="additionalLanguage"
+            name="additionalLanguage"
             placeholder="Enter here"
             [matChipInputFor]="chipGrid"
             [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
             [matChipInputAddOnBlur]="addOnBlur"
             (matChipInputTokenEnd)="add($event)"
+
           />
         </mat-chip-grid>
-      </mat-form-field>
-
+      </mat-form-field> -->
+<!-- 
       <button
         class="close-button-for-grid"
         (click)="toggleChipList()"
@@ -127,7 +141,7 @@
         mat-raised-button
       >
         Submit
-      </button>
+      </button> -->
 
       <!-- location and compensation -->
       <div class="row">
@@ -138,16 +152,17 @@
             placeholder="For which location do you want to hire"
             value=""
             required
+            [(ngModel)]="location" name="location"
           />
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="example-full-width">
           <mat-label>Compensation Band (in LPA) </mat-label>
-          <mat-select name="ctc" required>
-            <mat-option>3.5LPA to 5LPA</mat-option>
-            <mat-option>5LPA to 6.5LPA</mat-option>
-            <mat-option>6.5LPA to 8LPA</mat-option>
-            <mat-option>Above 8LPA</mat-option>
+          <mat-select name="ctc" required [(ngModel)]="compensationBand" name="compensationBand">
+            <mat-option value="3.5LPA to 5LPA">3.5LPA to 5LPA</mat-option>
+            <mat-option value="5LPA to 6.5LPA">5LPA to 6.5LPA</mat-option>
+            <mat-option value="6.5LPA to 8LPA">6.5LPA to 8LPA</mat-option>
+            <mat-option value="Above 8LPA">Above 8LPA</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
@@ -156,15 +171,15 @@
       <div class="row">
         <mat-form-field appearance="outline" class="example-full-width">
           <mat-label>Mode of working</mat-label>
-          <mat-select name="mode" required>
-            <mat-option>Remote</mat-option>
-            <mat-option>Onsite</mat-option>
+          <mat-select name="mode" required [(ngModel)]="workingMode" name="workingMode">
+            <mat-option value="Remote">Remote</mat-option>
+            <mat-option value="Onsite">Onsite</mat-option>
           </mat-select>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="example-full-width">
           <mat-label>Role Type</mat-label>
-          <input matInput placeholder="Specialist" value="" required />
+          <input matInput placeholder="Specialist" value="" required [(ngModel)]="roleType" name="roleType"/>
         </mat-form-field>
       </div>
 
@@ -172,12 +187,12 @@
       <div class="row">
         <mat-form-field appearance="outline" class="example-full-width">
           <mat-label>Timeline for hiring</mat-label>
-          <input matInput placeholder="Urgent" value="" required />
+          <input matInput placeholder="Urgent" value="" required [(ngModel)]="hiringTimeline" name="hiringTimeline"/>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="example-full-width">
           <mat-label>Communication Channel</mat-label>
-          <input matInput placeholder="" value="" required />
+          <input matInput placeholder="" value="" required [(ngModel)]="communicationChannel" name="communicationChannel"/>
         </mat-form-field>
       </div>
 
@@ -188,15 +203,20 @@
         id="employment-type"
       >
         <mat-label>Type of Employement (Optional)</mat-label>
-        <mat-select name="employmentType">
-          <mat-option>Full Time</mat-option>
-          <mat-option>Contractual</mat-option>
-          <mat-option>Part-time</mat-option>
+        <mat-select [(ngModel)]="employementType" name="employementType">
+          <mat-option value="full-time">Full Time</mat-option>
+          <mat-option value="contractual">Contractual</mat-option>
+          <mat-option value="part-time">Part-time</mat-option>
         </mat-select>
       </mat-form-field>
 
       <!-- meeting button -->
-
+      <!-- <mat-form-field class="example-full-width">
+        <mat-label>Select a Date</mat-label>
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="appointmentDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field> -->
       
 
       <div class="row-buttons">
@@ -238,7 +258,7 @@
 
         <!-- submit button -->
 
-        <button mat-raised-button>Submit</button>
+        <button mat-raised-button (click)="onSubmit()" >Submit</button>
         <!-- <button mat-raised-button [disabled]="!isFormFilled">Submit</button>
       <button mat-raised-button *ngIf="!isFormFilled" disabled>
         Please fill the form
