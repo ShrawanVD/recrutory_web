@@ -9,6 +9,11 @@ import { CandidateformComponent } from './components/candidateform/candidateform
 import { OverlayComponent } from './components/overlay/overlay.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { CompanyComponent } from './components/company/company.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatIconModule} from '@angular/material/icon';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,12 @@ import { CompanyComponent } from './components/company/company.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    MatDialogModule,
+    MatIconModule,
+    MatSnackBarModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration(),

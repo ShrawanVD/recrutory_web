@@ -1,5 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { CandidateformComponent } from '../candidateform/candidateform.component';
+import { OverlayComponent } from '../overlay/overlay.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +10,7 @@ import { CandidateformComponent } from '../candidateform/candidateform.component
 })
 
 
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, AfterViewInit {
 
   @ViewChild(CandidateformComponent) candidateFormRef!: CandidateformComponent;
   // handleClick(event: MouseEvent): void {
@@ -25,7 +27,7 @@ export class HeaderComponent implements OnInit {
   //   }
   //   event.stopPropagation();
   // }
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.selectedImage = this.faqList[this.activeIndex].image;
@@ -126,4 +128,16 @@ export class HeaderComponent implements OnInit {
   closePopup() { 
     this.displayStyle = "none"; 
   } 
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(OverlayComponent, {
+      height: '70vh', 
+      width: '100vw' 
+      
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 }

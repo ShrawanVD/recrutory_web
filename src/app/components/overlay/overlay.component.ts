@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
     selector: 'app-overlay',
@@ -11,7 +12,7 @@ export class OverlayComponent {
     @ViewChild('scrollingWrapper') scrollingWrapper!: ElementRef;
     colors: string[] = ['#FF5733', '#33FFA8', '#3355FF', '#FF33E9', '#FFE333'];
   
-    constructor() {}
+    constructor(public dialogRef: MatDialogRef<OverlayComponent>) {}
   
     onVerticalScroll(event: WheelEvent) {
       const scrollingWrapperElement = this.scrollingWrapper.nativeElement as HTMLElement;
@@ -21,6 +22,10 @@ export class OverlayComponent {
         scrollingWrapperElement.scrollLeft -= 100; // Adjust the scroll distance as needed
       }
       event.preventDefault();
+    }
+
+    onClose(): void {
+      this.dialogRef.close();
     }
 
 }

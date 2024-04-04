@@ -1,5 +1,7 @@
 <div class="container">
-  <h2>Horizontal Color Scroll</h2>
+  <button mat-icon-button class="close-button" (click)="onClose()">
+    <mat-icon>close</mat-icon>
+  </button>
   <div class="scrolling-wrapper" #scrollingWrapper>
     <div class="card" *ngFor="let color of colors" [ngStyle]="{'background-color': color}"></div>
   </div>

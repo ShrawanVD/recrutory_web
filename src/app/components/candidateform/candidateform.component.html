@@ -20,13 +20,13 @@
     </div>
     <div class="row clearfix">
       <div class="">
-        <form action="https://backendrecrutory.onrender.com/candidate" method="post">
+        <form [formGroup]="candidateForm" (ngSubmit)="onSubmit()">
           <!-- first and last name -->
           <div class="row clearfix">
             <div class="col_half">
               <div class="input_field">
                 <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                <input type="text" name="firstname" placeholder="First Name" />
+                <input type="text" formControlName="firstname" placeholder="First Name" />
               </div>
             </div>
             <div class="col_half">
@@ -34,7 +34,7 @@
                 <span><i aria-hidden="true" class="fa fa-user"></i></span>
                 <input
                   type="text"
-                  name="lastname"
+                  formControlName="lastname"
                   placeholder="Last Name"
                   required
                 />
@@ -47,7 +47,7 @@
             <div class="col_half">
               <div class="input_field">
                 <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
-                <input type="email" name="email" placeholder="Email" required />
+                <input type="email" formControlName="email" placeholder="Email" required />
               </div>
             </div>
             <div class="col_half">
@@ -55,7 +55,7 @@
                 <span><i aria-hidden="true" class="fa fa-phone"></i></span>
                 <input
                   type="number"
-                  name="mobile"
+                  formControlName="mobile"
                   placeholder="Contact No"
                   required
                 />
@@ -70,7 +70,7 @@
                 <span><i aria-hidden="true" class="fa fa-location"></i></span>
                 <input
                   type="text"
-                  name="currentLocation"
+                  formControlName="currentLocation"
                   placeholder="Current Location"
                   required
                 />
@@ -81,7 +81,7 @@
                 <span><i aria-hidden="true" class="fa fa-building"></i></span>
                 <input
                   type="text"
-                  name="companyname"
+                  formControlName="companyname"
                   placeholder="Current Company"
                 />
               </div>
@@ -95,7 +95,7 @@
                 <span><i aria-hidden="true" class="fa fa-tasks"></i></span>
                 <input
                   type="text"
-                  name="role"
+                  formControlName="role"
                   placeholder="Current Role"
                   required
                 />
@@ -106,7 +106,7 @@
                 <span><i aria-hidden="true" class="fa fa-inr"></i></span>
                 <input
                   type="number"
-                  name="ctc"
+                  formControlName="ctc"
                   placeholder="Current CTC"
                   required
                 />
@@ -128,7 +128,7 @@
               <input
                 type="checkbox"
                 id="russian"
-                name="languages[]"
+                formControlName="languages[]"
                 value="russian"
               />
               <label for="russian">Russian</label>
@@ -137,7 +137,7 @@
               <input
                 type="checkbox"
                 id="Portuguese"
-                name="languages[]"
+                formControlName="languages[]"
                 value="Portuguese"
               />
               <label for="Portuguese">Portuguese</label>
@@ -146,7 +146,7 @@
               <input
                 type="checkbox"
                 id="Dutch"
-                name="languages[]"
+                formControlName="languages[]"
                 value="Dutch"
               />
               <label for="Dutch">Dutch</label>
@@ -164,7 +164,7 @@
               <input
                 type="checkbox"
                 id="Hindi"
-                name="languages[]"
+                formControlName="languages[]"
                 value="Hindi"
               />
               <label for="Hindi">Hindi</label>
@@ -173,7 +173,7 @@
               <input
                 type="checkbox"
                 id="Sanskrit"
-                name="languages[]"
+                formControlName="languages[]"
                 value="Sanskrit"
               />
               <label for="Sanskrit">Sanskrit</label>
@@ -182,7 +182,7 @@
               <input
                 type="checkbox"
                 id="Italian"
-                name="languages[]"
+                formControlName="languages[]"
                 value="Italian"
               />
               <label for="Italian">Italian</label>
@@ -191,7 +191,7 @@
               <input
                 type="checkbox"
                 id="Arabic"
-                name="languages[]"
+                formControlName="languages[]"
                 value="Arabic"
               />
               <label for="Arabic">Arabic</label>
@@ -200,7 +200,7 @@
               <input
                 type="checkbox"
                 id="Korean"
-                name="languages[]"
+                formControlName="languages[]"
                 value="Korean"
               />
               <label for="Korean">Korean</label>
@@ -209,7 +209,7 @@
               <input
                 type="checkbox"
                 id="Mandarin"
-                name="languages[]"
+                formControlName="languages[]"
                 value="Mandarin"
               />
               <label for="Mandarin">Mandarin</label>
@@ -218,7 +218,7 @@
               <input
                 type="checkbox"
                 id="Japanese"
-                name="languages[]"
+                formControlName="languages[]"
                 value="Japanese"
               />
               <label for="Japanese">Japanese</label>
@@ -227,7 +227,7 @@
               <input
                 type="checkbox"
                 id="French"
-                name="languages[]"
+                formControlName="languages[]"
                 value="French"
               />
               <label for="French">French</label>
@@ -236,7 +236,7 @@
               <input
                 type="checkbox"
                 id="Spanish"
-                name="languages[]"
+                formControlName="languages[]"
                 value="Spanish"
               />
               <label for="Spanish">Spanish</label>
@@ -245,7 +245,7 @@
               <input
                 type="checkbox"
                 id="German"
-                name="languages[]"
+                formControlName="languages[]"
                 value="German"
               />
               <label for="German">German</label>
@@ -266,7 +266,7 @@
               <input
                 type="checkbox"
                 id="certificate"
-                name="proficiency[]"
+                formControlName="proficiency[]"
                 value="certificate"
               />
               <label for="certificate">Globally recongnised certificate</label>
@@ -275,7 +275,7 @@
               <input
                 type="checkbox"
                 id="Undergraduate"
-                name="proficiency[]"
+                formControlName="proficiency[]"
                 value="Undergraduate"
               />
               <label for="Undergraduate">Undergraduate (B.A)</label>
@@ -284,7 +284,7 @@
               <input
                 type="checkbox"
                 id="Post"
-                name="proficiency[]"
+                formControlName="proficiency[]"
                 value="Post"
               />
               <label for="Post">Post Graduation (M.A)</label>
@@ -293,7 +293,7 @@
               <input
                 type="checkbox"
                 id="Diploma"
-                name="proficiency[]"
+                formControlName="proficiency[]"
                 value="Diploma"
               />
               <label for="Diploma">Diploma</label>
@@ -306,7 +306,7 @@
               <input
                 type="checkbox"
                 id="Native"
-                name="proficiency[]"
+                formControlName="proficiency[]"
                 value="Native"
               />
               <label for="Native">Native Speaker</label>
@@ -323,8 +323,7 @@
             >
             <textarea
               id="answer1"
-              name="Briefly describe your previous role in terms of client support
-              role, If yes, Describe Briefly."
+              formControlName="ans1"
               placeholder="Your answer goes here..."
               value="answer1"
               required
@@ -339,8 +338,7 @@
             >
             <textarea
               id="answer2"
-              name="Methods for staying updated with language changes and
-              developments"
+              formControlName="ans2"
               value="answer2"
               placeholder="Your answer goes here..."
               required
@@ -356,9 +354,7 @@
             >
             <textarea
               id="answer3"
-              name="Are you familiar with different dialects or regional variations
-              of the languages you speak? Can you understand and communicate
-              effectively in these variations?"
+              formControlName="ans3"
               placeholder="Your answer goes here..."
               value="answer3"
               required
@@ -373,8 +369,7 @@
             >
             <textarea
               id="answer4"
-              name="What tools or resources do you use to aid in translation or
-              language-related tasks"
+              formControlName="ans4"
               value="answer4"
               placeholder="Your answer goes here..."
               required
@@ -389,8 +384,7 @@
             >
             <textarea
               id="answer5"
-              name="Can you explain complex grammatical concepts in the languages
-              you're proficient in?"
+              formControlName="ans5"
               placeholder="Your answer goes here..."
               value="answer5"
               required
@@ -406,9 +400,7 @@
             >
             <textarea
               id="answer6"
-              name="Are you proficient in any specialization such as customer support
-              legal, medical, technical, or literary translation?  Please
-              describe your proficiency pertaining to the domain in brief"
+              formControlName="ans6"
               value="answer6"
               placeholder="Your answer goes here..."
               required
@@ -424,9 +416,7 @@
             >
             <textarea
               id="answer7"
-              name="Can you demonstrate your proficiency in the languages you claim
-              to speak by engaging in a conversation with a native to provide a
-              simple translation or interpretation?"
+              formControlName="ans7"
               placeholder="Your answer goes here..."
               value="answer7"
               required
@@ -435,7 +425,7 @@
 
           <!-- submit button -->
 
-          <input class="button" type="submit" value="Register" />
+          <input class="button" type="submit" value="Register"/>
         </form>
       </div>
     </div>
