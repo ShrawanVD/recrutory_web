@@ -83,7 +83,6 @@ isMeetingScheduled: boolean = false;
   announcer: any;
   selected: any;
 
-
  
   onDateSelected(selectedDate: Date) {
     this.selected = selectedDate;
@@ -94,14 +93,6 @@ isMeetingScheduled: boolean = false;
 
 
   ngOnInit(): void {
-    // this.showChipList = false;
-    // localStorage.clear();
-    // this.fruits = [];
-    // const savedFruits = localStorage.getItem('fruits');
-    // if (savedFruits) {
-    //   this.fruits = JSON.parse(savedFruits);
-    // }
-    console.log(this.additionalLanguage)
   }
 
   toggleChipList() {
@@ -163,27 +154,36 @@ isMeetingScheduled: boolean = false;
       communicationChannel: this.communicationChannel,
       employementType: this.employementType,
     }
-    console.log(data);
-    this.candidate.companyForm(data).subscribe({
-      next: (val: any) => {
-        this._snackBar.open('Form Submitted Successfully', 'Close', {
-          duration: 3000,
-        });
-        window.location.reload();
-      },
-      error: (err: any) => {
-        const config = new MatSnackBarConfig();
-        config.duration = 1000;
-        config.verticalPosition = 'top'; 
-        config.panelClass = ['custom-snackbar']; 
-        this._snackBar.open('Form Submitted Successfully', 'Close', config);
-        setTimeout(() => {
+    if(data.compensationBand){
+      const config = new MatSnackBarConfig();
+          config.duration = 1000;
+          config.verticalPosition = 'top'; 
+          config.panelClass = ['custom-snackbar']; 
+          this._snackBar.open('Form Submitted Successfully', 'Close', config);
+          setTimeout(() => {
+            this.router.navigate(['']);
+          }, 1500);
+
+      this.candidate.companyForm(data).subscribe({
+        next: (val: any) => {
+          this._snackBar.open('Form Submitted Successfully', 'Close', {
+            duration: 3000,
+          });
           window.location.reload();
-        }, 1000);
-        this.router.navigate(['']);
-        // console.error(err);
-      }
-    })
+        },
+        error: (err: any) => {
+          
+        }
+      })
+    }
+    else{
+      const config = new MatSnackBarConfig();
+      config.duration = 1000;
+      config.verticalPosition = 'top'; 
+      config.panelClass = ['custom-snackbar']; 
+      this._snackBar.open('Please Fill The Form', 'Close', config);
+    }
+
   }
 
 
