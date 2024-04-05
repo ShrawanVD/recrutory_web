@@ -107,7 +107,7 @@
 
         <!-- grid options to add new languages -->
 
-      <mat-form-field appearance="outline" class="example-full-width addLanguage">
+      <!-- <mat-form-field appearance="outline" class="example-full-width addLanguage">
         <mat-label>Add Additional Languages</mat-label>
         <input
           matInput
@@ -117,40 +117,32 @@
           [(ngModel)]="additionalLanguage"
           name="additionalLanguage"
         />
-      </mat-form-field>
-
-      <!-- <button
-        class="open-button-for-grid"
-        *ngIf="!showChipList"
-        (click)="toggleChipList()"
-      >
-        Add More languages?
-      </button>
-
-              <mat-icon>cancel</mat-icon>
-            </button>
-          </mat-chip-row>
-          <input
-            [(ngModel)]="additionalLanguage"
-            name="additionalLanguage"
-            placeholder="Enter here"
-            [matChipInputFor]="chipGrid"
-            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-            [matChipInputAddOnBlur]="addOnBlur"
-            (matChipInputTokenEnd)="add($event)"
-
-          />
-        </mat-chip-grid>
       </mat-form-field> -->
-<!-- 
-      <button
-        class="close-button-for-grid"
-        (click)="toggleChipList()"
-        *ngIf="showChipList"
-        mat-raised-button
-      >
-        Submit
-      </button> -->
+
+      <mat-form-field class="example-chip-list addLanguage">
+        <mat-label>Add Additional Language, If not in the List</mat-label>
+        <mat-chip-grid #chipGrid aria-label="Enter fruits">
+          @for (fruit of fruits; track fruit) {
+            <mat-chip-row
+              (removed)="remove(fruit)"
+              [editable]="true"
+              (edited)="edit(fruit, $event)"
+              [aria-description]="'press enter to edit ' + fruit.name">
+              {{fruit.name}}
+              <button matChipRemove [attr.aria-label]="'remove ' + fruit.name">
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </mat-chip-row>
+          }
+          <input placeholder="Add Languages....."
+                 [matChipInputFor]="chipGrid"
+                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                 [matChipInputAddOnBlur]="addOnBlur"
+                 (matChipInputTokenEnd)="add($event)"
+                 [(ngModel)]="additionalLanguage"
+                 name="additionalLanguage" />
+        </mat-chip-grid>
+      </mat-form-field>
 
       <!-- location and compensation -->
       <div class="row">

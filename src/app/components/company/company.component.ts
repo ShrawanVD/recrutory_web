@@ -7,7 +7,7 @@ import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 
 
 interface Fruit {
-  language: string;
+  name: string;
 }
 
 
@@ -23,7 +23,7 @@ export class CompanyComponent implements OnInit {
   companyName: string = '';
   email: string = '';
   language: string[] = [];
-  additionalLanguage: string = '' ;
+  additionalLanguage: any ;
   location: string = '';
   compensationBand: string = '';
   workingMode: string = '';
@@ -100,46 +100,51 @@ isMeetingScheduled: boolean = false;
     // if (savedFruits) {
     //   this.fruits = JSON.parse(savedFruits);
     // }
+    console.log(this.additionalLanguage)
   }
 
-  // toggleChipList() {
-  //   this.showChipList = !this.showChipList
-  //   this.saveFruits();
-  //   const savedFruits = localStorage.getItem('fruits');
-  //   if (savedFruits) {
-  //     this.fruits = JSON.parse(savedFruits);
-  //   }
-  //   console.log(savedFruits);
-  //   this.additionalLanguage = savedFruits;
-  // }
+  toggleChipList() {
+    this.showChipList = !this.showChipList
+  }
 
-  // add(event: MatChipInputEvent): void {
-  //   const value = (event.value || '').trim();
+  add(event: MatChipInputEvent): void {
+    const value = (event.value || '').trim();
 
-  //   // Add the new fruit
-  //   if (value) {
-  //     this.fruits.push({ language: value });
-  //     this.saveFruits();
-  //   }
+    // Add our fruit
+    if (value) {
+      this.fruits.push({name: value});
+    }
 
-  //   // Clear the input value
-  //   event.chipInput!.clear();
-  // }
+    // Clear the input value
+    event.chipInput!.clear();
+  }
 
-  // remove(fruit: Fruit): void {
-  //   const index = this.fruits.indexOf(fruit);
+  remove(fruit: Fruit): void {
+    const index = this.fruits.indexOf(fruit);
 
-  //   if (index >= 0) {
-  //     this.fruits.splice(index, 1);
+    if (index >= 0) {
+      this.fruits.splice(index, 1);
 
-  //     this.announcer.announce(`Removed ${fruit}`);
-  //     this.saveFruits();
-  //   }
-  // }
+      this.announcer.announce(`Removed ${fruit}`);
+    }
+  }
 
-  // saveFruits(): void {
-  //   localStorage.setItem('fruits', JSON.stringify(this.fruits));
-  // }
+  edit(fruit: Fruit, event: MatChipEditedEvent) {
+    const value = event.value.trim();
+
+    // Remove fruit if it no longer has a name
+    if (!value) {
+      this.remove(fruit);
+      return;
+    }
+
+    // Edit existing fruit
+    const index = this.fruits.indexOf(fruit);
+    if (index >= 0) {
+      this.fruits[index].name = value;
+    }
+  }
+
 
   onSubmit() {
     const data = {
@@ -148,7 +153,7 @@ isMeetingScheduled: boolean = false;
       companyName: this.companyName,
       email: this.email,
       language: this.language,
-      additionalLanguage: this.additionalLanguage,
+      additionalLanguage: this.fruits,
       location: this.location,
       compensationBand: this.compensationBand,
       workingMode: this.workingMode,
@@ -171,9 +176,9 @@ isMeetingScheduled: boolean = false;
         config.verticalPosition = 'top'; 
         config.panelClass = ['custom-snackbar']; 
         this._snackBar.open('Form Submitted Successfully', 'Close', config);
-        setTimeout(() => {
-          window.location.reload();
-        }, 1000);
+        // setTimeout(() => {
+        //   window.location.reload();
+        // }, 1000);
         // console.error(err);
       }
     })
