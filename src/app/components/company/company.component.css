@@ -1,13 +1,13 @@
-.background {
+/* .background {
   background-image: url("/assets/background.png");
   background-size: cover;
   background-position: center;
   height: auto;
   justify-content: center;
   align-items: center;
-  padding: 0rem 0rem 5rem;
+  padding: 0rem 0rem 5rem; */
   /* height: 150vh; */
-}
+/* } */
 
 nav {
   text-align: center;
@@ -90,7 +90,7 @@ nav {
 /* real content starts here */
 
 .card{
-  background-color: whitesmoke;
+  background-color: white;
   width: 80%;
   /* height: 150vh; */
   margin: 7rem auto 0rem;
@@ -102,11 +102,11 @@ nav {
   padding-bottom: 3rem;
 
 }
-.card::before {
+/* .card::before {
   content: '';
-  border-left: 5px solid #90d1f4; /* Adjust the width and color as needed */
-  border-radius: 0 20px 20px 0; /* Adjust the border radius to match the card's border-radius */
-}
+  border-left: 5px solid #90d1f4; 
+  border-radius: 0 20px 20px 0; 
+} */
 
 /* image part */
 
@@ -120,7 +120,7 @@ nav {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 104.5%;
+  height: 105.4%;
   border-top-right-radius: 20px; /* Adjust the radius value as needed */
   border-bottom-right-radius: 20px; /* Adjust the radius value as needed */
 }
@@ -352,6 +352,7 @@ nav {
   font-family: "Poppins", sans-serif;
 }
 
+
 .example-chip-list {
   width: 100%;
 }
@@ -427,6 +428,10 @@ nav {
 .addLanguage{
   width: 100%;
   margin-top: 1rem;
+}
+ 
+.addLanguage mat-chip-row{
+  background: white;
 }
 
 

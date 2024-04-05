@@ -4,6 +4,7 @@ import { Component, HostListener, OnInit, inject } from '@angular/core';
 import { MatChipInputEvent, MatChipEditedEvent } from '@angular/material/chips';
 import { CandidateService } from '../../services/candidate.service';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 
 interface Fruit {
@@ -89,7 +90,7 @@ isMeetingScheduled: boolean = false;
   }
  
 
-  constructor(public candidate: CandidateService, private _snackBar: MatSnackBar) { }
+  constructor(public candidate: CandidateService, private _snackBar: MatSnackBar,public router:Router) { }
 
 
   ngOnInit(): void {
@@ -176,9 +177,10 @@ isMeetingScheduled: boolean = false;
         config.verticalPosition = 'top'; 
         config.panelClass = ['custom-snackbar']; 
         this._snackBar.open('Form Submitted Successfully', 'Close', config);
-        // setTimeout(() => {
-        //   window.location.reload();
-        // }, 1000);
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
+        this.router.navigate(['']);
         // console.error(err);
       }
     })
