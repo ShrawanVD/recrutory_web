@@ -109,7 +109,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
         'Bespoke Client Assistance Solutions',
         'Proactive Client Support Initiatives'
       ],
-      image: 'assets/vector3.png'
+      image: 'assets/vector3.svg'
     }
   ];
 
