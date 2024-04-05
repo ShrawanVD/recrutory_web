@@ -100,7 +100,7 @@ nav {
   justify-content: space-between;
   flex-direction: row;
   padding-bottom: 3rem;
-
+  box-shadow: 2px 4px 6px #507577;
 }
 /* .card::before {
   content: '';
@@ -172,6 +172,13 @@ nav {
 
 
 /* content part */
+
+
+
+
+
+
+
 
 
 .left-side{
@@ -336,9 +343,12 @@ nav {
   padding: 8px;
 }
 
-.mat-form-field .mat-input-element {
+/* .mat-form-field .mat-input-element {
   border: none; 
   outline: none;
+} */
+::ng-deep.mat-form-field.mat-focused .mat-form-field-ripple{
+  background-color: rgb(196, 238, 30);
 }
 
 
@@ -392,7 +402,7 @@ nav {
 
 .row-buttons{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -402,7 +412,7 @@ nav {
 
 .row-buttons .meet-button{
   flex: 2;
-  margin-right: 2rem;
+  /* margin-right: 2rem; */
 }
 .row-buttons button{
   flex: 1;
@@ -456,10 +466,15 @@ nav {
 
 
 @media screen and (max-width: 650px) {
+
+  .card{
+    margin-top: 1rem;
+  }
+
   .row{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex;
+    justify-content: space-evenly;
+    align-items: center; */
     flex-direction: column;
   }
   .example-full-width, #employment-type {
@@ -469,12 +484,14 @@ nav {
     flex-direction: column;
   }
   .last-button{
-    max-width: max-content;
+    min-width: auto;
+    padding: 1rem;
   }
-  .last-button a{
-    width: 50%;
-    padding: 10px 5px;
+  
+  #meeting-button-id{
+    margin-bottom: 1.5rem;
   }
+
 }
 
 
