@@ -85,6 +85,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
         'Technical Proficiency Analysis',
         'Interpersonal Dynamics Assessment'
       ],
+      // image: 'assets/vectorPointers1.mp4'
       image: 'assets/vector1.svg'
     },
     { 

@@ -3,7 +3,7 @@
 <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> -->
 
 
-<div class="background"  style="
+<div class="background" style="
 background-image: url('assets/background.png');
 height: 100vh;
 background-size: cover;
@@ -20,9 +20,7 @@ height: auto;
       <ul>
         <li><a href="#">Why Recrutory ?</a></li>
         <li>
-          <a href="#"
-            ><img src="assets/verbiq_logo.png" height="30px" width="85px"
-          /></a>
+          <a href="#"><img src="assets/verbiq_logo.png" height="30px" width="85px" /></a>
         </li>
         <li><a href="#">Global Insights</a></li>
       </ul>
@@ -33,15 +31,18 @@ height: auto;
   <div class="coverpage">
     <!-- Content on the left -->
     <div class="col-md-12  justify-content-center align-items-start text-left p-5 pt-5">
-      <h1>Unlock top-tier talent <span style="font-style: italic; font-weight: 700;">effortlessly</span><br> with our tailored solutions.</h1>
-      <h4>Introducing <span><img src="assets/verbiq_logo.png" /></span>Your Premier Assessor for Hiring Linguistic Experts.
+      <h1>Unlock top-tier talent <span style="font-style: italic; font-weight: 700;">effortlessly</span><br> with our
+        tailored solutions.</h1>
+      <h4>Introducing <span><img src="assets/verbiq_logo.png" /></span>Your Premier Assessor for Hiring Linguistic
+        Experts.
       </h4>
-      <p>Unlock unparalleled linguistic precision with VerbiQ. Say goodbye to resource challenges and hello to success.</p>
+      <p>Unlock unparalleled linguistic precision with VerbiQ. Say goodbye to resource challenges and hello to success.
+      </p>
       <div style="margin: 2rem 0rem 0rem;" class="button-part">
         <a href="https://forms.gle/sd1Gb3kSECabYbvY7"><button class="liquid-button">
-          <span>For Candidates</span>
-          <div class="liquid"></div>
-        </button></a>
+            <span>For Candidates</span>
+            <div class="liquid"></div>
+          </button></a>
         <button class="simple-button" routerLink="/company">
           For Companies
         </button>
@@ -59,16 +60,8 @@ height: auto;
     <h3>Revolutionizing Linguistic Expertise Assessment</h3>
     <div class="multiple-tabs">
       <div class="tabs">
-        <input
-          class="input"
-          name="tabs"
-          type="radio"
-          id="tab-1"
-          checked="checked"
-        />
-        <label class="label" for="tab-1" id="label1"
-          >Advanced AI Algorithms</label
-        >
+        <input class="input" name="tabs" type="radio" id="tab-1" checked="checked" />
+        <label class="label" for="tab-1" id="label1">Advanced AI Algorithms</label>
         <div class="panel">
           <p>
             VerbIQ utilizes state-of-the-art AI algorithms to analyze candidate
@@ -95,9 +88,7 @@ height: auto;
           </p>
         </div>
         <input class="input" name="tabs" type="radio" id="tab-4" />
-        <label class="label" for="tab-4" id="label4"
-          >Comprehensive Skill Evaluation</label
-        >
+        <label class="label" for="tab-4" id="label4">Comprehensive Skill Evaluation</label>
         <div class="panel">
           <p>
             Assess a wide range of linguistic skills, including language
@@ -125,46 +116,33 @@ height: auto;
         <div class="content">
           <div class="faq-accordion">
             <div *ngFor="let faq of faqList; let i = index" class="faq-item">
-              <div
-                class="faq-question"
-                [ngClass]="{ active: activeIndex === i }"
-                (click)="toggleAccordion(i)"
-              >
+              <div class="faq-question" [ngClass]="{ active: activeIndex === i }" (click)="toggleAccordion(i)">
                 <span class="toggle-icon">{{
                   activeIndex === i ? "-" : "+"
-                }}</span>
+                  }}</span>
                 <h3>{{ faq.question }}</h3>
               </div>
-              <div
-                *ngIf="activeIndex === i"
-                class="faq-answer"
-                [ngClass]="{ open: activeIndex === i }"
-              >
+              <div *ngIf="activeIndex === i" class="faq-answer" [ngClass]="{ open: activeIndex === i }">
                 <ul>
                   <li *ngFor="let item of faq.answerList">{{ item }}</li>
                 </ul>
               </div>
-              <hr/>
+              <hr />
             </div>
           </div>
         </div>
       </div>
-      <div
-        class="col-md-6 d-flex align-items-center justify-content-center vector-right" style="
+      <div class="col-md-6 d-flex align-items-center justify-content-center vector-right" style="
         text-align: center;
   padding: 0rem 1rem;
   height: 82vh;
         background-image: url('assets/hr-solution - 1.png');
     background-size: cover;
-    background-position: center;"
-      >
-        <img
-          width="550px"
-          height="500px"
-          [src]="selectedImage"
-          class="img-fluid"
-          alt="Right Image"
-        />
+    background-position: center;">
+        <img width="550px" height="500px" [src]="selectedImage" class="img-fluid" alt="Right Image" />
+        <!-- <video width="550px" height="500px" autoplay loop>
+          <source [src]="selectedImage" type="video/mp4">
+        </video> -->
       </div>
     </div>
   </div>
@@ -174,22 +152,12 @@ height: auto;
   <!-- <button style="margin: 50px; padding: 10px" type="button" class="btn btn-primary" (click)="openPopup()">Show Data</button> -->
 
   <!-- Modal -->
-  <div
-    class="modal custom-modal"
-    tabindex="-1"
-    role="dialog"
-    [ngStyle]="{ display: displayStyle }"
-  >
+  <div class="modal custom-modal" tabindex="-1" role="dialog" [ngStyle]="{ display: displayStyle }">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">Modal Title</h4>
-          <button
-            type="button"
-            class="close"
-            aria-label="Close"
-            (click)="closePopup()"
-          >
+          <button type="button" class="close" aria-label="Close" (click)="closePopup()">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -217,25 +185,18 @@ height: auto;
 
 <!-- Footer Code Starts From Here -->
 
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-  integrity="sha512-..."
-  crossorigin="anonymous"
-/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  integrity="sha512-..." crossorigin="anonymous" />
 
 <!-- hr solutions section  -->
 
 <div class="container1">
-  <div
-    class="left"
-    style="
+  <div class="left" style="
       background-image: url('assets/hr-solution - 1.png');
       height: 100vh;
       background-size: cover;
       background-position: center;
-    "
-  >
+    ">
     <div class="heading">
       <h2>Comprehensive HR Solutions</h2>
     </div>
@@ -279,15 +240,12 @@ height: auto;
       </div>
     </div>
   </div>
-  <div
-    class="right"
-    style="
+  <div class="right" style="
       background-image: url('assets/hr-solution - 2.png');
       height: 100vh;
       background-size: cover;
       background-position: center;
-    "
-  >
+    ">
     <div class="content2">
       <!-- card 4 -->
       <div class="cards" id="content2-first-card">
@@ -320,12 +278,7 @@ height: auto;
 
 <!-- scrolling section -->
 
-<div
-  class="scroller"
-  data-speed="fast"
-  (mouseenter)="pauseAnimation()"
-  (mouseleave)="resumeAnimation()"
->
+<div class="scroller" data-speed="fast" (mouseenter)="pauseAnimation()" (mouseleave)="resumeAnimation()">
   <ul class="tag-list scroller__inner">
     <li>MULTILINGUAL PROFICIENCY</li>
     <li>GLOBAL TALENT ACQUISITION</li>
@@ -340,17 +293,17 @@ height: auto;
 
 <!-- above footer section -->
 
-<div
-  class="above-footer-container"
-  style="
+<div class="above-footer-container" style="
     background-image: url('assets/justabovefooter.png');
     height: 100vh;
     background-size: cover;
     background-position: center;
-  "
->
+  ">
   <div class="left-side">
     <img src="assets/up-footer-right.svg" alt="Image" />
+    <!-- <video autoplay loop class="img">
+      <source src="assets/aboveFooterAni.mp4" type="video/mp4">
+    </video> -->
   </div>
   <div class="right-side">
     <ul>
@@ -385,10 +338,7 @@ height: auto;
 </div>
 
 <!-- Footer -->
-<footer
-  class="text-center text-lg-start text-muted"
-  style="font-family: 'Poppins', sans-serif"
->
+<footer class="text-center text-lg-start text-muted" style="font-family: 'Poppins', sans-serif">
   <div class="text-center text-md-start m-5 p-4">
     <!-- Grid row -->
     <div class="row">
@@ -408,23 +358,17 @@ height: auto;
       </div>
       <!-- Grid column -->
 
-      <div
-        class="col-lg-4 col-md-12 mb-5 mb-md-0 quick-links about-us"
-        style="position: relative; right: -5rem"
-      >
+      <div class="col-lg-4 col-md-12 mb-5 mb-md-0 quick-links about-us" style="position: relative; right: -5rem">
         <h6 class="text-uppercase fw-bold mb-4">Quick links</h6>
         <p>
-          <a href="#!" class="text-reset text-decoration-none random"
-            ><img class="logo-link" src="assets/verbiq_logo.png" alt=""
-          /></a>
+          <a href="#!" class="text-reset text-decoration-none random"><img class="logo-link"
+              src="assets/verbiq_logo.png" alt="" /></a>
         </p>
         <p>
           <a href="#!" class="text-reset text-decoration-none random">Blogs</a>
         </p>
         <p>
-          <a href="#!" class="text-reset text-decoration-none random"
-            >Media & Press Release</a
-          >
+          <a href="#!" class="text-reset text-decoration-none random">Media & Press Release</a>
         </p>
       </div>
 
@@ -447,59 +391,29 @@ height: auto;
   <div class="container pt-4 text-center">
     <section class="mb-4">
       <!-- Facebook -->
-      <a
-        data-mdb-ripple-init
-        class="btn btn-link btn-floating text-body m-1 random"
-        target="_blank"
-        href="https://www.facebook.com/profile.php?id=61556404210113"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-facebook-f iconf"></i
-      ></a>
+      <a data-mdb-ripple-init class="btn btn-link btn-floating text-body m-1 random" target="_blank"
+        href="https://www.facebook.com/profile.php?id=61556404210113" role="button" data-mdb-ripple-color="dark"><i
+          class="fab fa-facebook-f iconf"></i></a>
 
       <!-- Twitter -->
-      <a
-        data-mdb-ripple-init
-        class="btn btn-link btn-floating text-body m-1 random"
-        target="_blank"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><img width="22px" height="22px" src="assets/twitter.svg" />
+      <a data-mdb-ripple-init class="btn btn-link btn-floating text-body m-1 random" target="_blank" href="#!"
+        role="button" data-mdb-ripple-color="dark"><img width="22px" height="22px" src="assets/twitter.svg" />
       </a>
 
       <!-- Google -->
-      <a
-        data-mdb-ripple-init
-        class="btn btn-link btn-floating text-body m-1 random"
-        target="_blank"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><img width="15px" height="17px" src="assets/google.svg" />
+      <a data-mdb-ripple-init class="btn btn-link btn-floating text-body m-1 random" target="_blank" href="#!"
+        role="button" data-mdb-ripple-color="dark"><img width="15px" height="17px" src="assets/google.svg" />
       </a>
 
       <!-- Instagram -->
-      <a
-        data-mdb-ripple-init
-        class="btn btn-link btn-floating text-body m-1 random"
-        target="_blank"
-        href="https://www.instagram.com/recrutory/?hl=en"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-instagram iconinsta"></i
-      ></a>
+      <a data-mdb-ripple-init class="btn btn-link btn-floating text-body m-1 random" target="_blank"
+        href="https://www.instagram.com/recrutory/?hl=en" role="button" data-mdb-ripple-color="dark"><i
+          class="fab fa-instagram iconinsta"></i></a>
 
       <!-- Linkedin -->
-      <a
-        data-mdb-ripple-init
-        class="btn btn-link btn-floating text-body m-1 random"
-        target="_blank"
-        href="https://www.linkedin.com/company/recrutorycompany/"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-linkedin iconlinkdin"></i
-      ></a>
+      <a data-mdb-ripple-init class="btn btn-link btn-floating text-body m-1 random" target="_blank"
+        href="https://www.linkedin.com/company/recrutorycompany/" role="button" data-mdb-ripple-color="dark"><i
+          class="fab fa-linkedin iconlinkdin"></i></a>
     </section>
     <!-- Section: Social media -->
 

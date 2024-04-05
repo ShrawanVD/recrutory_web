@@ -123,6 +123,7 @@ nav {
   transform: scale(1); /* Adjusted for better visibility */
   cursor: pointer;
   outline: none; /* Remove the focus border */
+  box-shadow: 0 2px 4px #507577;
 }
 
 .liquid-button span {
@@ -204,6 +205,7 @@ nav {
   cursor: pointer;
   outline: none;
   background-color: white;
+  box-shadow: 0 2px 4px #507577;
 }
 .simple-button:hover {
 font-weight: bold;
@@ -374,7 +376,7 @@ font-weight: bold;
 }
 
 
-@media (max-width: 1420px) {
+@media (max-width: 1451px) {
   .label {
     padding: 15px 15px;
     border-radius: 9px;
@@ -383,7 +385,7 @@ font-weight: bold;
     border-radius: 9px;
   }
 }
-@media (min-width: 1001px) and (max-width: 1269px) {
+@media (min-width: 1001px) and (max-width: 1299px) {
   .label {
     padding: 15px 11px;
     border-radius: 9px;
@@ -400,6 +402,13 @@ font-weight: bold;
   .label {
     width: auto;
   }  
+}
+@media (min-width: 1001px) and (max-width: 1076px){
+  .label {
+    padding: 11px 8px;
+    border-radius: 9px;
+    font-size: 13px;
+  }
 }
 .panel {
   display: none;
@@ -967,7 +976,7 @@ font-weight: bold;
   flex: 0 0 auto;
 }
 
-.left-side img {
+.left-side .img {
   display: block;
   margin: 0 2rem 0 auto;
   width: 80%;
