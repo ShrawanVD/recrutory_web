@@ -32,6 +32,8 @@ import {NgIf} from '@angular/common';
 import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
 
+import {FormBuilder, Validators} from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -65,7 +67,13 @@ import {MatRadioModule} from '@angular/material/radio';
     NgIf,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatRadioModule
+    MatRadioModule,
+    MatButtonModule,
+    MatStepperModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [
     provideClientHydration(),

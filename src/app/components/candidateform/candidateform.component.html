@@ -1,433 +1,315 @@
-<nav>
-  <div class="logo">
-    <img src="assets/logo.png" height="60px" width="200px" />
-  </div>
-  <div class="navbar-links">
-    <ul>
-      <li><a href="#">Why Recrutory ?</a></li>
-      <li><a href="#"><img src="assets/verbiq_logo.png" height="30px" width="85px" /></a></li>
-      <li><a href="#">Global Insights</a></li>
-    </ul>
-  </div>
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
 
-</nav>
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  rel="stylesheet"
+/>
 
-
-<div class="form_wrapper">
-  <div class="form_container">
-    <div class="title_container">
-      <h2>Registration Form</h2>
+<div
+  class="background"
+  style="
+    background-image: url('assets/background.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 10rem 5rem;
+  "
+>
+  <nav>
+    <div class="logo">
+      <a href="#"><img src="assets/logo.png" height="60px" width="200px" /></a>
     </div>
-    <div class="row clearfix">
-      <div class="">
-        <form [formGroup]="candidateForm" (ngSubmit)="onSubmit()">
-          <!-- first and last name -->
-          <div class="row clearfix">
-            <div class="col_half">
-              <div class="input_field">
-                <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                <input type="text" formControlName="firstname" placeholder="First Name" />
-              </div>
-            </div>
-            <div class="col_half">
-              <div class="input_field">
-                <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                <input
-                  type="text"
-                  formControlName="lastname"
-                  placeholder="Last Name"
-                  required
-                />
-              </div>
-            </div>
-          </div>
+    <div class="navbar-links">
+      <ul>
+        <li><a href="#">Why Recrutory ?</a></li>
+        <li>
+          <a href="#"
+            ><img src="assets/verbiq_logo.png" height="30px" width="85px"
+          /></a>
+        </li>
+        <li><a href="#">Global Insights</a></li>
+      </ul>
+    </div>
+  </nav>
 
-          <!-- email and contact no -->
-          <div class="row clearfix">
-            <div class="col_half">
-              <div class="input_field">
-                <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
-                <input type="email" formControlName="email" placeholder="Email" required />
-              </div>
-            </div>
-            <div class="col_half">
-              <div class="input_field">
-                <span><i aria-hidden="true" class="fa fa-phone"></i></span>
-                <input
-                  type="number"
-                  formControlName="mobile"
-                  placeholder="Contact No"
-                  required
-                />
-              </div>
-            </div>
-          </div>
+  <!-- form starts -->
 
-          <!-- location and company -->
-          <div class="row clearfix">
-            <div class="col_half">
-              <div class="input_field">
-                <span><i aria-hidden="true" class="fa fa-location"></i></span>
-                <input
-                  type="text"
-                  formControlName="currentLocation"
-                  placeholder="Current Location"
-                  required
-                />
-              </div>
-            </div>
-            <div class="col_half">
-              <div class="input_field">
-                <span><i aria-hidden="true" class="fa fa-building"></i></span>
-                <input
-                  type="text"
-                  formControlName="companyname"
-                  placeholder="Current Company"
-                />
-              </div>
-            </div>
-          </div>
+  <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Fill out your name</ng-template>
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input
+            matInput
+            placeholder="Last name, First name"
+            formControlName="firstCtrl"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Contact No</mat-label>
+          <input
+            matInput
+            type="number"
+            placeholder="9808888089"
+            value=""
+            required
+            name="contactno"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input
+            matInput
+            type="email"
+            placeholder="xyz@gmail.com"
+            value=""
+            required
+            name="email"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Current Location</mat-label>
+          <input
+            matInput
+            placeholder="For which location do you want to hire"
+            value=""
+            required
+            name="location"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Company Name</mat-label>
+          <input
+            matInput
+            placeholder="XYZ Pvt Ltd"
+            value=""
+            required
+            name="companyName"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Current Role</mat-label>
+          <input
+            matInput
+            placeholder="Specialist"
+            value=""
+            required
+            name="roleType"
+          />
+        </mat-form-field>
 
-          <!-- role and ctc -->
-          <div class="row clearfix">
-            <div class="col_half">
-              <div class="input_field">
-                <span><i aria-hidden="true" class="fa fa-tasks"></i></span>
-                <input
-                  type="text"
-                  formControlName="role"
-                  placeholder="Current Role"
-                  required
-                />
-              </div>
-            </div>
-            <div class="col_half">
-              <div class="input_field">
-                <span><i aria-hidden="true" class="fa fa-inr"></i></span>
-                <input
-                  type="number"
-                  formControlName="ctc"
-                  placeholder="Current CTC"
-                  required
-                />
-              </div>
-            </div>
-          </div>
+        <mat-form-field
+          class="example-chip-list addLanguage"
+          appearance="outline"
+        >
+          <mat-label>What languages do you know?</mat-label>
+          <mat-chip-grid #chipGrid aria-label="Enter fruits">
+            @for (fruit of fruits; track fruit) {
+            <mat-chip-row
+              (removed)="remove(fruit)"
+              [editable]="true"
+              (edited)="edit(fruit, $event)"
+              [aria-description]="'press enter to edit ' + fruit.name"
+            >
+              {{ fruit.name }}
+              <button matChipRemove [attr.aria-label]="'remove ' + fruit.name">
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </mat-chip-row>
+            }
+            <input
+              placeholder="Add Languages....."
+              [matChipInputFor]="chipGrid"
+              [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+              [matChipInputAddOnBlur]="addOnBlur"
+              (matChipInputTokenEnd)="add($event)"
+              name="additionalLanguage"
+            />
+          </mat-chip-grid>
+        </mat-form-field>
 
-          <!-- Languages section -->
-          <label
-            style="
-              margin: 0 0 0.4rem;
-              font-size: 1rem;
-              font-family: Poppins, sans-serif;
-            "
-            >Language you may know:</label
+        <div class="languages-section">
+          <p>What is your language qualification</p>
+
+          <mat-chip-listbox
+            aria-label="language selection"
+            required
+            multiple
+            name="language"
           >
-          <div class="checkbox_container">
-            <div class="input_field checkbox_option">
-              <input
-                type="checkbox"
-                id="russian"
-                formControlName="languages[]"
-                value="russian"
-              />
-              <label for="russian">Russian</label>
-            </div>
-            <div class="input_field checkbox_option">
-              <input
-                type="checkbox"
-                id="Portuguese"
-                formControlName="languages[]"
-                value="Portuguese"
-              />
-              <label for="Portuguese">Portuguese</label>
-            </div>
-            <div class="input_field checkbox_option">
-              <input
-                type="checkbox"
-                id="Dutch"
-                formControlName="languages[]"
-                value="Dutch"
-              />
-              <label for="Dutch">Dutch</label>
-            </div>
-            <div class="input_field checkbox_option">
-              <input
-                type="checkbox"
-                id="English"
-                name="languages[]"
-                value="English"
-              />
-              <label for="English">English</label>
-            </div>
-            <div class="input_field checkbox_option">
-              <input
-                type="checkbox"
-                id="Hindi"
-                formControlName="languages[]"
-                value="Hindi"
-              />
-              <label for="Hindi">Hindi</label>
-            </div>
-            <div class="input_field checkbox_option">
-              <input
-                type="checkbox"
-                id="Sanskrit"
-                formControlName="languages[]"
-                value="Sanskrit"
-              />
-              <label for="Sanskrit">Sanskrit</label>
-            </div>
-            <div class="input_field checkbox_option">
-              <input
-                type="checkbox"
-                id="Italian"
-                formControlName="languages[]"
-                value="Italian"
-              />
-              <label for="Italian">Italian</label>
-            </div>
-            <div class="input_field checkbox_option">
-              <input
-                type="checkbox"
-                id="Arabic"
-                formControlName="languages[]"
-                value="Arabic"
-              />
-              <label for="Arabic">Arabic</label>
-            </div>
-            <div class="input_field checkbox_option">
-              <input
-                type="checkbox"
-                id="Korean"
-                formControlName="languages[]"
-                value="Korean"
-              />
-              <label for="Korean">Korean</label>
-            </div>
-            <div class="input_field checkbox_option">
-              <input
-                type="checkbox"
-                id="Mandarin"
-                formControlName="languages[]"
-                value="Mandarin"
-              />
-              <label for="Mandarin">Mandarin</label>
-            </div>
-            <div class="input_field checkbox_option">
-              <input
-                type="checkbox"
-                id="Japanese"
-                formControlName="languages[]"
-                value="Japanese"
-              />
-              <label for="Japanese">Japanese</label>
-            </div>
-            <div class="input_field checkbox_option">
-              <input
-                type="checkbox"
-                id="French"
-                formControlName="languages[]"
-                value="French"
-              />
-              <label for="French">French</label>
-            </div>
-            <div class="input_field checkbox_option">
-              <input
-                type="checkbox"
-                id="Spanish"
-                formControlName="languages[]"
-                value="Spanish"
-              />
-              <label for="Spanish">Spanish</label>
-            </div>
-            <div class="input_field checkbox_option">
-              <input
-                type="checkbox"
-                id="German"
-                formControlName="languages[]"
-                value="German"
-              />
-              <label for="German">German</label>
-            </div>
-          </div>
-
-          <!-- Educational section -->
-          <label
-            style="
-              margin: 0 0 0.4rem;
-              font-size: 1rem;
-              font-family: Poppins, sans-serif;
-            "
-            >How did you acquire you language skills?</label
-          >
-          <div class="checkbox_container" style="margin-bottom: 2rem">
-            <div class="input_field checkbox_option">
-              <input
-                type="checkbox"
-                id="certificate"
-                formControlName="proficiency[]"
-                value="certificate"
-              />
-              <label for="certificate">Globally recongnised certificate</label>
-            </div>
-            <div class="input_field checkbox_option">
-              <input
-                type="checkbox"
-                id="Undergraduate"
-                formControlName="proficiency[]"
-                value="Undergraduate"
-              />
-              <label for="Undergraduate">Undergraduate (B.A)</label>
-            </div>
-            <div class="input_field checkbox_option">
-              <input
-                type="checkbox"
-                id="Post"
-                formControlName="proficiency[]"
-                value="Post"
-              />
-              <label for="Post">Post Graduation (M.A)</label>
-            </div>
-            <div class="input_field checkbox_option">
-              <input
-                type="checkbox"
-                id="Diploma"
-                formControlName="proficiency[]"
-                value="Diploma"
-              />
-              <label for="Diploma">Diploma</label>
-            </div>
-            <div class="input_field checkbox_option">
-              <input type="checkbox" id="PG" name="proficiency[]" value="PG" />
-              <label for="PG">PG Diploma</label>
-            </div>
-            <div class="input_field checkbox_option">
-              <input
-                type="checkbox"
-                id="Native"
-                formControlName="proficiency[]"
-                value="Native"
-              />
-              <label for="Native">Native Speaker</label>
-            </div>
-          </div>
-
-          <!-- descriptive questions and answers -->
-
-          <!-- question 1 -->
-          <div class="question_answer_field">
-            <label for="question"
-              >Briefly describe your previous role in terms of client support
-              role, If yes, Describe Briefly</label
+            <mat-chip-option value="French"
+              >Globally recognised certification</mat-chip-option
             >
-            <textarea
-              id="answer1"
-              formControlName="ans1"
-              placeholder="Your answer goes here..."
-              value="answer1"
-              required
-            ></textarea>
-          </div>
-
-          <!-- question 2 -->
-          <div class="question_answer_field">
-            <label for="question"
-              >Methods for staying updated with language changes and
-              developments</label
-            >
-            <textarea
-              id="answer2"
-              formControlName="ans2"
-              value="answer2"
-              placeholder="Your answer goes here..."
-              required
-            ></textarea>
-          </div>
-
-          <!-- question 3 -->
-          <div class="question_answer_field">
-            <label for="question"
-              >Are you familiar with different dialects or regional variations
-              of the languages you speak? Can you understand and communicate
-              effectively in these variations?</label
-            >
-            <textarea
-              id="answer3"
-              formControlName="ans3"
-              placeholder="Your answer goes here..."
-              value="answer3"
-              required
-            ></textarea>
-          </div>
-
-          <!-- question 4 -->
-          <div class="question_answer_field">
-            <label for="question"
-              >What tools or resources do you use to aid in translation or
-              language-related tasks</label
-            >
-            <textarea
-              id="answer4"
-              formControlName="ans4"
-              value="answer4"
-              placeholder="Your answer goes here..."
-              required
-            ></textarea>
-          </div>
-
-          <!-- question 5 -->
-          <div class="question_answer_field">
-            <label for="question"
-              >Can you explain complex grammatical concepts in the languages
-              you're proficient in? </label
-            >
-            <textarea
-              id="answer5"
-              formControlName="ans5"
-              placeholder="Your answer goes here..."
-              value="answer5"
-              required
-            ></textarea>
-          </div>
-
-          <!-- question 6 -->
-          <div class="question_answer_field">
-            <label for="question"
-              >Are you proficient in any specialization such as customer support
-              legal, medical, technical, or literary translation?  Please
-              describe your proficiency pertaining to the domain in brief</label
-            >
-            <textarea
-              id="answer6"
-              formControlName="ans6"
-              value="answer6"
-              placeholder="Your answer goes here..."
-              required
-            ></textarea>
-          </div>
-
-          <!-- question 7 -->
-          <div class="question_answer_field">
-            <label for="question"
-              >Can you demonstrate your proficiency in the languages you claim
-              to speak by engaging in a conversation with a native to provide a
-              simple translation or interpretation? </label
-            >
-            <textarea
-              id="answer7"
-              formControlName="ans7"
-              placeholder="Your answer goes here..."
-              value="answer7"
-              required
-            ></textarea>
-          </div>
-
-          <!-- submit button -->
-
-          <input class="button" type="submit" value="Register"/>
-        </form>
+            <mat-chip-option value="German">Graduation</mat-chip-option>
+            <mat-chip-option value="Spanish">Post - Graduation</mat-chip-option>
+            <mat-chip-option value="Dutch">Diploma</mat-chip-option>
+            <mat-chip-option value="Portuguese">PG Diploma</mat-chip-option>
+            <mat-chip-option value="Russian">Native Speaker</mat-chip-option>
+            <mat-chip-option value="Japanese">Other</mat-chip-option>
+          </mat-chip-listbox>
+        </div>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Fill out your address</ng-template>
+        <mat-form-field>
+          <mat-label>Address</mat-label>
+          <input
+            matInput
+            formControlName="secondCtrl"
+            placeholder="Ex. 1 Main St, New York, NY"
+            required
+          />
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
       </div>
-    </div>
-  </div>
+    </mat-step>
+  </mat-stepper>
 </div>
+
+<!-- Footer -->
+<footer
+  class="text-center text-lg-start text-muted"
+  style="font-family: 'Poppins', sans-serif"
+>
+  <div class="text-center text-md-start m-5 p-4">
+    <!-- Grid row -->
+    <div class="row">
+      <!-- Grid column -->
+      <div class="col-lg-4 col-md-12 mb-5 mb-md-0 about-us">
+        <h6 class="text-uppercase fw-bold mb-4">About Us</h6>
+
+        <p class="footer-para-about-us">
+          Recrutory, powered by
+          <img class="logo-link" src="assets/verbiq_logo.png" alt="" /> AI,
+          specializes in the multilingual recruitment, global talent search, and
+          advanced assessment and screening. We connect businesses in India and
+          worldwide with top-tier professionals, leveraging our extensive
+          network and cutting-edge technology to ensure unparalleled talent
+          matches.
+        </p>
+      </div>
+      <!-- Grid column -->
+
+      <div
+        class="col-lg-4 col-md-12 mb-5 mb-md-0 quick-links about-us"
+        style="position: relative; right: -5rem"
+      >
+        <h6 class="text-uppercase fw-bold mb-4">Quick links</h6>
+        <p>
+          <a href="#!" class="text-reset text-decoration-none random"
+            ><img class="logo-link" src="assets/verbiq_logo.png" alt=""
+          /></a>
+        </p>
+        <p>
+          <a href="#!" class="text-reset text-decoration-none random">Blogs</a>
+        </p>
+        <p>
+          <a href="#!" class="text-reset text-decoration-none random"
+            >Media & Press Release</a
+          >
+        </p>
+      </div>
+
+      <!-- Grid column -->
+      <div class="col-lg-4 col-md-12 about-us">
+        <h6 class="text-uppercase fw-bold mb-4">Contact Us</h6>
+        <p>
+          <i class="fas fa-home me-3" id="footer-address"></i>Corp. Off. No 16A,
+          Floor 2, Tower A, Downtown City Vista, Fountain Road, Ashoka Nagar,
+          Kharadi, Pune – 411014
+        </p>
+        <p><i class="fas fa-envelope me-3"></i> hr&#64;recrutory.com</p>
+        <p><i class="fas fa-phone me-3"></i> +91 9373902341</p>
+      </div>
+      <!-- Grid column -->
+    </div>
+    <!-- Grid row -->
+  </div>
+
+  <div class="container pt-4 text-center">
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating text-body m-1 random"
+        target="_blank"
+        href="https://www.facebook.com/profile.php?id=61556404210113"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-facebook-f iconf"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating text-body m-1 random"
+        target="_blank"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><img width="22px" height="22px" src="assets/twitter.svg" />
+      </a>
+
+      <!-- Google -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating text-body m-1 random"
+        target="_blank"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><img width="15px" height="17px" src="assets/google.svg" />
+      </a>
+
+      <!-- Instagram -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating text-body m-1 random"
+        target="_blank"
+        href="https://www.instagram.com/recrutory/?hl=en"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-instagram iconinsta"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating text-body m-1 random"
+        target="_blank"
+        href="https://www.linkedin.com/company/recrutorycompany/"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-linkedin iconlinkdin"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+
+    <div class="text-center">&#64; 2024 TalentAxisPro Private Limited</div>
+  </div>
+</footer>
+<!-- Footer -->
