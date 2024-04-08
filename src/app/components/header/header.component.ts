@@ -1,7 +1,8 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CandidateformComponent } from '../candidateform/candidateform.component';
 import { OverlayComponent } from '../overlay/overlay.component';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from 'express';
 
 @Component({
   selector: 'app-header',
@@ -31,7 +32,6 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.selectedImage = this.faqList[this.activeIndex].image;
-    
   }
 
   ngAfterViewInit(): void {
@@ -117,8 +117,8 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   selectedImage: string | null = null; 
 
   toggleAccordion(index: number): void {
-    this.activeIndex = (this.activeIndex === index) ? -1 : index;
-    this.selectedImage = (this.activeIndex === index) ? this.faqList[index].image : null;
+    this.activeIndex = (this.activeIndex === index) ? 0 : index;
+    this.selectedImage = (this.activeIndex === index) ? this.faqList[index].image : 'assets/vector1.svg' ;
   }
 
   displayStyle = "none"; 

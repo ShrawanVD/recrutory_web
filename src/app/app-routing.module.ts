@@ -4,6 +4,7 @@ import { CandidateformComponent } from './components/candidateform/candidateform
 import { HeaderComponent } from './components/header/header.component';
 import { OverlayComponent } from './components/overlay/overlay.component';
 import { CompanyComponent } from './components/company/company.component';
+import { BlogsComponent } from './components/blogs/blogs.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'company',
     component: CompanyComponent
+  },
+  {
+    path: 'blogs',
+    component: BlogsComponent
   }
 ];
 

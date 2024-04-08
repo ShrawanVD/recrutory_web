@@ -1,0 +1,137 @@
+nav {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  /* position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ffffff; */
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #61bdee;
+  padding-bottom: 5px;
+  color: #022b41;
+}
+.navbar-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem 0rem 0rem;
+}
+.navbar-links ul {
+  display: flex;
+  text-align: center;
+  align-items: baseline;
+}
+.navbar-links ul li {
+  list-style-type: none;
+  padding: 0rem 4rem;
+  font-family: "Poppins", sans-serif;
+}
+.navbar-links a {
+  text-decoration: none;
+  color: #022b41;
+}
+
+@media screen and (max-width: 692px) {
+  .navbar-links ul li {
+    padding: 0rem 2rem;
+  }
+}
+@media screen and (max-width: 497px) {
+  .navbar-links ul {
+    padding-left: 0px;
+  }
+  .navbar-links ul li {
+    padding: 0rem 0.8rem;
+  }
+}
+@media screen and (max-width: 397px) {
+  .navbar-links ul {
+    padding-left: 0px;
+  }
+  .navbar-links ul li {
+    padding: 0rem 0.5rem;
+
+  }
+}
+
+/* Apply styles for active link when clicked */
+.navbar-links ul li a:active,
+.navbar-links ul li a:hover {
+  padding: 0px 0px 10px;
+  border-bottom: 3px solid #022b41;
+  border-radius: 20%;
+}
+/*-------------- blogs heading----------  */
+
+.blog-heading{
+  padding:4rem 0rem 2rem;
+  text-align: center;
+}
+.blog-heading h1{
+  font-size: 60px;
+  font-weight: 500;
+  color: #033753;
+  letter-spacing: 10px;
+}
+
+
+/*--------------------- blogs container -----------------*/
+.blogs{
+  padding: 0rem 4rem 4rem;
+  font-family: "Poppins", sans-serif;
+}
+.blog-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.blog-card {
+  width: calc(33.33% - 20px);
+  border-radius: 7%;
+  margin-bottom: 20px;
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.31);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.3px);
+  -webkit-backdrop-filter: blur(3.3px);
+}
+
+.blog-card:hover {
+  background-color: white;
+}
+
+.mat-card-content {
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .blog-card {
+    width: 100%; 
+  }
+  .blogs{
+    padding: 0rem 2.2rem 2rem;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+  .blog-card {
+    width: calc(50% - 20px); 
+  }
+  .blogs{
+    padding: 0rem 3rem 2rem;
+  }
+}

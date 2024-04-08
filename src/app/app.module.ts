@@ -33,6 +33,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
 
 import {FormBuilder, Validators} from '@angular/forms';
+import { BlogsComponent } from './components/blogs/blogs.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import {FormBuilder, Validators} from '@angular/forms';
     HeaderComponent,
     CandidateformComponent,
     OverlayComponent,
-    CompanyComponent
+    CompanyComponent,
+    BlogsComponent
   ],
   imports: [
     BrowserModule,

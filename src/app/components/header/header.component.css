@@ -75,12 +75,18 @@ nav {
 }
 
 /* Apply styles for active link when clicked */
-.navbar-links ul li a:active,
-.navbar-links ul li a:hover {
+/* .navbar-links ul li:hover,
+.navbar-links ul li:active {
+  padding: 0px 0px 10px;
+  border-bottom: 3px solid #022b41;
+  border-radius: 20%;
+} */
+.whyactive a{
   padding: 0px 0px 10px;
   border-bottom: 3px solid #022b41;
   border-radius: 20%;
 }
+
 
 /* ------cover page section ---------- */
 
@@ -410,6 +416,9 @@ font-weight: bold;
 @media (max-width: 1000px){
   .label{
     margin: 2px 0px;
+  }
+  .panel p{
+    font-size: 15px;
   }
 }
 @media (min-width: 1000px) {
