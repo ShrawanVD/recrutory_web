@@ -4,6 +4,10 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { CandidateService } from '../../services/candidate.service';
 
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { map, shareReplay } from 'rxjs/operators';
+
 @Component({
   selector: 'app-candidateform',
   templateUrl: './candidateform.component.html',
@@ -11,15 +15,20 @@ import { CandidateService } from '../../services/candidate.service';
 })
 export class CandidateformComponent {
 
-  firstFormGroup = this._formBuilder.group({
-    firstCtrl: ['', Validators.required],
-  });
-  secondFormGroup = this._formBuilder.group({
-    secondCtrl: ['', Validators.required],
-  });
-  isLinear = false;
+ 
 
-  constructor(private _formBuilder: FormBuilder) {}
+  isLinear = true; // Or false, depending on your requirement
+  isScreenLarge!: Observable<boolean>;
+
+  constructor(private breakpointObserver: BreakpointObserver) {}
+
+  ngOnInit() {
+    this.isScreenLarge = this.breakpointObserver.observe([Breakpoints.Large, Breakpoints.XLarge])
+      .pipe(
+        map(result => result.matches),
+        shareReplay()
+      );
+  }
 
   
 
