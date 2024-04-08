@@ -135,3 +135,146 @@ nav {
     padding: 0rem 3rem 2rem;
   }
 }
+
+
+
+/* footer section */
+
+footer {
+  /* margin-top: -19rem; */
+  padding: 2rem 0;
+  background-color: #bce1eb;
+  font-size: 1rem;
+}
+
+.footer-para-about-us {
+  text-align: justify;
+  line-height: 1.5rem;
+}
+
+.about-us  h6{
+  font-size: 0.9rem;
+}
+
+.about-us p{
+  line-height: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.logo-link{
+  width: 3.5rem;
+  height: auto;
+  margin: 0 -3px 4px;
+  /* margin-bottom: 4px;
+  margin-left: -3px;
+  margin-right: -3px; */
+}
+
+.iconf {
+  color: #3b5998; /* Facebook blue */
+}
+.iconinsta {
+  color: #c13584; /* Instagram pink */
+}
+.iconlinkdin{
+  color: #0077b5;
+}
+
+@media screen and (max-width: 995px) {
+  .quick-links {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 772px) {
+  .about-us {
+    text-align: left;
+  }
+}
+
+
+
+/* footer section */
+
+footer {
+  /* margin-top: -19rem; */
+  padding: 2rem 0;
+  background-color: #bce1eb;
+  font-size: 1rem;
+}
+
+.footer-para-about-us {
+  text-align: justify;
+  line-height: 1.5rem;
+}
+
+.about-us  h6{
+  font-size: 0.9rem;
+}
+
+.about-us p{
+  line-height: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.logo-link{
+  width: 3.5rem;
+  height: auto;
+  margin: 0 -3px 4px;
+  /* margin-bottom: 4px;
+  margin-left: -3px;
+  margin-right: -3px; */
+}
+
+.iconf {
+  color: #3b5998; /* Facebook blue */
+}
+.iconinsta {
+  color: #c13584; /* Instagram pink */
+}
+.iconlinkdin{
+  color: #0077b5;
+}
+
+@media screen and (max-width: 995px) {
+  .quick-links {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 772px) {
+  .about-us {
+    text-align: left;
+  }
+}
+
+
+
+/* hover effect */
+.random {
+  color: #54b3d6;
+  text-decoration: none;
+  position: relative;
+}
+
+.random::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.random:hover::after {
+  transform: scaleX(1);
+}
+
+#footer-address {
+  text-align: justify;
+}
