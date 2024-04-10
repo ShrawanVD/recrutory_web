@@ -80,10 +80,19 @@ nav {
 }
 
 .mat-stepper-horizontal {
-  background-color: whitesmoke;
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
   box-shadow: 0 2px 4px #507577;
   border-radius: 10px;
-  margin-top: 3rem;
+  margin: 3rem 6rem 0;
+
+}
+
+#verticalId {
+  background-color: white;
+  box-shadow: 0 2px 4px #507577;
+  border-radius: 10px;
+  margin: 3rem 6rem 0;
 }
 
 form {
@@ -112,6 +121,116 @@ form {
 .radion-button {
   margin-right: 1rem;
 }
+
+.textareas{
+  margin-top: 1rem;
+}
+
+#verticalId p{
+  font-size: 1.1rem;
+}
+
+.textareas p{
+  font-size: 1.1rem;
+  margin-bottom: -2px;
+}
+
+
+.mat-stepper-horizontal, #verticalId {
+	/* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+	background: linear-gradient(-45deg,whitesmoke, white, #cee2ec, #d2dce1);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	/* height: 100vh; */
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+
+
+@media screen and (max-width: 3000px) {
+
+
+  #verticalId{
+    display: none;
+  }
+  
+}
+
+@media screen and (max-width: 1300px) {
+
+ #horizontalId{
+  margin: 2rem 1rem 5rem;
+ }
+
+ 
+
+
+  
+}
+
+@media screen and (max-width: 900px) {
+
+  #verticalId{
+    display: block;
+  }
+
+  #horizontalId{
+    display: none;
+  }
+  
+}
+
+@media screen and (max-width: 740px) {
+
+  #verticalId{
+    margin: 2rem 2rem 0;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .mat-mdc-form-field{
+    max-width: 100%;
+  }
+
+  #verticalId p{
+    font-size: 1rem;
+  }
+
+  .textareas p{
+    font-size: 1rem;
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
 
 /* footer section */
 
