@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { CandidateService } from '../../services/candidate.service';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+
+
 
 @Component({
   selector: 'app-candidateform',
@@ -10,6 +12,29 @@ import { CandidateService } from '../../services/candidate.service';
   styleUrl: './candidateform.component.css'
 })
 export class CandidateformComponent {
+
+
+  isSmallScreen: boolean = false;
+
+  constructor(private breakpointObserver: BreakpointObserver, private _formBuilder: FormBuilder) {}
+
+  ngOnInit() {
+    this.breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall])
+      .subscribe(result => {
+        this.isSmallScreen = result.matches;
+      });
+  }
+
+
+
+  // toggling horizontal to vertical stepper
+  // isVertical: boolean = false;
+
+
+
+
+
+
 
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
@@ -19,7 +44,6 @@ export class CandidateformComponent {
   });
   isLinear = false;
 
-  constructor(private _formBuilder: FormBuilder) {}
 
   
 
