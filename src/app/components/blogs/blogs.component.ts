@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogsService } from '../../services/blogs.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-blogs',
@@ -9,7 +10,7 @@ import { BlogsService } from '../../services/blogs.service';
 export class BlogsComponent implements OnInit{
   blogPosts: any;
 
-  constructor(private blog:BlogsService) {}
+  constructor(private blog:BlogsService,private route:Router) {}
 
   ngOnInit(): void {
     this.blog.getAllBlogs().subscribe({
@@ -21,6 +22,10 @@ export class BlogsComponent implements OnInit{
       }
     })
 
+  }
+
+  openBlog(id: any){
+    this.route.navigate(['blogs/',id]);
   }
   
 }

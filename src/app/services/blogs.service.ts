@@ -18,6 +18,7 @@ export class BlogsService {
           if (response.hasOwnProperty(postId)) {
             const post = response[postId];
             const blogPost: Blogs = {
+              _id: post._id,
               title: post.title,
               date: post.date,
               imageUrl: post.imageUrl,

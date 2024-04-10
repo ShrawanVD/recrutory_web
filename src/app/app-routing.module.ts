@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { OverlayComponent } from './components/overlay/overlay.component';
 import { CompanyComponent } from './components/company/company.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
+import { SingleBlogComponent } from './components/single-blog/single-blog.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'blogs',
     component: BlogsComponent
+  },
+  {
+    path: 'blogs/:id',
+    component: SingleBlogComponent
   }
 ];
 

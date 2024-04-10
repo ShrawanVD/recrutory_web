@@ -34,6 +34,7 @@ import {MatRadioModule} from '@angular/material/radio';
 
 import {FormBuilder, Validators} from '@angular/forms';
 import { BlogsComponent } from './components/blogs/blogs.component';
+import { SingleBlogComponent } from './components/single-blog/single-blog.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { BlogsComponent } from './components/blogs/blogs.component';
     CandidateformComponent,
     OverlayComponent,
     CompanyComponent,
-    BlogsComponent
+    BlogsComponent,
+    SingleBlogComponent
   ],
   imports: [
     BrowserModule,

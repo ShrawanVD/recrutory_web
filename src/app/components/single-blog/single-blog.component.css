@@ -1,0 +1,296 @@
+nav {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  
+    /* position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: #ffffff; */
+  }
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #61bdee;
+    padding-bottom: 5px;
+    color: #022b41;
+  }
+  .navbar-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 0rem 0rem;
+  }
+  .navbar-links ul {
+    display: flex;
+    text-align: center;
+    align-items: baseline;
+  }
+  .navbar-links ul li {
+    list-style-type: none;
+    padding: 0rem 4rem;
+    font-family: "Poppins", sans-serif;
+  }
+  .navbar-links a {
+    text-decoration: none;
+    color: #022b41;
+  }
+  
+  @media screen and (max-width: 692px) {
+    .navbar-links ul li {
+      padding: 0rem 2rem;
+    }
+  }
+  @media screen and (max-width: 497px) {
+    .navbar-links ul {
+      padding-left: 0px;
+    }
+    .navbar-links ul li {
+      padding: 0rem 0.8rem;
+    }
+  }
+  @media screen and (max-width: 397px) {
+    .navbar-links ul {
+      padding-left: 0px;
+    }
+    .navbar-links ul li {
+      padding: 0rem 0.5rem;
+  
+    }
+  }
+  
+  /* Apply styles for active link when clicked */
+  .navbar-links ul li a:active,
+  .navbar-links ul li a:hover {
+    padding: 0px 0px 10px;
+    border-bottom: 3px solid #022b41;
+    border-radius: 20%;
+  }
+
+
+/* ---------------------- */
+.blogs-container{
+    padding: 2rem 10rem;
+}
+.blogs-container mat-card{
+  border-radius: 1%;
+  text-align: left;
+  align-items: center;
+  padding: 4rem 11rem;
+}
+
+.blog-card{
+  padding: 1rem;
+
+}
+.blog-card img{
+  border-radius: 2%;
+  margin-bottom: 2rem;
+  height: 28rem;
+  width: 50rem;
+}
+.blog-card h1{
+  font-family: "Poppins", sans-serif;
+}
+.blog-card h3{
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+}
+
+@media screen and (max-width: 1300px){
+  .blogs-container mat-card{
+    padding: 4rem 4rem;
+  }
+}
+@media screen and (max-width: 1172px){
+  .blogs-container{
+    padding: 4rem 8rem;
+  }
+  .blog-card img{
+    height: 20rem;
+    width: 40rem;
+  }
+}
+@media screen and (max-width: 932px){
+  .blogs-container mat-card{
+    padding: 2rem 3rem;
+  }
+  .blog-card img{
+    height: 19rem;
+    width: 35rem;
+  }
+  .blogs-container{
+    padding: 3rem 4rem;
+  }
+}
+@media screen and (max-width: 708px){
+  .blog-card img{
+    height: 17rem;
+    width: 30rem;
+  }
+}
+@media screen and (max-width: 602px){
+  .blog-card img{
+    height: auto;
+    width: 100%;
+  }
+  .blog-card{
+    padding: 0rem;
+  }
+  .blog-card mat-card{
+    padding: 0rem 0rem;
+  }
+  .blog-card h3{
+    font-size: 0.85rem;
+  }
+  .blogs-container{
+    padding: 3rem 2rem;
+  }
+}
+/* footer section */
+
+footer {
+    /* margin-top: -19rem; */
+    padding: 2rem 0;
+    background-color: #bce1eb;
+    font-size: 1rem;
+  }
+  
+  .footer-para-about-us {
+    text-align: justify;
+    line-height: 1.5rem;
+  }
+  
+  .about-us  h6{
+    font-size: 0.9rem;
+  }
+  
+  .about-us p{
+    line-height: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+  }
+  
+  .logo-link{
+    width: 3.5rem;
+    height: auto;
+    margin: 0 -3px 4px;
+    /* margin-bottom: 4px;
+    margin-left: -3px;
+    margin-right: -3px; */
+  }
+  
+  .iconf {
+    color: #3b5998; /* Facebook blue */
+  }
+  .iconinsta {
+    color: #c13584; /* Instagram pink */
+  }
+  .iconlinkdin{
+    color: #0077b5;
+  }
+  
+  @media screen and (max-width: 995px) {
+    .quick-links {
+      left: 0;
+    }
+  }
+  
+  @media screen and (max-width: 772px) {
+    .about-us {
+      text-align: left;
+    }
+  }
+  
+  
+  
+  /* footer section */
+  
+  footer {
+    /* margin-top: -19rem; */
+    padding: 2rem 0;
+    background-color: #bce1eb;
+    font-size: 1rem;
+  }
+  
+  .footer-para-about-us {
+    text-align: justify;
+    line-height: 1.5rem;
+  }
+  
+  .about-us  h6{
+    font-size: 0.9rem;
+  }
+  
+  .about-us p{
+    line-height: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+  }
+  
+  .logo-link{
+    width: 3.5rem;
+    height: auto;
+    margin: 0 -3px 4px;
+    /* margin-bottom: 4px;
+    margin-left: -3px;
+    margin-right: -3px; */
+  }
+  
+  .iconf {
+    color: #3b5998; /* Facebook blue */
+  }
+  .iconinsta {
+    color: #c13584; /* Instagram pink */
+  }
+  .iconlinkdin{
+    color: #0077b5;
+  }
+  
+  @media screen and (max-width: 995px) {
+    .quick-links {
+      left: 0;
+    }
+  }
+  
+  @media screen and (max-width: 772px) {
+    .about-us {
+      text-align: left;
+    }
+  }
+  
+  
+  
+  /* hover effect */
+  .random {
+    color: #54b3d6;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .random::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .random:hover::after {
+    transform: scaleX(1);
+  }
+  
+  #footer-address {
+    text-align: justify;
+  }
+  
