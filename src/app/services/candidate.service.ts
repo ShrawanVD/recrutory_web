@@ -9,7 +9,7 @@ export class CandidateService {
   constructor(private http:HttpClient) { }
 
   candidateForm(data: any){
-    return this.http.post('http://localhost:3000/candidate',data);
+    return this.http.post('https://backendrecrutory.onrender.com/candidate',data);
   }
 
   companyForm(data: any){

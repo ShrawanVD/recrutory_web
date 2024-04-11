@@ -32,8 +32,8 @@
 
     <div class="blogs">
         <div class="blog-container" style="display: flex; flex-wrap: wrap;">
-            <mat-card class="blog-card" *ngFor="let post of blogPosts">
-                <img mat-card-image [src]="post.imageUrl" alt="Blog Image">
+            <mat-card class="blog-card" *ngFor="let post of blogPosts" (click)="openBlog(post._id)" >
+                <img mat-card-image [src]="post.imageUrl" alt="Blog Image" >
                 <mat-card-content style="font-family: 'Poppins', sans-serif;">
                     <mat-card-title>{{ post.title }}</mat-card-title>
                     <mat-card-subtitle>{{ post.date }}</mat-card-subtitle>
