@@ -21,6 +21,8 @@
     padding-bottom: 5rem;
   "
 >
+
+
   <nav>
     <div class="logo">
       <a href="#"><img src="assets/logo.png" height="60px" width="200px" /></a>
@@ -40,27 +42,26 @@
 
   <!-- form starts -->
 
-
   <!---------------------------------------------------------- horizontal stepper -->
 
-  <mat-stepper  labelPosition="bottom" #stepper id="horizontalId" animationDuration="1500">
-    
-
+  <mat-stepper
+    labelPosition="bottom"
+    #stepper
+    id="horizontalId"
+    animationDuration="1500"
+  >
     <!--  ------------------1st step---------------------- -->
 
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
-        <!-- <ng-template matStepLabel>Candidature</ng-template> -->
-        <ng-template matStepLabel [ngStyle]="{ 'font-size': (isSmallScreen ? '1rem' : 'medium') }">Candidature</ng-template>
+        <ng-template matStepLabel
+          ><label class="stepper-label">Candidature</label></ng-template
+        >
         <div class="row">
           <!-- name -->
           <mat-form-field appearance="outline">
             <mat-label>Name</mat-label>
-            <input
-              matInput
-              placeholder="John Sharma"
-              required
-            />
+            <input matInput placeholder="John Sharma" required />
           </mat-form-field>
 
           <!-- contact no -->
@@ -208,19 +209,20 @@
         <!-- score - textarea -->
 
         <div class="textareas">
-
-          <p>If you have taken a formal language assessment, Please state your
+          <p>
+            If you have taken a formal language assessment, Please state your
             score here along with the proficiency result for the said
-            assessment.</p>
+            assessment.
+          </p>
 
-            <mat-form-field appearance="outline" class="example-full-width">
-              
-              <textarea rows="1" matInput placeholder="Yes, I have taken.."></textarea>
-            </mat-form-field>
-
+          <mat-form-field appearance="outline" class="example-full-width">
+            <textarea
+              rows="1"
+              matInput
+              placeholder="Yes, I have taken.."
+            ></textarea>
+          </mat-form-field>
         </div>
-        
-        
 
         <!-- dialects - textarea -->
         <div class="dialects radio" style="margin-bottom: 2rem">
@@ -250,7 +252,9 @@
     <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
       <form [formGroup]="secondFormGroup">
         <ng-template matStepLabel
-          >Continuous Learning & Development</ng-template
+          ><label class="stepper-label"
+            >Continuous Learning & Development</label
+          ></ng-template
         >
 
         <!-- stay - updated -->
@@ -325,45 +329,49 @@
         <!-- new learned language - textarea -->
 
         <div class="textareas">
+          <p>
+            How do you incorporate newly learned language skills into your work
+            ?
+          </p>
 
-          <p>How do you incorporate newly learned language skills into your work ?</p>
-
-            <mat-form-field appearance="outline" class="example-full-width">
-              
-              <textarea rows="1" matInput placeholder="I incorporate it using..."></textarea>
-            </mat-form-field>
-
+          <mat-form-field appearance="outline" class="example-full-width">
+            <textarea
+              rows="1"
+              matInput
+              placeholder="I incorporate it using..."
+            ></textarea>
+          </mat-form-field>
         </div>
 
         <!-- staying updated - textarea -->
 
         <div class="textareas">
+          <p>
+            What are your methods of staying updated with language changes and
+            developments ?
+          </p>
 
-          <p>What are your methods of staying updated with language changes and
-            developments ?</p>
-
-            <mat-form-field appearance="outline" class="example-full-width">
-              
-              <textarea rows="1" matInput placeholder="Methods i used are..."></textarea>
-            </mat-form-field>
-
+          <mat-form-field appearance="outline" class="example-full-width">
+            <textarea
+              rows="1"
+              matInput
+              placeholder="Methods i used are..."
+            ></textarea>
+          </mat-form-field>
         </div>
-
 
         <!-- grammar - textarea -->
 
         <div class="textareas">
+          <p>
+            Can you explain complex grammatical concepts in the languages you're
+            proficient in ?
+          </p>
 
-          <p>Can you explain complex grammatical concepts in the languages
-            you're proficient in ?</p>
-
-            <mat-form-field appearance="outline" class="example-full-width">
-              
-              <textarea rows="1" matInput placeholder="Yeah sure..."></textarea>
-            </mat-form-field>
-
+          <mat-form-field appearance="outline" class="example-full-width">
+            <textarea rows="1" matInput placeholder="Yeah sure..."></textarea>
+          </mat-form-field>
         </div>
-
 
         <div>
           <button mat-button matStepperPrevious>Back</button>
@@ -376,7 +384,9 @@
 
     <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
       <form [formGroup]="secondFormGroup">
-        <ng-template matStepLabel>Tools & Resources</ng-template>
+        <ng-template matStepLabel
+          ><label class="stepper-label">Tools & Resources</label></ng-template
+        >
 
         <!-- tanslation tools -->
         <div class="tanslation-tools radio">
@@ -403,7 +413,7 @@
         </div>
 
         <!-- other's section -->
-        
+
         <mat-form-field appearance="outline" class="example-full-width">
           <mat-label appearance="outline"
             >If there are other tools, please mention here</mat-label
@@ -491,7 +501,9 @@
     <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
       <form [formGroup]="secondFormGroup">
         <ng-template matStepLabel
-          >Specialization and Domain Expertise</ng-template
+          ><label class="stepper-label"
+            >Specialization and Domain Expertise</label
+          ></ng-template
         >
 
         <!-- first section -->
@@ -528,14 +540,11 @@
 
         <!-- third - textarea -->
         <div class="textareas">
-
           <p>Can you provide examples of your work in specialized areas ?</p>
 
-            <mat-form-field appearance="outline" class="example-full-width">
-              
-              <textarea rows="1" matInput placeholder="Yeah sure..."></textarea>
-            </mat-form-field>
-
+          <mat-form-field appearance="outline" class="example-full-width">
+            <textarea rows="1" matInput placeholder="Yeah sure..."></textarea>
+          </mat-form-field>
         </div>
 
         <div>
@@ -548,7 +557,11 @@
     <!-- ------------------- 5th step -------------------- -->
 
     <mat-step>
-      <ng-template matStepLabel>Practical Demonstration</ng-template>
+      <ng-template matStepLabel
+        ><label class="stepper-label"
+          >Practical Demonstration</label
+        ></ng-template
+      >
 
       <!-- first section -->
       <div class="last-first radio" style="margin-bottom: 1.5rem">
@@ -557,7 +570,10 @@
           speak by engaging in a conversation with a native of our choosing to
           provide a simple translation or interpretation ?
         </p>
-        <mat-radio-group aria-label="Select an option" required>
+        <mat-radio-group aria-label="Select an option" required
+        
+        
+        >
           <mat-radio-button class="radion-button" value="yes"
             >Yes</mat-radio-button
           >
@@ -569,14 +585,17 @@
 
       <!-- second - textarea -->
       <div class="textareas">
+        <p>
+          How do you handle challenges or nuances in real-time conversations ?
+        </p>
 
-        <p>How do you handle challenges or nuances in real-time conversations ?</p>
-
-          <mat-form-field appearance="outline" class="example-full-width">
-            
-            <textarea rows="1" matInput placeholder="I try to be calm..."></textarea>
-          </mat-form-field>
-
+        <mat-form-field appearance="outline" class="example-full-width">
+          <textarea
+            rows="1"
+            matInput
+            placeholder="I try to be calm..."
+          ></textarea>
+        </mat-form-field>
       </div>
 
       <!-- third section -->
@@ -604,23 +623,20 @@
 
 
 
-
-
-
   </mat-stepper>
-
-
-
-
 
 
 
 
   <!---------------------------------------------------------- vertical stepper -->
 
-  <mat-stepper orientation="vertical" labelPosition="bottom" #stepper id="verticalId" animationDuration="1500">
-    
-
+  <mat-stepper
+    orientation="vertical"
+    labelPosition="bottom"
+    #stepper
+    id="verticalId"
+    animationDuration="1500"
+  >
     <!--  ------------------1st step---------------------- -->
 
     <mat-step [stepControl]="firstFormGroup">
@@ -631,11 +647,7 @@
           <!-- name -->
           <mat-form-field appearance="outline">
             <mat-label>Name</mat-label>
-            <input
-              matInput
-              placeholder="John Sharma"
-              required
-            />
+            <input matInput placeholder="John Sharma" required />
           </mat-form-field>
 
           <!-- contact no -->
@@ -714,9 +726,7 @@
         <!-- qualification -->
 
         <div class="language-qualifications">
-          <p style=" margin-top: 1rem">
-            What is your language qualification?
-          </p>
+          <p style="margin-top: 1rem">What is your language qualification?</p>
           <mat-chip-listbox aria-label="Fish selection" multiple>
             <mat-chip-option>Globally recognized certification</mat-chip-option>
             <mat-chip-option>Graduation</mat-chip-option>
@@ -783,19 +793,20 @@
         <!-- score - textarea -->
 
         <div class="textareas">
-
-          <p>If you have taken a formal language assessment, Please state your
+          <p>
+            If you have taken a formal language assessment, Please state your
             score here along with the proficiency result for the said
-            assessment.</p>
+            assessment.
+          </p>
 
-            <mat-form-field appearance="outline" class="example-full-width">
-              
-              <textarea rows="1" matInput placeholder="Yes, I have taken.."></textarea>
-            </mat-form-field>
-
+          <mat-form-field appearance="outline" class="example-full-width">
+            <textarea
+              rows="1"
+              matInput
+              placeholder="Yes, I have taken.."
+            ></textarea>
+          </mat-form-field>
         </div>
-        
-        
 
         <!-- dialects - textarea -->
         <div class="dialects radio" style="margin-bottom: 2rem">
@@ -831,7 +842,7 @@
         <!-- stay - updated -->
 
         <div class="stay-updated">
-          <p style=" margin-top: 1rem">
+          <p style="margin-top: 1rem">
             How do you stay updated with language changes and developments ?
           </p>
           <mat-chip-listbox aria-label="Fish selection" multiple>
@@ -847,9 +858,7 @@
 
         <!-- workshops section -->
         <div class="workshops radio">
-          <p>
-            Do you participate in Language courses, Workshops or seminars ?
-          </p>
+          <p>Do you participate in Language courses, Workshops or seminars ?</p>
           <mat-radio-group aria-label="Select an option">
             <mat-radio-button class="radion-button" value="Frequently"
               >Frequently</mat-radio-button
@@ -868,9 +877,7 @@
 
         <!-- forums  -->
         <div class="forums radio">
-          <p>
-            Are you a part of language-related communities or forums ?
-          </p>
+          <p>Are you a part of language-related communities or forums ?</p>
           <mat-radio-group aria-label="Select an option">
             <mat-radio-button class="radion-button" value="yes"
               >Yes</mat-radio-button
@@ -900,45 +907,49 @@
         <!-- new learned language - textarea -->
 
         <div class="textareas">
+          <p>
+            How do you incorporate newly learned language skills into your work
+            ?
+          </p>
 
-          <p>How do you incorporate newly learned language skills into your work ?</p>
-
-            <mat-form-field appearance="outline" class="example-full-width">
-              
-              <textarea rows="1" matInput placeholder="I incorporate it using..."></textarea>
-            </mat-form-field>
-
+          <mat-form-field appearance="outline" class="example-full-width">
+            <textarea
+              rows="1"
+              matInput
+              placeholder="I incorporate it using..."
+            ></textarea>
+          </mat-form-field>
         </div>
 
         <!-- staying updated - textarea -->
 
         <div class="textareas">
+          <p>
+            What are your methods of staying updated with language changes and
+            developments ?
+          </p>
 
-          <p>What are your methods of staying updated with language changes and
-            developments ?</p>
-
-            <mat-form-field appearance="outline" class="example-full-width">
-              
-              <textarea rows="1" matInput placeholder="Methods i used are..."></textarea>
-            </mat-form-field>
-
+          <mat-form-field appearance="outline" class="example-full-width">
+            <textarea
+              rows="1"
+              matInput
+              placeholder="Methods i used are..."
+            ></textarea>
+          </mat-form-field>
         </div>
-
 
         <!-- grammar - textarea -->
 
         <div class="textareas">
+          <p>
+            Can you explain complex grammatical concepts in the languages you're
+            proficient in ?
+          </p>
 
-          <p>Can you explain complex grammatical concepts in the languages
-            you're proficient in ?</p>
-
-            <mat-form-field appearance="outline" class="example-full-width">
-              
-              <textarea rows="1" matInput placeholder="Yeah sure..."></textarea>
-            </mat-form-field>
-
+          <mat-form-field appearance="outline" class="example-full-width">
+            <textarea rows="1" matInput placeholder="Yeah sure..."></textarea>
+          </mat-form-field>
         </div>
-
 
         <div>
           <button mat-button matStepperPrevious>Back</button>
@@ -978,7 +989,7 @@
         </div>
 
         <!-- other's section -->
-        
+
         <mat-form-field appearance="outline" class="example-full-width">
           <mat-label appearance="outline"
             >If any other tools, please mention here</mat-label
@@ -988,9 +999,7 @@
 
         <!-- translation - software section -->
         <div class="translation-software radio">
-          <p>
-            Are you proficient in using translation software or platforms ?
-          </p>
+          <p>Are you proficient in using translation software or platforms ?</p>
           <mat-radio-group aria-label="Select an option">
             <mat-radio-button class="radion-button" value="yes"
               >Yes</mat-radio-button
@@ -1103,14 +1112,11 @@
 
         <!-- third - textarea -->
         <div class="textareas">
-
           <p>Can you provide examples of your work in specialized areas ?</p>
 
-            <mat-form-field appearance="outline" class="example-full-width">
-              
-              <textarea rows="1" matInput placeholder="Yeah sure..."></textarea>
-            </mat-form-field>
-
+          <mat-form-field appearance="outline" class="example-full-width">
+            <textarea rows="1" matInput placeholder="Yeah sure..."></textarea>
+          </mat-form-field>
         </div>
 
         <div>
@@ -1144,14 +1150,17 @@
 
       <!-- second - textarea -->
       <div class="textareas">
+        <p>
+          How do you handle challenges or nuances in real-time conversations ?
+        </p>
 
-        <p>How do you handle challenges or nuances in real-time conversations ?</p>
-
-          <mat-form-field appearance="outline" class="example-full-width">
-            
-            <textarea rows="1" matInput placeholder="I try to be calm..."></textarea>
-          </mat-form-field>
-
+        <mat-form-field appearance="outline" class="example-full-width">
+          <textarea
+            rows="1"
+            matInput
+            placeholder="I try to be calm..."
+          ></textarea>
+        </mat-form-field>
       </div>
 
       <!-- third section -->
@@ -1176,31 +1185,15 @@
         <button class="last-button" mat-raised-button>Submit</button>
       </div>
     </mat-step>
-
   </mat-stepper>
-
-
-  
-
-
-
-
-
-
-
 </div>
-
-
-
-
-  
 
 <!-- Footer -->
 <footer
   class="text-center text-lg-start text-muted"
   style="font-family: 'Poppins', sans-serif"
 >
-  <div class="text-center text-md-start m-5 p-4">
+  <div class="text-center text-md-start m-5">
     <!-- Grid row -->
     <div class="row">
       <!-- Grid column -->
@@ -1230,7 +1223,12 @@
           /></a>
         </p>
         <p>
-          <a routerLink="/blogs" routerLinkActive="router-link-active"  class="text-reset text-decoration-none random">Blogs</a>
+          <a
+            routerLink="/blogs"
+            routerLinkActive="router-link-active"
+            class="text-reset text-decoration-none random"
+            >Blogs</a
+          >
         </p>
         <p>
           <a href="#!" class="text-reset text-decoration-none random"

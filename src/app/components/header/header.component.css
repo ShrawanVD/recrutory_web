@@ -1099,7 +1099,7 @@ font-weight: bold;
 
   .above-footer-container .right-side {
     margin-top: 4rem;
-    width: 80%;
+    width: 90%;
     margin-right: 7rem;
     
   }
@@ -1157,6 +1157,8 @@ font-weight: bold;
 }
 
 @media screen and (max-width: 450px) {
+
+
   .above-footer-container .left-side img {
     margin-left: -5rem;
   }
@@ -1214,6 +1216,7 @@ footer {
 }
 
 @media screen and (max-width: 995px) {
+
   .quick-links {
     left: 0;
   }
