@@ -50,8 +50,7 @@
 
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
-        <!-- <ng-template matStepLabel>Candidature</ng-template> -->
-        <ng-template matStepLabel [ngStyle]="{ 'font-size': (isSmallScreen ? '1rem' : 'medium') }">Candidature</ng-template>
+        <ng-template matStepLabel>Candidature</ng-template>
         <div class="row">
           <!-- name -->
           <mat-form-field appearance="outline">
@@ -60,6 +59,7 @@
               matInput
               placeholder="John Sharma"
               required
+              formControlName="name"
             />
           </mat-form-field>
 
@@ -72,7 +72,7 @@
               placeholder="9808888089"
               value=""
               required
-              name="contactno"
+              formControlName="contactno"
             />
           </mat-form-field>
         </div>
@@ -86,7 +86,7 @@
               placeholder="xyz@gmail.com"
               value=""
               required
-              name="email"
+              formControlName="email"
             />
           </mat-form-field>
 
@@ -98,7 +98,7 @@
               placeholder="Pune"
               value=""
               required
-              name="location"
+              formControlName="location"
             />
           </mat-form-field>
         </div>
@@ -111,7 +111,7 @@
               placeholder="XYZ Pvt Ltd"
               value=""
               required
-              name="companyName"
+              formControlName="companyName"
             />
           </mat-form-field>
 
@@ -123,7 +123,7 @@
               placeholder="Specialist"
               value=""
               required
-              name="roleType"
+              formControlName="currRole"
             />
           </mat-form-field>
         </div>
@@ -133,7 +133,7 @@
           <mat-label appearance="outline"
             >What languages do you know?</mat-label
           >
-          <textarea required rows="1" matInput></textarea>
+          <textarea required rows="1" matInput formControlName="langKnow"></textarea>
         </mat-form-field>
 
         <!-- qualification -->
@@ -142,12 +142,12 @@
           <p style="font-size: 1.1rem; margin-top: 1rem">
             What is your language qualification?
           </p>
-          <mat-chip-listbox aria-label="Fish selection" multiple>
-            <mat-chip-option>Globally recognized certification</mat-chip-option>
-            <mat-chip-option>Graduation</mat-chip-option>
-            <mat-chip-option>Diploma</mat-chip-option>
-            <mat-chip-option>PG Diploma</mat-chip-option>
-            <mat-chip-option>Native Speaker</mat-chip-option>
+          <mat-chip-listbox aria-label="Fish selection" multiple formControlName="langQuali">
+            <mat-chip-option value="Globally recognized certification">Globally recognized certification</mat-chip-option>
+            <mat-chip-option value="Graduation">Graduation</mat-chip-option>
+            <mat-chip-option value="Diploma">Diploma</mat-chip-option>
+            <mat-chip-option value="PG Diploma">PG Diploma</mat-chip-option>
+            <mat-chip-option value="Native Speaker">Native Speaker</mat-chip-option>
           </mat-chip-listbox>
         </div>
 
@@ -156,27 +156,27 @@
           <mat-label appearance="outline"
             >Add other qualifications, if not in list</mat-label
           >
-          <textarea rows="1" matInput></textarea>
+          <textarea rows="1" matInput  formControlName="otherlangQuali"></textarea>
         </mat-form-field>
 
         <!-- language proficiency -->
         <div class="curr-proficiency radio">
           <p style="font-size: 1.1rem">Please rate your current proficiency?</p>
-          <mat-radio-group required aria-label="Select an option">
+          <mat-radio-group required aria-label="Select an option"  formControlName="proficiency">
             <mat-radio-button class="radion-button" value="Basic"
-              >Basic</mat-radio-button
+            value="Basic">Basic</mat-radio-button
             >
             <mat-radio-button class="radion-button" value="Intermediate"
-              >Intermediate</mat-radio-button
+              value="Intermediate" >Intermediate</mat-radio-button
             >
             <mat-radio-button class="radion-button" value="Advanced"
-              >Advanced</mat-radio-button
+              value="Advanced" >Advanced</mat-radio-button
             >
             <mat-radio-button class="radion-button" value="Fluent"
-              >Fluent</mat-radio-button
+              value="Fluent" >Fluent</mat-radio-button
             >
             <mat-radio-button class="radion-button" value="Native Speaker"
-              >Native Speaker</mat-radio-button
+              value="Native Speaker" >Native Speaker</mat-radio-button
             >
           </mat-radio-group>
         </div>
@@ -187,7 +187,7 @@
             Have you taken a formal language assessment through platforms like
             Berlitz, Versant or any other in the past?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option"  formControlName="formalAssesment">
             <mat-radio-button class="radion-button" value="yes"
               >Yes</mat-radio-button
             >
@@ -202,7 +202,7 @@
           <mat-label appearance="outline"
             >If there is another platform, please mention here</mat-label
           >
-          <textarea rows="1" matInput></textarea>
+          <textarea rows="1" matInput formControlName="otherPlatform"></textarea>
         </mat-form-field>
 
         <!-- score - textarea -->
@@ -215,7 +215,7 @@
 
             <mat-form-field appearance="outline" class="example-full-width">
               
-              <textarea rows="1" matInput placeholder="Yes, I have taken.."></textarea>
+              <textarea rows="1" matInput placeholder="Yes, I have taken.."formControlName="ProficiencyResult" ></textarea>
             </mat-form-field>
 
         </div>
@@ -228,7 +228,7 @@
             Are you familiar with different dialects or regional variations of
             the language your speak ?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option" formControlName="dialects">
             <mat-radio-button class="radion-button" value="yes"
               >Yes</mat-radio-button
             >
@@ -259,11 +259,11 @@
           <p style="font-size: 1.1rem; margin-top: 1rem">
             How do you stay updated with language changes and developments ?
           </p>
-          <mat-chip-listbox aria-label="Fish selection" multiple>
-            <mat-chip-option>Reading articles</mat-chip-option>
-            <mat-chip-option>Taking courses</mat-chip-option>
-            <mat-chip-option>Attending Workshops/seminars</mat-chip-option>
-            <mat-chip-option>Following Language Blogs/Forums</mat-chip-option>
+          <mat-chip-listbox aria-label="Fish selection" multiple formControlName="supdatedLanguage">
+            <mat-chip-option value="Reading articles">Reading articles</mat-chip-option>
+            <mat-chip-option value="aking courses">Taking courses</mat-chip-option>
+            <mat-chip-option value="Attending Workshops/seminars">Attending Workshops/seminars</mat-chip-option>
+            <mat-chip-option value="Following Language Blogs/Forums">Following Language Blogs/Forums</mat-chip-option>
             <mat-chip-option
               >Native News papers and latest trends</mat-chip-option
             >
@@ -275,7 +275,7 @@
           <p style="font-size: 1.1rem">
             Do you participate in Language courses, Workshops or seminars ?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option" formControlName="sWorkshop">
             <mat-radio-button class="radion-button" value="Frequently"
               >Frequently</mat-radio-button
             >
@@ -296,7 +296,7 @@
           <p style="font-size: 1.1rem">
             Are you a part of language-related communities or forums ?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option" formControlName="sLangCommunity">
             <mat-radio-button class="radion-button" value="yes"
               >Yes</mat-radio-button
             >
@@ -312,7 +312,7 @@
             Do you regularly read literature or watch Media in languages you
             speak ?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option" formControlName="sLangCommunity">
             <mat-radio-button class="radion-button" value="yes"
               >Yes</mat-radio-button
             >
@@ -330,7 +330,7 @@
 
             <mat-form-field appearance="outline" class="example-full-width">
               
-              <textarea rows="1" matInput placeholder="I incorporate it using..."></textarea>
+              <textarea rows="1" matInput placeholder="I incorporate it using..." formControlName="sLangIntoWork"></textarea>
             </mat-form-field>
 
         </div>
@@ -344,7 +344,7 @@
 
             <mat-form-field appearance="outline" class="example-full-width">
               
-              <textarea rows="1" matInput placeholder="Methods i used are..."></textarea>
+              <textarea rows="1" matInput placeholder="Methods i used are..." formControlName="sMethodLang"></textarea>
             </mat-form-field>
 
         </div>
@@ -359,7 +359,7 @@
 
             <mat-form-field appearance="outline" class="example-full-width">
               
-              <textarea rows="1" matInput placeholder="Yeah sure..."></textarea>
+              <textarea rows="1" matInput placeholder="Yeah sure..."formControlName="sgramm"></textarea>
             </mat-form-field>
 
         </div>
@@ -374,8 +374,8 @@
 
     <!-- ------------------------- 3rd section ----------------  -->
 
-    <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
-      <form [formGroup]="secondFormGroup">
+    <mat-step [stepControl]="thirdFormGroup" label="Fill out your address">
+      <form [formGroup]="thirdFormGroup">
         <ng-template matStepLabel>Tools & Resources</ng-template>
 
         <!-- tanslation tools -->
@@ -384,7 +384,7 @@
             What tools or resources do you use for translation or language
             related tasks ?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option" formControlName="tTools">
             <mat-radio-button class="radion-button" value="Translation Software"
               >Translation Software</mat-radio-button
             >
@@ -408,7 +408,7 @@
           <mat-label appearance="outline"
             >If there are other tools, please mention here</mat-label
           >
-          <textarea rows="1" matInput></textarea>
+          <textarea rows="1" matInput formControlName="totherTools"></textarea>
         </mat-form-field>
 
         <!-- translation - software section -->
@@ -416,7 +416,7 @@
           <p style="font-size: 1.1rem">
             Are you proficient in using translation software or platforms ?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option" formControlName="tTranslation">
             <mat-radio-button class="radion-button" value="yes"
               >Yes</mat-radio-button
             >
@@ -432,7 +432,7 @@
             Do you have experience with online dictionaries or language
             databases ?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option" formControlName="tdictionaries">
             <mat-radio-button class="radion-button" value="yes"
               >Yes</mat-radio-button
             >
@@ -448,7 +448,7 @@
             Have you developed any custom tools or workflows for language
             related tasks ?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option" formControlName="tdevelopedTool">
             <mat-radio-button class="radion-button" value="yes"
               >Yes</mat-radio-button
             >
@@ -463,7 +463,7 @@
           <p style="font-size: 1.1rem">
             How often do you require to use a language tool to generate output ?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option" formControlName="tgeneOutput">
             <mat-radio-button class="radion-button" value="Frequently"
               >Frequently</mat-radio-button
             >
@@ -488,8 +488,8 @@
 
     <!-- --------------------- 4th section ---------------- -->
 
-    <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
-      <form [formGroup]="secondFormGroup">
+    <mat-step [stepControl]="fourFormGroup" label="Fill out your address">
+      <form [formGroup]="fourFormGroup">
         <ng-template matStepLabel
           >Specialization and Domain Expertise</ng-template
         >
@@ -500,7 +500,7 @@
             Are you proficient in any specialized areas such as Voice,
             Non-voice, Legal, Medical, Technical or Literary translation ?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option" formControlName="fproficient">
             <mat-radio-button class="radion-button" value="yes"
               >Yes</mat-radio-button
             >
@@ -516,7 +516,7 @@
             Have you received any formal training or certifications in
             specialized language domains ?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option" formControlName="fFormalTrainer">
             <mat-radio-button class="radion-button" value="yes"
               >Yes</mat-radio-button
             >
@@ -533,7 +533,7 @@
 
             <mat-form-field appearance="outline" class="example-full-width">
               
-              <textarea rows="1" matInput placeholder="Yeah sure..."></textarea>
+              <textarea rows="1" matInput placeholder="Yeah sure..." formControlName="fworkExample"></textarea>
             </mat-form-field>
 
         </div>
@@ -550,6 +550,7 @@
     <mat-step>
       <ng-template matStepLabel>Practical Demonstration</ng-template>
 
+      <form [formGroup]="fiveFormGroup">
       <!-- first section -->
       <div class="last-first radio" style="margin-bottom: 1.5rem">
         <p style="font-size: 1.1rem">
@@ -557,7 +558,7 @@
           speak by engaging in a conversation with a native of our choosing to
           provide a simple translation or interpretation ?
         </p>
-        <mat-radio-group aria-label="Select an option" required>
+        <mat-radio-group aria-label="Select an option" required formControlName="fiInterpretation">
           <mat-radio-button class="radion-button" value="yes"
             >Yes</mat-radio-button
           >
@@ -574,7 +575,7 @@
 
           <mat-form-field appearance="outline" class="example-full-width">
             
-            <textarea rows="1" matInput placeholder="I try to be calm..."></textarea>
+            <textarea rows="1" matInput placeholder="I try to be calm..." formControlName="fichallenges"></textarea>
           </mat-form-field>
 
       </div>
@@ -584,7 +585,7 @@
         <p style="font-size: 1.1rem">
           Can you adapt your language skills to various contexts and audiences ?
         </p>
-        <mat-radio-group aria-label="Select an option">
+        <mat-radio-group aria-label="Select an option" formControlName="fiLanguageSkills">
           <mat-radio-button class="radion-button" value="yes"
             >Yes</mat-radio-button
           >
@@ -596,9 +597,9 @@
           >
         </mat-radio-group>
       </div>
-
+      </form>
       <div>
-        <button class="last-button" mat-raised-button>Submit</button>
+        <button class="last-button" mat-raised-button (click)="candidateSubmit()">Submit</button>
       </div>
     </mat-step>
 
@@ -626,7 +627,6 @@
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
         <ng-template matStepLabel>Candidature</ng-template>
-
         <div class="row">
           <!-- name -->
           <mat-form-field appearance="outline">
@@ -635,6 +635,7 @@
               matInput
               placeholder="John Sharma"
               required
+              formControlName="name"
             />
           </mat-form-field>
 
@@ -647,7 +648,7 @@
               placeholder="9808888089"
               value=""
               required
-              name="contactno"
+              formControlName="contactno"
             />
           </mat-form-field>
         </div>
@@ -661,7 +662,7 @@
               placeholder="xyz@gmail.com"
               value=""
               required
-              name="email"
+              formControlName="email"
             />
           </mat-form-field>
 
@@ -673,7 +674,7 @@
               placeholder="Pune"
               value=""
               required
-              name="location"
+              formControlName="location"
             />
           </mat-form-field>
         </div>
@@ -686,7 +687,7 @@
               placeholder="XYZ Pvt Ltd"
               value=""
               required
-              name="companyName"
+              formControlName="companyName"
             />
           </mat-form-field>
 
@@ -698,7 +699,7 @@
               placeholder="Specialist"
               value=""
               required
-              name="roleType"
+              formControlName="currRole"
             />
           </mat-form-field>
         </div>
@@ -708,21 +709,21 @@
           <mat-label appearance="outline"
             >What languages do you know?</mat-label
           >
-          <textarea required rows="1" matInput></textarea>
+          <textarea required rows="1" matInput formControlName="langKnow"></textarea>
         </mat-form-field>
 
         <!-- qualification -->
 
         <div class="language-qualifications">
-          <p style=" margin-top: 1rem">
+          <p style="font-size: 1.1rem; margin-top: 1rem">
             What is your language qualification?
           </p>
-          <mat-chip-listbox aria-label="Fish selection" multiple>
-            <mat-chip-option>Globally recognized certification</mat-chip-option>
-            <mat-chip-option>Graduation</mat-chip-option>
-            <mat-chip-option>Diploma</mat-chip-option>
-            <mat-chip-option>PG Diploma</mat-chip-option>
-            <mat-chip-option>Native Speaker</mat-chip-option>
+          <mat-chip-listbox aria-label="Fish selection" multiple formControlName="langQuali">
+            <mat-chip-option value="Globally recognized certification">Globally recognized certification</mat-chip-option>
+            <mat-chip-option value="Graduation">Graduation</mat-chip-option>
+            <mat-chip-option value="Diploma">Diploma</mat-chip-option>
+            <mat-chip-option value="PG Diploma">PG Diploma</mat-chip-option>
+            <mat-chip-option value="Native Speaker">Native Speaker</mat-chip-option>
           </mat-chip-listbox>
         </div>
 
@@ -731,38 +732,38 @@
           <mat-label appearance="outline"
             >Add other qualifications, if not in list</mat-label
           >
-          <textarea rows="1" matInput></textarea>
+          <textarea rows="1" matInput  formControlName="otherlangQuali"></textarea>
         </mat-form-field>
 
         <!-- language proficiency -->
         <div class="curr-proficiency radio">
-          <p>Please rate your current proficiency?</p>
-          <mat-radio-group required aria-label="Select an option">
+          <p style="font-size: 1.1rem">Please rate your current proficiency?</p>
+          <mat-radio-group required aria-label="Select an option"  formControlName="proficiency">
             <mat-radio-button class="radion-button" value="Basic"
-              >Basic</mat-radio-button
+            value="Basic">Basic</mat-radio-button
             >
             <mat-radio-button class="radion-button" value="Intermediate"
-              >Intermediate</mat-radio-button
+              value="Intermediate" >Intermediate</mat-radio-button
             >
             <mat-radio-button class="radion-button" value="Advanced"
-              >Advanced</mat-radio-button
+              value="Advanced" >Advanced</mat-radio-button
             >
             <mat-radio-button class="radion-button" value="Fluent"
-              >Fluent</mat-radio-button
+              value="Fluent" >Fluent</mat-radio-button
             >
             <mat-radio-button class="radion-button" value="Native Speaker"
-              >Native Speaker</mat-radio-button
+              value="Native Speaker" >Native Speaker</mat-radio-button
             >
           </mat-radio-group>
         </div>
 
         <!-- language assessment -->
         <div class="language-assessment radio">
-          <p>
+          <p style="font-size: 1.1rem">
             Have you taken a formal language assessment through platforms like
             Berlitz, Versant or any other in the past?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option"  formControlName="formalAssesment">
             <mat-radio-button class="radion-button" value="yes"
               >Yes</mat-radio-button
             >
@@ -775,9 +776,9 @@
         <!-- other's section -->
         <mat-form-field appearance="outline" class="example-full-width">
           <mat-label appearance="outline"
-            >if any other platform, mention here</mat-label
+            >If there is another platform, please mention here</mat-label
           >
-          <textarea rows="1" matInput></textarea>
+          <textarea rows="1" matInput formControlName="otherPlatform"></textarea>
         </mat-form-field>
 
         <!-- score - textarea -->
@@ -790,7 +791,7 @@
 
             <mat-form-field appearance="outline" class="example-full-width">
               
-              <textarea rows="1" matInput placeholder="Yes, I have taken.."></textarea>
+              <textarea rows="1" matInput placeholder="Yes, I have taken.."formControlName="ProficiencyResult" ></textarea>
             </mat-form-field>
 
         </div>
@@ -799,11 +800,11 @@
 
         <!-- dialects - textarea -->
         <div class="dialects radio" style="margin-bottom: 2rem">
-          <p>
+          <p style="font-size: 1.1rem">
             Are you familiar with different dialects or regional variations of
             the language your speak ?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option" formControlName="dialects">
             <mat-radio-button class="radion-button" value="yes"
               >Yes</mat-radio-button
             >
@@ -815,7 +816,7 @@
 
         <!-- next button -->
         <div>
-          <button mat-button matStepperNext>Next Step</button>
+          <button mat-button matStepperNext>Next</button>
         </div>
       </form>
     </mat-step>
@@ -831,14 +832,14 @@
         <!-- stay - updated -->
 
         <div class="stay-updated">
-          <p style=" margin-top: 1rem">
+          <p style="font-size: 1.1rem; margin-top: 1rem">
             How do you stay updated with language changes and developments ?
           </p>
-          <mat-chip-listbox aria-label="Fish selection" multiple>
-            <mat-chip-option>Reading articles</mat-chip-option>
-            <mat-chip-option>Taking courses</mat-chip-option>
-            <mat-chip-option>Attending Workshops/seminars</mat-chip-option>
-            <mat-chip-option>Following Language Blogs/Forums</mat-chip-option>
+          <mat-chip-listbox aria-label="Fish selection" multiple formControlName="supdatedLanguage">
+            <mat-chip-option value="Reading articles">Reading articles</mat-chip-option>
+            <mat-chip-option value="aking courses">Taking courses</mat-chip-option>
+            <mat-chip-option value="Attending Workshops/seminars">Attending Workshops/seminars</mat-chip-option>
+            <mat-chip-option value="Following Language Blogs/Forums">Following Language Blogs/Forums</mat-chip-option>
             <mat-chip-option
               >Native News papers and latest trends</mat-chip-option
             >
@@ -847,10 +848,10 @@
 
         <!-- workshops section -->
         <div class="workshops radio">
-          <p>
+          <p style="font-size: 1.1rem">
             Do you participate in Language courses, Workshops or seminars ?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option" formControlName="sWorkshop">
             <mat-radio-button class="radion-button" value="Frequently"
               >Frequently</mat-radio-button
             >
@@ -868,10 +869,10 @@
 
         <!-- forums  -->
         <div class="forums radio">
-          <p>
+          <p style="font-size: 1.1rem">
             Are you a part of language-related communities or forums ?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option" formControlName="sLangCommunity">
             <mat-radio-button class="radion-button" value="yes"
               >Yes</mat-radio-button
             >
@@ -883,11 +884,11 @@
 
         <!-- literature -->
         <div class="literature radio">
-          <p>
+          <p style="font-size: 1.1rem">
             Do you regularly read literature or watch Media in languages you
             speak ?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option" formControlName="sLangCommunity">
             <mat-radio-button class="radion-button" value="yes"
               >Yes</mat-radio-button
             >
@@ -905,7 +906,7 @@
 
             <mat-form-field appearance="outline" class="example-full-width">
               
-              <textarea rows="1" matInput placeholder="I incorporate it using..."></textarea>
+              <textarea rows="1" matInput placeholder="I incorporate it using..." formControlName="sLangIntoWork"></textarea>
             </mat-form-field>
 
         </div>
@@ -919,7 +920,7 @@
 
             <mat-form-field appearance="outline" class="example-full-width">
               
-              <textarea rows="1" matInput placeholder="Methods i used are..."></textarea>
+              <textarea rows="1" matInput placeholder="Methods i used are..." formControlName="sMethodLang"></textarea>
             </mat-form-field>
 
         </div>
@@ -934,7 +935,7 @@
 
             <mat-form-field appearance="outline" class="example-full-width">
               
-              <textarea rows="1" matInput placeholder="Yeah sure..."></textarea>
+              <textarea rows="1" matInput placeholder="Yeah sure..."formControlName="sgramm"></textarea>
             </mat-form-field>
 
         </div>
@@ -949,17 +950,17 @@
 
     <!-- ------------------------- 3rd section ----------------  -->
 
-    <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
-      <form [formGroup]="secondFormGroup">
+    <mat-step [stepControl]="thirdFormGroup" label="Fill out your address">
+      <form [formGroup]="thirdFormGroup">
         <ng-template matStepLabel>Tools & Resources</ng-template>
 
         <!-- tanslation tools -->
         <div class="tanslation-tools radio">
-          <p>
+          <p style="font-size: 1.1rem">
             What tools or resources do you use for translation or language
             related tasks ?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option" formControlName="tTools">
             <mat-radio-button class="radion-button" value="Translation Software"
               >Translation Software</mat-radio-button
             >
@@ -981,17 +982,17 @@
         
         <mat-form-field appearance="outline" class="example-full-width">
           <mat-label appearance="outline"
-            >If any other tools, please mention here</mat-label
+            >If there are other tools, please mention here</mat-label
           >
-          <textarea rows="1" matInput></textarea>
+          <textarea rows="1" matInput formControlName="totherTools"></textarea>
         </mat-form-field>
 
         <!-- translation - software section -->
         <div class="translation-software radio">
-          <p>
+          <p style="font-size: 1.1rem">
             Are you proficient in using translation software or platforms ?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option" formControlName="tTranslation">
             <mat-radio-button class="radion-button" value="yes"
               >Yes</mat-radio-button
             >
@@ -1003,11 +1004,11 @@
 
         <!-- dictionaries section -->
         <div class="dictionaries radio">
-          <p>
+          <p style="font-size: 1.1rem">
             Do you have experience with online dictionaries or language
             databases ?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option" formControlName="tdictionaries">
             <mat-radio-button class="radion-button" value="yes"
               >Yes</mat-radio-button
             >
@@ -1019,11 +1020,11 @@
 
         <!-- custom-tools section -->
         <div class="custom-tools radio">
-          <p>
+          <p style="font-size: 1.1rem">
             Have you developed any custom tools or workflows for language
             related tasks ?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option" formControlName="tdevelopedTool">
             <mat-radio-button class="radion-button" value="yes"
               >Yes</mat-radio-button
             >
@@ -1035,10 +1036,10 @@
 
         <!-- last-section -->
         <div class="last-section radio" style="margin-bottom: 2rem">
-          <p>
+          <p style="font-size: 1.1rem">
             How often do you require to use a language tool to generate output ?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option" formControlName="tgeneOutput">
             <mat-radio-button class="radion-button" value="Frequently"
               >Frequently</mat-radio-button
             >
@@ -1063,19 +1064,19 @@
 
     <!-- --------------------- 4th section ---------------- -->
 
-    <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
-      <form [formGroup]="secondFormGroup">
+    <mat-step [stepControl]="fourFormGroup" label="Fill out your address">
+      <form [formGroup]="fourFormGroup">
         <ng-template matStepLabel
           >Specialization and Domain Expertise</ng-template
         >
 
         <!-- first section -->
         <div class="first radio">
-          <p>
+          <p style="font-size: 1.1rem">
             Are you proficient in any specialized areas such as Voice,
             Non-voice, Legal, Medical, Technical or Literary translation ?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option" formControlName="fproficient">
             <mat-radio-button class="radion-button" value="yes"
               >Yes</mat-radio-button
             >
@@ -1087,11 +1088,11 @@
 
         <!-- second section -->
         <div class="second radio">
-          <p>
+          <p style="font-size: 1.1rem">
             Have you received any formal training or certifications in
             specialized language domains ?
           </p>
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option" formControlName="fFormalTrainer">
             <mat-radio-button class="radion-button" value="yes"
               >Yes</mat-radio-button
             >
@@ -1108,7 +1109,7 @@
 
             <mat-form-field appearance="outline" class="example-full-width">
               
-              <textarea rows="1" matInput placeholder="Yeah sure..."></textarea>
+              <textarea rows="1" matInput placeholder="Yeah sure..." formControlName="fworkExample"></textarea>
             </mat-form-field>
 
         </div>
@@ -1125,14 +1126,15 @@
     <mat-step>
       <ng-template matStepLabel>Practical Demonstration</ng-template>
 
+      <form [formGroup]="fiveFormGroup">
       <!-- first section -->
       <div class="last-first radio" style="margin-bottom: 1.5rem">
-        <p>
+        <p style="font-size: 1.1rem">
           Can you demonstrate your proficiency in the languages you claim to
           speak by engaging in a conversation with a native of our choosing to
           provide a simple translation or interpretation ?
         </p>
-        <mat-radio-group aria-label="Select an option" required>
+        <mat-radio-group aria-label="Select an option" required formControlName="fiInterpretation">
           <mat-radio-button class="radion-button" value="yes"
             >Yes</mat-radio-button
           >
@@ -1149,17 +1151,17 @@
 
           <mat-form-field appearance="outline" class="example-full-width">
             
-            <textarea rows="1" matInput placeholder="I try to be calm..."></textarea>
+            <textarea rows="1" matInput placeholder="I try to be calm..." formControlName="fichallenges"></textarea>
           </mat-form-field>
 
       </div>
 
       <!-- third section -->
       <div class="last-third radio" style="margin-bottom: 2rem">
-        <p>
+        <p style="font-size: 1.1rem">
           Can you adapt your language skills to various contexts and audiences ?
         </p>
-        <mat-radio-group aria-label="Select an option">
+        <mat-radio-group aria-label="Select an option" formControlName="fiLanguageSkills">
           <mat-radio-button class="radion-button" value="yes"
             >Yes</mat-radio-button
           >
@@ -1171,9 +1173,9 @@
           >
         </mat-radio-group>
       </div>
-
+      </form>
       <div>
-        <button class="last-button" mat-raised-button>Submit</button>
+        <button class="last-button" mat-raised-button (click)="candidateSubmit()">Submit</button>
       </div>
     </mat-step>
 
