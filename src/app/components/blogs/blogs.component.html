@@ -9,41 +9,42 @@
     justify-content: center;
     align-items: center;
 ">
-    <nav>
-        <div class="logo">
-          <a href="#"><img src="assets/logo.png" height="60px" width="200px" /></a>
-        </div>
-        <div class="navbar-links">
-          <ul>
-            <li><a href="#">Why Recrutory ?</a></li>
-            <li>
-              <a href="#"
-                ><img src="assets/verbiq_logo.png" height="30px" width="85px"
-              /></a>
-            </li>
-            <li><a href="#">Global Insights</a></li>
-          </ul>
-        </div>
-      </nav>
-
-    <div class="blog-heading">
-        <h1>Blogs</h1>
+  <nav>
+    <div class="logo">
+      <a href="#"><img src="assets/logo.png" height="60px" width="200px" /></a>
     </div>
-
-    <div class="blogs">
-        <div class="blog-container" style="display: flex; flex-wrap: wrap;">
-            <mat-card class="blog-card" *ngFor="let post of blogPosts" (click)="openBlog(post._id)" >
-                <img mat-card-image [src]="post.imageUrl" alt="Blog Image" >
-                <mat-card-content style="font-family: 'Poppins', sans-serif;">
-                    <mat-card-title>{{ post.title }}</mat-card-title>
-                    <mat-card-subtitle>{{ post.date }}</mat-card-subtitle>
-                    <hr />
-                    <p style="text-align: justify;">{{ post.content }}</p>
-                </mat-card-content>
-            </mat-card>
-        </div>
+    <div class="navbar-links">
+      <ul>
+        <li><a href="#">Why Recrutory ?</a></li>
+        <li>
+          <a href="#"><img src="assets/verbiq_logo.png" height="30px" width="85px" /></a>
+        </li>
+        <li><a href="#">Global Insights</a></li>
+      </ul>
     </div>
-</div> 
+  </nav>
+
+  <div class="blog-heading">
+    <h1>Blogs</h1>
+  </div>
+
+  <div class="blogs">
+    <div class="blog-container" style="display: flex; flex-wrap: wrap;">
+      <mat-card class="blog-card" *ngFor="let post of blogPosts" (click)="openBlog(post._id)">
+        <img mat-card-image [src]="post.imageUrl" alt="Blog Image">
+        <mat-card-content style="font-family: 'Poppins', sans-serif;">
+          <mat-card-title>{{ post.title }}</mat-card-title>
+          <mat-card-subtitle>{{ post.date }}</mat-card-subtitle>
+          <hr />
+          <p style="text-align: justify;">{{ post.content }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page">
+    </mat-paginator>
+  </div>
+</div>
+
 <!-- Footer -->
 <footer class="text-center text-lg-start text-muted" style="font-family: 'Poppins', sans-serif">
   <div class="text-center text-md-start m-5">

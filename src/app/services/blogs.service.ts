@@ -23,6 +23,8 @@ export class BlogsService {
               date: post.date,
               imageUrl: post.imageUrl,
               content: post.content
+              // imageUrl2: post.imageUrl2,
+              // content2: post.content2
             };
             postsArray.push(blogPost);
           }

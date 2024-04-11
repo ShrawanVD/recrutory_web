@@ -40,6 +40,7 @@ nav {
 .navbar-links a {
   text-decoration: none;
   color: #022b41;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 692px) {
@@ -72,6 +73,7 @@ nav {
   border-bottom: 3px solid #022b41;
   border-radius: 20%;
 }
+
 /*-------------- blogs heading----------  */
 
 .blog-heading{
@@ -96,6 +98,14 @@ nav {
   justify-content: space-between;
   margin: 20px;
 }
+.blogs mat-paginator{
+  background: rgba( 255, 255, 255, 0.4 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 1.5px );
+  -webkit-backdrop-filter: blur( 1.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
 
 .blog-card {
   width: calc(33.33% - 20px);
@@ -103,15 +113,36 @@ nav {
   margin-bottom: 20px;
   cursor: pointer;
 
-  background: rgba(255, 255, 255, 0.31);
+  /* background: rgba(255, 255, 255, 0.31);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.3px);
-  -webkit-backdrop-filter: blur(3.3px);
+  -webkit-backdrop-filter: blur(3.3px); */
+
+  background: rgba( 255, 255, 255, 0.4 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 1.5px );
+  -webkit-backdrop-filter: blur( 1.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .blog-card:hover {
-  background-color: white;
+  -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+    -webkit-box-shadow: 0px 15px 15px 0px #272727;
+    transition-timing-function: ease-in-out;
+            -ms-transition-timing-function: ease-in-out;
+            -moz-transition-timing-function: ease-in-out;
+            -webkit-transition-timing-function: ease-in-out;
+            -o-transition-timing-function: ease-in-out;
+            transition-duration: 0.4s;
+            -ms-transition-duration: 0.4s;
+            -moz-transition-duration: 0.4s;
+            -webkit-transition-duration: 0.4s;
+            -o-transition-duration: 0.4s;
+
 }
 
 .mat-card-content {

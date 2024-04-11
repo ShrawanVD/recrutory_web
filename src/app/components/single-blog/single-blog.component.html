@@ -9,29 +9,52 @@ background-position: center;
 justify-content: center;
 align-items: center;
 ">
-    <nav>
+     <nav>
         <div class="logo">
-            <a href="#"><img src="assets/logo.png" height="60px" width="200px" /></a>
+          <a href="#"><img src="assets/logo.png" height="60px" width="200px" /></a>
         </div>
         <div class="navbar-links">
-            <ul>
-                <li><a href="#">Why Recrutory ?</a></li>
-                <li>
-                    <a href="#"><img src="assets/verbiq_logo.png" height="30px" width="85px" /></a>
-                </li>
-                <li><a href="#">Global Insights</a></li>
-            </ul>
+          <ul>
+            <li><a routerLink="">Why Recrutory ?</a></li>
+            <li>
+              <a href="#"
+                ><img src="assets/verbiq_logo.png" height="30px" width="85px"
+              /></a>
+            </li>
+            <li><a href="#">Global Insights</a></li>
+          </ul>
         </div>
-    </nav>
+      </nav>
+    <div class="bubbles">
+        <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      
+    </div>
 
     <div class="blogs-container">
-        <!-- <div class="blog-list">
-
-        </div> -->
-        <mat-card class="blog-card">
-            <img [src]="blogData.imageUrl" />
+        <div class="blog-list">
+            <mat-card class="list-card">
+                <h1>Explore More</h1>
+                <ul *ngFor="let post of blogTitle">
+                    <li [class.active]="activePostId === post._id" (click)="openBlog(post._id)">{{post.title}}</li>
+                </ul>
+            </mat-card>
+        </div>
+        <mat-card class="blog-card ">
             <h1>{{blogData.title}}</h1>
+            <h3>{{blogData.date}}</h3>
+            <img [src]="blogData.imageUrl" />
             <h3>{{blogData.content}}</h3>
+            <!-- <img [src]="blogData.imageUrl" />
+            <h3>{{blogData.content}}</h3> -->
           </mat-card>
     </div>
 

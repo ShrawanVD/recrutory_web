@@ -31,7 +31,7 @@ import {NgIf} from '@angular/common';
 
 import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
-
+import {MatPaginatorModule} from '@angular/material/paginator';
 import {FormBuilder, Validators} from '@angular/forms';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { SingleBlogComponent } from './components/single-blog/single-blog.component';
@@ -78,6 +78,7 @@ import { SingleBlogComponent } from './components/single-blog/single-blog.compon
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatPaginatorModule
   ],
   providers: [
     provideClientHydration(),

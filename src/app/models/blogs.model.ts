@@ -4,4 +4,6 @@ export interface Blogs {
   date: string;
   imageUrl: string;
   content: string;
+  // imageUrl2: string;
+  // content2: string;
 }
