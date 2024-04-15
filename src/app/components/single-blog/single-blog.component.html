@@ -33,7 +33,7 @@ align-items: center;
                 <li>
                     <a href="#"><img src="assets/verbiq_logo.png" height="30px" width="85px" /></a>
                 </li>
-                <li><a href="#">Global Insights</a></li>
+                <li><a  routerLink="insights">Global Insights</a></li>
             </ul>
         </div>
     </nav>
@@ -72,11 +72,12 @@ align-items: center;
                 [include]="['facebook','whatsapp','twitter','linkedin','telegram','copy']" 
                 [url]="'https://recrutory.com/blogs/'+blogId" 
                 [autoSetMeta]="true"
-                [title]="blogData.title"
-               [description]="blogData.content"
-               [image]="blogData.imageUrl"
+
                 class="share-icon-button">
             </share-buttons>
+            <!-- [title]="blogData.title"
+            [description]="blogData.content"
+            [image]="blogData.imageUrl" -->
         </mat-card>
     </div>
 
