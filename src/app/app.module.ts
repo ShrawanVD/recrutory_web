@@ -36,6 +36,7 @@ import {FormBuilder, Validators} from '@angular/forms';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { SingleBlogComponent } from './components/single-blog/single-blog.component';
 import { MeetTheTeamComponent } from './components/meet-the-team/meet-the-team.component';
+import { GlobalInsightsComponent } from './components/global-insights/global-insights.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { MeetTheTeamComponent } from './components/meet-the-team/meet-the-team.c
     CompanyComponent,
     BlogsComponent,
     SingleBlogComponent,
-    MeetTheTeamComponent
+    MeetTheTeamComponent,
+    GlobalInsightsComponent
   ],
   imports: [
     BrowserModule,
