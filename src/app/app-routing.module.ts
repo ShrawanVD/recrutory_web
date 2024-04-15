@@ -6,6 +6,7 @@ import { OverlayComponent } from './components/overlay/overlay.component';
 import { CompanyComponent } from './components/company/company.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { SingleBlogComponent } from './components/single-blog/single-blog.component';
+import { MeetTheTeamComponent } from './components/meet-the-team/meet-the-team.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'blogs/:id',
     component: SingleBlogComponent
+  },
+  {
+    path: 'team',
+    component: MeetTheTeamComponent
   }
 ];
 
