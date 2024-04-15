@@ -67,7 +67,6 @@ nav {
 }
 
 /* Apply styles for active link when clicked */
-.navbar-links ul li a:active,
 .navbar-links ul li a:hover {
   padding: 0px 0px 10px;
   border-bottom: 3px solid #022b41;
