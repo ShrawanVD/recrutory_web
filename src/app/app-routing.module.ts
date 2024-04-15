@@ -7,6 +7,7 @@ import { CompanyComponent } from './components/company/company.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { SingleBlogComponent } from './components/single-blog/single-blog.component';
 import { MeetTheTeamComponent } from './components/meet-the-team/meet-the-team.component';
+import { GlobalInsightsComponent } from './components/global-insights/global-insights.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'team',
     component: MeetTheTeamComponent
+  },
+  {
+    path: 'insights',
+    component: GlobalInsightsComponent
   }
 ];
 

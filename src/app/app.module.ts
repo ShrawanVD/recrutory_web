@@ -38,6 +38,8 @@ import { SingleBlogComponent } from './components/single-blog/single-blog.compon
 import { MeetTheTeamComponent } from './components/meet-the-team/meet-the-team.component';
 import {ShareButtonsModule} from 'ngx-sharebuttons/buttons';
 import {ShareIconsModule} from 'ngx-sharebuttons/icons'
+import { GlobalInsightsComponent } from './components/global-insights/global-insights.component';
+
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import {ShareIconsModule} from 'ngx-sharebuttons/icons'
     CompanyComponent,
     BlogsComponent,
     SingleBlogComponent,
-    MeetTheTeamComponent
+    MeetTheTeamComponent,
+    GlobalInsightsComponent
   ],
   imports: [
     BrowserModule,
