@@ -35,6 +35,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {FormBuilder, Validators} from '@angular/forms';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { SingleBlogComponent } from './components/single-blog/single-blog.component';
+import { MeetTheTeamComponent } from './components/meet-the-team/meet-the-team.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { SingleBlogComponent } from './components/single-blog/single-blog.compon
     OverlayComponent,
     CompanyComponent,
     BlogsComponent,
-    SingleBlogComponent
+    SingleBlogComponent,
+    MeetTheTeamComponent
   ],
   imports: [
     BrowserModule,
