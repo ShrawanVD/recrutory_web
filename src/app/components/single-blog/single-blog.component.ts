@@ -13,7 +13,7 @@ export class SingleBlogComponent implements OnInit{
   blogId : any;
   blogData: any;
   blogTitle :any;
-  activePostId: any
+  activePostId: any;
 
   ngOnInit(): void {
     this.activeRoute.params.subscribe(params =>{

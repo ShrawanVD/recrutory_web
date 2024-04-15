@@ -1,5 +1,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
 <div class="background" style="
     background-image: url('assets/background.png');
@@ -33,10 +34,11 @@
       <mat-card class="blog-card" *ngFor="let post of blogPosts" (click)="openBlog(post._id)">
         <img mat-card-image [src]="post.imageUrl" alt="Blog Image">
         <mat-card-content style="font-family: 'Poppins', sans-serif;">
-          <mat-card-title>{{ post.title }}</mat-card-title>
+          <mat-card-title >{{ post.title }}</mat-card-title>
           <mat-card-subtitle>{{ post.date }}</mat-card-subtitle>
           <hr />
-          <p style="text-align: justify;">{{ post.content }}</p>
+          <p style="text-align: justify;" class="cardtitle">{{ post.content }}</p>
+          <h3 class="read-more">Read More >></h3>
         </mat-card-content>
       </mat-card>
     </div>

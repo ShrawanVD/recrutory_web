@@ -148,6 +148,32 @@ nav {
 .mat-card-content {
   text-align: center;
 }
+.blog-container mat-card-title{
+  margin-top: 1rem;
+  line-height: 1.6rem;
+}
+.blog-container mat-card-subtitle{
+  margin-top: 0.2rem;
+}
+
+.cardtitle {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  height: auto !important; 
+}
+.read-more{
+  color: #0e82c0;
+  cursor: pointer;
+}
+.read-more:hover{
+  color: black;
+}
+
+
+
 
 @media screen and (max-width: 600px) {
   .blog-card {

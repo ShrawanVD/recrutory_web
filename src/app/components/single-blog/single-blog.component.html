@@ -1,5 +1,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
 <div style="
 background-image: url('assets/background.png');
@@ -50,11 +51,11 @@ align-items: center;
         </div>
         <mat-card class="blog-card ">
             <h1>{{blogData.title}}</h1>
-            <h3>{{blogData.date}}</h3>
+            <h3 class="blogDate">{{blogData.date}}</h3>
             <img [src]="blogData.imageUrl" />
-            <h3>{{blogData.content}}</h3>
-            <!-- <img [src]="blogData.imageUrl" />
-            <h3>{{blogData.content}}</h3> -->
+            <h3 class="blogcontent">{{blogData.content}}</h3>
+            <img [src]="blogData.imageUrl2" [style.display]="blogData.imageUrl2 ? 'block' : 'none'" />
+            <h3 class="blogcontent" >{{blogData.content2}}</h3>
           </mat-card>
     </div>
 
