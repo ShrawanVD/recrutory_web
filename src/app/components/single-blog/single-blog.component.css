@@ -354,7 +354,20 @@ nav {
 }
 
 /* ---------------------- */
+/* share button */
+.share-icon-button{
+  background-color: #022b41;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+.share-icon-button:hover{
+  color:#0077b5;
+  background-color: #022b41;
+}
 
+
+
+/* --------------------------------- */
 
 /* footer section */
 

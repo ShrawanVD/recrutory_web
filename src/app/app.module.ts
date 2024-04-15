@@ -36,7 +36,8 @@ import {FormBuilder, Validators} from '@angular/forms';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { SingleBlogComponent } from './components/single-blog/single-blog.component';
 import { MeetTheTeamComponent } from './components/meet-the-team/meet-the-team.component';
-
+import {ShareButtonsModule} from 'ngx-sharebuttons/buttons';
+import {ShareIconsModule} from 'ngx-sharebuttons/icons'
 
 @NgModule({
   declarations: [
@@ -80,7 +81,11 @@ import { MeetTheTeamComponent } from './components/meet-the-team/meet-the-team.c
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    ShareButtonsModule.withConfig({
+      debug: true,
+    }),
+    ShareIconsModule
   ],
   providers: [
     provideClientHydration(),

@@ -99,7 +99,7 @@ export class CandidateformComponent  implements OnInit{
     };
 
     console.log(this.formData)
-    if(this.formData){
+    if(this.firstFormGroup.valid){
       const config = new MatSnackBarConfig();
           config.duration = 1000;
           config.verticalPosition = 'top'; 

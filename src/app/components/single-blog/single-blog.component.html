@@ -1,6 +1,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
+
+
+
+<!-- <head>
+    <meta property="og:url" [content]="'https://recrutory.com/blogs/'+blogId" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" [content]="blogData.title" />
+    <meta property="og:description" [content]="blogData.content" />
+    <meta property="og:image" [content]="blogData.imageUrl" />
+
+</head> -->
+  
 
 <div style="
 background-image: url('assets/background.png');
@@ -10,34 +23,32 @@ background-position: center;
 justify-content: center;
 align-items: center;
 ">
-     <nav>
+    <nav>
         <div class="logo">
-          <a href="#!"><img src="assets/logo.png" height="60px" width="200px" /></a>
+            <a href="#!"><img src="assets/logo.png" height="60px" width="200px" /></a>
         </div>
         <div class="navbar-links">
-          <ul>
-            <li><a href="#!">Why Recrutory ?</a></li>
-            <li>
-              <a href="#"
-                ><img src="assets/verbiq_logo.png" height="30px" width="85px"
-              /></a>
-            </li>
-            <li><a href="#">Global Insights</a></li>
-          </ul>
+            <ul>
+                <li><a href="#!">Why Recrutory ?</a></li>
+                <li>
+                    <a href="#"><img src="assets/verbiq_logo.png" height="30px" width="85px" /></a>
+                </li>
+                <li><a href="#">Global Insights</a></li>
+            </ul>
         </div>
-      </nav>
+    </nav>
     <div class="bubbles">
         <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+
     </div>
 
     <div class="blogs-container">
@@ -55,8 +66,18 @@ align-items: center;
             <img [src]="blogData.imageUrl" />
             <h3 class="blogcontent">{{blogData.content}}</h3>
             <img [src]="blogData.imageUrl2" [style.display]="blogData.imageUrl2 ? 'block' : 'none'" />
-            <h3 class="blogcontent" >{{blogData.content2}}</h3>
-          </mat-card>
+            <h3 class="blogcontent">{{blogData.content2}}</h3>
+            <share-buttons 
+                theme="material-dark"
+                [include]="['facebook','whatsapp','twitter','linkedin','telegram','copy']" 
+                [url]="'https://recrutory.com/blogs/'+blogId" 
+                [autoSetMeta]="true"
+                [title]="blogData.title"
+               [description]="blogData.content"
+               [image]="blogData.imageUrl"
+                class="share-icon-button">
+            </share-buttons>
+        </mat-card>
     </div>
 
 
