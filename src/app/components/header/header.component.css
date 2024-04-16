@@ -1027,6 +1027,19 @@ font-weight: bold;
   width: 80%;
   height: auto;
 }
+.left-side .animation {
+  display: block;
+  margin: 0 2rem 0 auto;
+  width: 80%;
+  height: auto;
+}
+
+.left-side img {
+  display: block;
+  margin: 0 2rem 0 auto;
+  width: 80%;
+  height: auto;
+}
 
 .right-side {
   margin: 0 10rem 0 5rem;

@@ -6,6 +6,20 @@
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-N4F2M0QEH6"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-N4F2M0QEH6");
+    </script>
+
     <!-- swiper bundle -->
     <!-- <link
       rel="stylesheet"
@@ -13,12 +27,16 @@
     /> -->
 
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
   <body class="mat-typography">
     <app-root></app-root>
-
-    
   </body>
 </html>
