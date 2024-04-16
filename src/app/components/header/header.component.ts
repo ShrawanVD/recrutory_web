@@ -91,13 +91,9 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     { 
       question: 'COMPREHENSIVE CANDIDATE ASSESSMENT', 
       answerList: [
-        'Complete Competency Assessment',
-        'Comprehensive Skill Set Analysis',
-        'Thorough Qualification Review',
-        'In-Depth Aptitude Examination',
-        'Robust Performance Evaluation',
-        'Total Talent Suitability Check',
-        'Comprehensive Fit and Capability Audit'
+        'Competency Assessment: Evaluate skills comprehensively',
+        'Skill Set Analysis: Thoroughly review qualifications and aptitude',
+        'Talent Suitability Check: Assess fit, capability, and performance robustly'
       ],
       image: 'assets/vector2.svg'
     },
