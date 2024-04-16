@@ -13,7 +13,7 @@
     <meta property="og:image" [content]="blogData.imageUrl" />
 
 </head> -->
-  
+
 
 <div style="
 background-image: url('assets/background.png');
@@ -25,15 +25,15 @@ align-items: center;
 ">
     <nav>
         <div class="logo">
-            <a href="#!"><img src="assets/logo.png" height="60px" width="200px" /></a>
+            <a href="#"><img src="assets/logo.png" height="60px" width="200px" /></a>
         </div>
         <div class="navbar-links">
             <ul>
-                <li><a href="#!">Why Recrutory ?</a></li>
+                <li><a href="#">Why Recrutory ?</a></li>
                 <li>
                     <a href="#"><img src="assets/verbiq_logo.png" height="30px" width="85px" /></a>
                 </li>
-                <li><a  routerLink="insights">Global Insights</a></li>
+                <li><a href="insights">Global Insights</a></li>
             </ul>
         </div>
     </nav>
@@ -67,17 +67,12 @@ align-items: center;
             <h3 class="blogcontent">{{blogData.content}}</h3>
             <img [src]="blogData.imageUrl2" [style.display]="blogData.imageUrl2 ? 'block' : 'none'" />
             <h3 class="blogcontent">{{blogData.content2}}</h3>
-            <share-buttons 
-                theme="material-dark"
-                [include]="['facebook','whatsapp','twitter','linkedin','telegram','copy']" 
-                [url]="'https://recrutory.com/blogs/'+blogId" 
-                [autoSetMeta]="true"
-
-                class="share-icon-button">
+            <share-buttons theme="material-dark"
+                [include]="['facebook','whatsapp','twitter','linkedin','telegram','copy']"
+                [url]="'https://recrutory.com/blogs/'+blogId" [autoSetMeta]="true" [title]="blogData.title"
+                [description]="trimContent(blogData.content, 160)" [image]="blogData.imageUrl" class="share-icon-button">
             </share-buttons>
-            <!-- [title]="blogData.title"
-            [description]="blogData.content"
-            [image]="blogData.imageUrl" -->
+
         </mat-card>
     </div>
 
@@ -112,7 +107,7 @@ align-items: center;
                             src="assets/verbiq_logo.png" alt="" /></a>
                 </p>
                 <p>
-                    <a routerLink="blogs" class="text-reset text-decoration-none random">Blogs</a>
+                    <a href="blogs" class="text-reset text-decoration-none random">Blogs</a>
                 </p>
                 <p>
                     <a href="#!" class="text-reset text-decoration-none random">Media & Press Release</a>

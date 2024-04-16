@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BlogsService } from '../../services/blogs.service';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-single-blog',
@@ -9,7 +10,7 @@ import { BlogsService } from '../../services/blogs.service';
 })
 export class SingleBlogComponent implements OnInit{
 
-  constructor(private activeRoute:ActivatedRoute,private blog:BlogsService) {}
+  constructor(private activeRoute:ActivatedRoute,private blog:BlogsService,private router:Router,private meta: Meta) {}
   blogId : any;
   blogData: any;
   blogTitle :any;
@@ -30,10 +31,10 @@ export class SingleBlogComponent implements OnInit{
     })
   }
 
+  // get blog by its id 
   getBlogById(id: any){
     this.blog.getOneBlog(id).subscribe({
       next:(res:any) =>{
-        console.log(res)
         this.blogData = res;
       },
       error: (err:any)=> {
@@ -42,11 +43,12 @@ export class SingleBlogComponent implements OnInit{
     })
   }
 
+  // changing blog from explore more section
   openBlog(id: any){
     this.activePostId = id;
+    this.router.navigate(['blogs/',id]);
     this.blog.getOneBlog(id).subscribe({
       next:(res:any) =>{
-        console.log(res)
         this.blogData = res;
       },
       error: (err:any)=> {
@@ -54,5 +56,13 @@ export class SingleBlogComponent implements OnInit{
       }
     })
   }
+
+  // for showing only two lines of content
+  trimContent(content: string, maxLength: number): string {
+    if (!content) return content;
+    if (content.length <= maxLength) return content;
+    return content.substr(0, maxLength) + '...'; 
+  }
+  
 
 }
