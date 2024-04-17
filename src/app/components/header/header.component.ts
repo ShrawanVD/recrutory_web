@@ -95,7 +95,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
         'Skill Set Analysis: Thoroughly review qualifications and aptitude',
         'Talent Suitability Check: Assess fit, capability, and performance robustly'
       ],
-      image: 'assets/vector2.svg'
+      image: 'assets/Group.png'
     },
     { 
       question: 'TECHNICAL PROFICIENCY AND COMMUNICATION SKILLS', 
