@@ -50,8 +50,8 @@
   >
     <!--  ------------------1st step---------------------- -->
 
-    <mat-step [stepControl]="firstFormGroup">
-      <form [formGroup]="firstFormGroup">
+    <mat-step [stepControl]="firstFormGroup" >
+      <form [formGroup]="firstFormGroup" linear >
         <ng-template matStepLabel
           ><label class="stepper-label">Candidature</label></ng-template
         >
@@ -288,9 +288,9 @@
           </mat-radio-group>
         </div>
 
-        <!-- next button -->
-        <div>
-          <button mat-button matStepperNext>Next</button>
+        <!-- next button -->  
+        <div  style="text-align: right;">
+          <button mat-button (click)="checkData1()" >Next</button>
         </div>
       </form>
     </mat-step>
@@ -299,7 +299,7 @@
 
     <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
       <form [formGroup]="secondFormGroup">
-        <ng-template matStepLabel
+        <ng-template
           ><label class="stepper-label"
             >Continuous Learning & Development</label
           ></ng-template
@@ -456,9 +456,9 @@
           </mat-form-field>
         </div>
 
-        <div>
+        <div class="bottom-buttons">
           <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
+          <button mat-button (click)="checkData2()">Next</button>
         </div>
       </form>
     </mat-step>
@@ -607,9 +607,9 @@
           </mat-radio-group>
         </div>
 
-        <div>
+        <div class="bottom-buttons">
           <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
+          <button mat-button (click)="checkData3()">Next</button>
         </div>
       </form>
     </mat-step>
@@ -676,9 +676,9 @@
           </mat-form-field>
         </div>
 
-        <div>
+        <div class="bottom-buttons">
           <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
+          <button mat-button (click)="checkData4()">Next</button>
         </div>
       </form>
     </mat-step>
