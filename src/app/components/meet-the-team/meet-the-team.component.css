@@ -115,75 +115,18 @@ nav {
   left: calc(50% - 20px);
 }
 
-.card-pink {
-  border-radius: 6px;
-  border-bottom: 4px solid #ff2c95 !important;
-}
-.card-blue {
-  border-radius: 6px;
-  border-bottom: 4px solid #1c68b3 !important;
-}
 
-.col .card img {
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-}
-.card-body {
-  padding: 1rem 1.5rem;
-}
-.card-body p {
-  font-size: 0.9rem;
-  text-align: justify;
-  font-family: "Poppins", sans-serif;
-  color: #4b5563;
-}
-.card-blue svg {
-  fill: #1c68b3;
-}
-.card-pink svg {
-  fill: #ff2c95;
-}
-.card-blue .card-footer p {
-  color: #1c68b3;
-}
-.card-pink .card-footer p {
-  color: #ff2c95;
-}
-.card-shape {
-  position: relative;
-}
 
-.card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.card:hover {
-  transform: translateY(-10px);
-  transition: ease-in-out 0.3s;
-}
 
-.custom-shape-divider-bottom-1634717805 {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
 
-.custom-shape-divider-bottom-1634717805 svg {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 50px;
-}
 
-.custom-shape-divider-bottom-1634717805 .shape-fill {
-  fill: #ffffff;
-}
+
+
+
+
+
+
 
 
 #cards .card {
@@ -193,19 +136,15 @@ nav {
 
 #cards .heading-border {
   position: absolute;
-  min-width: 100%;
+  width: 100%;
   top: 60%;
-}
-
-.member-card {
-  border-bottom: 4px solid rgb(46, 196, 223) !important;
 }
 
 #cards .card .user-picture img {
   position: absolute;
   top: -25%;
-  right: 5%;
-  background: #f8f9fa !important;
+  right: 10%;
+  background: #f8f9fa!important;
   padding: 10px;
 }
 
@@ -213,35 +152,13 @@ nav {
   margin-right: 150px;
 }
 
-.user-content .small p{
-  text-align: left;
-  margin-top: 1rem;
+/* added css */
+
+.team{
+  margin-top: 4rem;
 }
-
-.user-content h3,
-.user-content p {
-  font-family: "Poppins", sans-serif;
-}
-
-
-
-/* founder's section */
-.founder-row {
-  margin-bottom: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.founder1 {
-  width: 40%;
-  min-height: 100%;
-  margin-right: 1rem;
-}
-.founder2 {
-  width: 40%;
-  min-height: 100%;
-  margin-left: 1rem;
+.subteam{
+  margin-top: 2rem;
 }
 
 .sheetal-mam {
@@ -250,69 +167,101 @@ nav {
 .ram-sir {
   border-bottom: 4px solid #1c68b3 !important;
 }
-
-@media screen and (max-width: 1200px) {
-  .founder-row {
-    margin-bottom: 5rem;
-  }
-  .social a{
-    margin-top: 5rem;
-  }
-  .sheetal-mam p, .ram-sir p {
-    font-size: 0.8rem;
-  }
-  .member-row {
-    margin-top: 5rem;
-  }
-  #cards .card .user-picture img {
-    top: -15%;
-    right: 5%;
-  }
+.member{
+  border-bottom: 4px solid rgb(46, 196, 223) !important;
 }
 
-/* member's section */
+.user-content h5{
+  font-family: "Poppins", sans-serif;
+}
+.user-content .profile{
+  font-family: "Poppins", sans-serif;
+}
+.user-content .bio{
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+}
 
-.member-row {
-  margin-top: 4rem;
+.row1, .row2{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
 }
 
-.member1 {
+.member1{
   margin-right: 1rem;
+  min-height: 100%;
 }
-.member2 {
+.member2{
   margin-left: 1rem;
+  min-height: 100%;
 }
 
-@media screen and (max-width: 768px) {
+.card:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+  transition: ease-in-out 0.3s;
+}
 
-  .founder-row{
+
+@media screen and (max-width: 950px) {
+  #cards .card .user-picture img {
+    top: -20%;
+  }
+}
+@media screen and (max-width: 770px) {
+  .row1, .row2{
     flex-direction: column;
-    margin-bottom: 2rem;
   }
-
-  .founder1, .founder2{
-    min-width: 70vw;
-    min-height: auto;
-    margin: 0 auto;
-  }
-
-  .member-row {
-    margin-top: 2rem;
-    flex-direction: column;
-  }
-
-  .member1 {
+  .member1{
     margin-right: 0rem;
-    margin-bottom: 1rem;
   }
-  .member2 {
+  .member2{
     margin-left: 0rem;
-    margin-top: 1rem;
   }
 }
+
+
+
+.astrodivider {
+  margin:5rem auto;
+  width:400px; 
+  max-width: 100%;
+  position:relative;
+}
+
+.astrodividermask { 
+    overflow:hidden; height:20px; 
+}
+
+.astrodividermask:after { 
+      content:''; 
+      display:block; margin:-25px auto 0;
+      width:100%; height:25px;  
+        border-radius:125px / 12px;
+       box-shadow:0 0 8px #049372;
+}
+.astrodivider span {
+    width:50px; height:50px; 
+    position:absolute; 
+    bottom:100%; margin-bottom:-25px;
+    left:50%; margin-left:-25px;
+    border-radius:100%;
+   box-shadow:0 2px 4px #4fb39c;
+    background:#fff;
+}
+.astrodivider i {
+    position:absolute;
+    top:4px; bottom:4px;
+    left:4px; right:4px;
+    border-radius:100%;
+    border:1px dashed #68beaa;
+    text-align:center;
+    line-height:40px;
+    font-style:normal;
+     color:#049372;
+}
+
 
 
 
