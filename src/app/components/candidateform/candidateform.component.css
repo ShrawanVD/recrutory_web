@@ -76,6 +76,7 @@ nav {
   justify-content: center;
   align-items: center;
   width: 80%;
+
 }
 
 .mat-stepper-horizontal {
@@ -84,6 +85,7 @@ nav {
   box-shadow: 0 2px 4px #507577;
   border-radius: 10px;
   margin: 3rem 6rem 0;
+  font-family: "Poppins", sans-serif;
 }
 
 #verticalId {
@@ -91,6 +93,7 @@ nav {
   box-shadow: 0 2px 4px #507577;
   border-radius: 10px;
   margin: 3rem 6rem 0;
+  font-family: "Poppins", sans-serif;
 }
 
 form {
@@ -125,11 +128,11 @@ form {
 }
 
 #verticalId p {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 
 .textareas p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: -2px;
 }
 
