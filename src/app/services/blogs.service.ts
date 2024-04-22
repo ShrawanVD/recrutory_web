@@ -22,7 +22,7 @@ export class BlogsService {
               title: post.title,
               date: post.date,
               imageUrl: post.imageUrl,
-              content: post.content
+              intro: post.intro
               // imageUrl2: post.imageUrl2,
               // content2: post.content2
             };

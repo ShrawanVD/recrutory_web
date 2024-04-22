@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BlogsService } from '../../services/blogs.service';
 import { Meta } from '@angular/platform-browser';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-single-blog',
@@ -10,7 +11,7 @@ import { Meta } from '@angular/platform-browser';
 })
 export class SingleBlogComponent implements OnInit{
 
-  constructor(private activeRoute:ActivatedRoute,private blog:BlogsService,private router:Router,private meta: Meta) {}
+  constructor(private activeRoute:ActivatedRoute,private blog:BlogsService,private router:Router,private meta: Meta,private sanitizer: DomSanitizer) {}
   blogId : any;
   blogData: any;
   blogTitle :any;
@@ -35,7 +36,10 @@ export class SingleBlogComponent implements OnInit{
   getBlogById(id: any){
     this.blog.getOneBlog(id).subscribe({
       next:(res:any) =>{
-        this.blogData = res;
+        this.blogData = {
+          ...res,
+          // content: this.sanitizer.bypassSecurityTrustHtml(res.content)
+        }
       },
       error: (err:any)=> {
         console.error(err);
