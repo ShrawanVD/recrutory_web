@@ -16,11 +16,14 @@
     </div>
     <div class="navbar-links">
       <ul>
-        <li><a href="#">Why Recrutory ?</a></li>
+        <!-- <li class="whyactive">
+                <a href="#">Why Recrutory ?</a>
+              </li> -->
+        <li><a routerLink="/insights">Global Insights</a></li>
         <li>
           <a href="#"><img src="assets/verbiq_logo.png" height="30px" width="85px" /></a>
         </li>
-        <li><a href="insights">Global Insights</a></li>
+        <li class="whyactive"><a href="blogs" >Blogs</a></li>
       </ul>
     </div>
   </nav>
@@ -34,7 +37,7 @@
       <mat-card class="blog-card" *ngFor="let post of blogPosts" (click)="openBlog(post._id)">
         <img mat-card-image [src]="post.imageUrl" alt="Blog Image">
         <mat-card-content style="font-family: 'Poppins', sans-serif;">
-          <mat-card-title >{{ post.title }}</mat-card-title>
+          <mat-card-title>{{ post.title }}</mat-card-title>
           <mat-card-subtitle>{{ post.date }}</mat-card-subtitle>
           <hr />
           <p style="text-align: justify;" class="cardtitle">{{ post.intro }}</p>
