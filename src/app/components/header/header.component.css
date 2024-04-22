@@ -81,6 +81,11 @@ nav {
   border-bottom: 3px solid #022b41;
   border-radius: 20%;
 } */
+.navbar-links ul li a:hover {
+  padding: 0px 0px 10px;
+  border-bottom: 3px solid #022b41;
+  border-radius: 20%;
+}
 
 
 .whyactive a{
@@ -786,6 +791,12 @@ font-weight: bold;
   height: auto;
   margin-right: 2rem;
 }
+/* .img-content2-img1{
+  width: 25%;
+  height: auto;
+  margin-right: 1rem;
+  margin-left: -2rem;
+} */
 
 .content2 .cards .inner {
   width: 70%;
@@ -812,6 +823,7 @@ font-weight: bold;
   text-align: left;
   text-align: justify;
 }
+
 
 /* Media Queries */
 @media (max-width: 1300px) {

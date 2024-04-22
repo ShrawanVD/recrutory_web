@@ -85,8 +85,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
         'Technical Proficiency Analysis',
         'Interpersonal Dynamics Assessment'
       ],
-      // image: 'assets/vectorPointers1.mp4'
-      image: 'assets/vector1.svg'
+      image: 'assets/animations/1.gif'
     },
     { 
       question: 'COMPREHENSIVE CANDIDATE ASSESSMENT', 
@@ -95,7 +94,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
         'Skill Set Analysis: Thoroughly review qualifications and aptitude',
         'Talent Suitability Check: Assess fit, capability, and performance robustly'
       ],
-      image: 'assets/Group.png'
+      image: 'assets/animations/2.gif'
     },
     { 
       question: 'TECHNICAL PROFICIENCY AND COMMUNICATION SKILLS', 
@@ -105,9 +104,10 @@ export class HeaderComponent implements OnInit, AfterViewInit {
         'Bespoke Client Assistance Solutions',
         'Proactive Client Support Initiatives'
       ],
-      image: 'assets/vector3.svg'
+      image: 'assets/animations/3.gif'
     }
   ];
+  
 
   activeIndex = 0; // Open the first item by default
   selectedImage: string | null = null; 
