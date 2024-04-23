@@ -90,6 +90,14 @@ nav {
   letter-spacing: 10px;
 }
 
+.loading-spinner{
+  padding: 2rem 0rem 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 /*--------------------- blogs container -----------------*/
 .blogs {
   padding: 0rem 4rem 4rem;
@@ -333,10 +341,3 @@ footer {
   text-align: justify;
 }
 
-.loading-spinner{
-  padding: 2rem 0rem 5rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}

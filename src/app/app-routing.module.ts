@@ -10,6 +10,7 @@ import { MeetTheTeamComponent } from './components/meet-the-team/meet-the-team.c
 import { GlobalInsightsComponent } from './components/global-insights/global-insights.component';
 import { Verbi1Component } from './components/verbi1/verbi1.component';
 import { Verbi2Component } from './components/verbi2/verbi2.component';
+import { VerbiDemoComponent } from './components/verbi-demo/verbi-demo.component';
 
 const routes: Routes = [
   {
@@ -51,6 +52,10 @@ const routes: Routes = [
   {
     path: 'verbi2',
     component: Verbi2Component
+  },
+  {
+    path: 'verbiq',
+    component: VerbiDemoComponent
   }
   
 ];

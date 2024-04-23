@@ -42,6 +42,7 @@ import { GlobalInsightsComponent } from './components/global-insights/global-ins
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { Verbi1Component } from './components/verbi1/verbi1.component';
 import { Verbi2Component } from './components/verbi2/verbi2.component';
+import { VerbiDemoComponent } from './components/verbi-demo/verbi-demo.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { Verbi2Component } from './components/verbi2/verbi2.component';
     MeetTheTeamComponent,
     GlobalInsightsComponent,
     Verbi1Component,
-    Verbi2Component
+    Verbi2Component,
+    VerbiDemoComponent
   ],
   imports: [
     BrowserModule,
