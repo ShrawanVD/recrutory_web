@@ -15,6 +15,7 @@ import { MatStepper } from '@angular/material/stepper';
 })
 export class CandidateformComponent  implements OnInit{
 
+  formData: FormData = new FormData();
 
 
   firstFormGroup!: FormGroup;
@@ -22,7 +23,7 @@ export class CandidateformComponent  implements OnInit{
   thirdFormGroup!: FormGroup;
   fourFormGroup!: FormGroup;
   fiveFormGroup!: FormGroup;
-  formData: any;
+  // formData: any;
   firstNext:boolean = false;
   secondNext:boolean = false;
   thirdNext:boolean = false;
@@ -85,7 +86,25 @@ export class CandidateformComponent  implements OnInit{
   // toggling horizontal to vertical stepper
   // isVertical: boolean = false;
 
+  onFileSelected(event: any) {
+    const file: File = event.target.files[0];
+    if (file) {
+      this.formData.append('uploadPhoto', file);
+    }
+  }
 
+  appendFormDataFields(formGroup: FormGroup) {
+    Object.keys(formGroup.controls).forEach(key => {
+      const control = formGroup.get(key);
+      if (control && control.value != null) { // Ensure the control exists and has a non-null value
+        if (control.value instanceof File) {
+          this.formData.append(key, control.value, control.value.name); // Handle file data specially
+        } else {
+          this.formData.append(key, control.value); // Append non-file data as normal
+        }
+      }
+    });
+  }
 
 
 
@@ -95,48 +114,88 @@ export class CandidateformComponent  implements OnInit{
 
   isLinear = false;
 
-  candidateSubmit(){
+  // candidateSubmit(){
 
-    this.formData = {
-      ...this.firstFormGroup.value,
-      ...this.secondFormGroup.value,
-      ...this.thirdFormGroup.value,
-      ...this.fourFormGroup.value,
-      ...this.fiveFormGroup.value
-    };
+  //   this.formData = {
+  //     ...this.firstFormGroup.value,
+  //     ...this.secondFormGroup.value,
+  //     ...this.thirdFormGroup.value,
+  //     ...this.fourFormGroup.value,
+  //     ...this.fiveFormGroup.value
+  //   };
 
-    console.log(this.formData)
-    if(this.firstFormGroup.valid){
-      const config = new MatSnackBarConfig();
-          config.duration = 1000;
-          config.verticalPosition = 'top'; 
-          config.panelClass = ['custom-snackbar']; 
-          this._snackBar.open('Form Submitted Successfully', 'Close', config);
-          setTimeout(() => {
-            this.router.navigate(['']);
-          }, 1500);
+  //   console.log(this.formData)
+  //   if(this.firstFormGroup.valid){
+  //     const config = new MatSnackBarConfig();
+  //         config.duration = 1000;
+  //         config.verticalPosition = 'top'; 
+  //         config.panelClass = ['custom-snackbar']; 
+  //         this._snackBar.open('Form Submitted Successfully', 'Close', config);
+  //         setTimeout(() => {
+  //           this.router.navigate(['']);
+  //         }, 1500);
 
-      this.candidate.candidateForm(this.formData).subscribe({
-        next: (val: any) => {
-          this._snackBar.open('Form Submitted Successfully', 'Close', {
-            duration: 3000,
-          });
-          window.location.reload();
-        },
-        error: (err: any) => {
+  //     this.candidate.candidateForm(this.formData).subscribe({
+  //       next: (val: any) => {
+  //         this._snackBar.open('Form Submitted Successfully', 'Close', {
+  //           duration: 3000,
+  //         });
+  //         window.location.reload();
+  //       },
+  //       error: (err: any) => {
           
-        }
-      })
-    }
-    else{
-      const config = new MatSnackBarConfig();
-      config.duration = 1000;
-      config.verticalPosition = 'top'; 
-      config.panelClass = ['custom-snackbar']; 
-      this._snackBar.open('Please fill the form', 'Close', config);
-    }
+  //       }
+  //     })
+  //   }
+  //   else{
+  //     const config = new MatSnackBarConfig();
+  //     config.duration = 1000;
+  //     config.verticalPosition = 'top'; 
+  //     config.panelClass = ['custom-snackbar']; 
+  //     this._snackBar.open('Please fill the form', 'Close', config);
+  //   }
 
-  }
+  // }
+
+  candidateSubmit(){
+    this.appendFormDataFields(this.firstFormGroup);
+    this.appendFormDataFields(this.secondFormGroup);
+    this.appendFormDataFields(this.thirdFormGroup);
+    this.appendFormDataFields(this.fourFormGroup);
+    this.appendFormDataFields(this.fiveFormGroup);
+   
+   
+      if(this.formData.has('uploadPhoto')){
+        const config = new MatSnackBarConfig();
+            config.duration = 1000;
+            config.verticalPosition = 'top';
+            config.panelClass = ['custom-snackbar'];
+            this._snackBar.open('Form Submitted Successfully', 'Close', config);
+            setTimeout(() => {
+              this.router.navigate(['']);
+            }, 1500);
+   
+        this.candidate.candidateForm(this.formData).subscribe({
+          next: (val: any) => {
+            this._snackBar.open('Form Submitted Successfully', 'Close', {
+              duration: 3000,
+            });
+            window.location.reload();
+          },
+          error: (err: any) => {
+            console.log(err);
+          }
+        })
+      }
+      else{
+        const config = new MatSnackBarConfig();
+        config.duration = 1000;
+        config.verticalPosition = 'top';
+        config.panelClass = ['custom-snackbar'];
+        this._snackBar.open('Please fill the form', 'Close', config);
+      }
+   
+    }
   
   checkData1(){
     if(this.firstFormGroup.valid){

@@ -332,3 +332,11 @@ footer {
 #footer-address {
   text-align: justify;
 }
+
+.loading-spinner{
+  padding: 2rem 0rem 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

@@ -9,13 +9,14 @@ import { Router } from '@angular/router';
 })
 export class BlogsComponent implements OnInit{
   blogPosts: any;
-
+  loading: boolean = true;
   constructor(private blog:BlogsService,private route:Router) {}
 
   ngOnInit(): void {
     this.blog.getAllBlogs().subscribe({
       next:(res:any) =>{
         this.blogPosts = res;
+        this.loading =false;
       },
       error: (err:any)=> {
         console.error(err);

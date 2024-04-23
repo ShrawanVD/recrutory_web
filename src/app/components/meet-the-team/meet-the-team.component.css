@@ -143,6 +143,8 @@ nav {
   padding: 10px;
 }
 
+
+
 #cards .card .user-content .user-name {
   margin-right: 150px;
 }
@@ -182,6 +184,9 @@ nav {
 .user-content .bio{
   text-align: justify;
   font-family: "Poppins", sans-serif;
+}
+.user-picture img{
+  object-fit: cover;
 }
 
 .row1, .row2{

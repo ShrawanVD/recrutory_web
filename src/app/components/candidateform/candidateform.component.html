@@ -757,6 +757,10 @@
             >
           </mat-radio-group>
         </div>
+        <div>
+          <mat-label>Upload CV</mat-label><br>
+          <input type="file" (change)="onFileSelected($event)">
+        </div>
       </form>
       <div>
         <button
@@ -1485,6 +1489,10 @@
             >
           </mat-radio-group>
         </div>
+        <div>
+          <mat-label>Upload CV</mat-label><br>
+          <input type="file" (change)="onFileSelected($event)">
+        </div>
       </form>
       <div>
         <button
@@ -1533,14 +1541,6 @@
           <a href="#!" class="text-reset text-decoration-none random"
             ><img class="logo-link" src="assets/verbiq_logo.png" alt=""
           /></a>
-        </p>
-        <p>
-          <a
-          href="blogs"
-            routerLinkActive="router-link-active"
-            class="text-reset text-decoration-none random"
-            >Blogs</a
-          >
         </p>
         <p>
           <a href="#!" class="text-reset text-decoration-none random"

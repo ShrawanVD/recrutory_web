@@ -39,6 +39,7 @@ import { MeetTheTeamComponent } from './components/meet-the-team/meet-the-team.c
 import {ShareButtonsModule} from 'ngx-sharebuttons/buttons';
 import {ShareIconsModule} from 'ngx-sharebuttons/icons'
 import { GlobalInsightsComponent } from './components/global-insights/global-insights.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -88,7 +89,8 @@ import { GlobalInsightsComponent } from './components/global-insights/global-ins
     ShareButtonsModule.withConfig({
       debug: true,
     }),
-    ShareIconsModule
+    ShareIconsModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     provideClientHydration(),
