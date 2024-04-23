@@ -40,6 +40,8 @@ import {ShareButtonsModule} from 'ngx-sharebuttons/buttons';
 import {ShareIconsModule} from 'ngx-sharebuttons/icons'
 import { GlobalInsightsComponent } from './components/global-insights/global-insights.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { Verbi1Component } from './components/verbi1/verbi1.component';
+import { Verbi2Component } from './components/verbi2/verbi2.component';
 
 
 @NgModule({
@@ -52,7 +54,9 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     BlogsComponent,
     SingleBlogComponent,
     MeetTheTeamComponent,
-    GlobalInsightsComponent
+    GlobalInsightsComponent,
+    Verbi1Component,
+    Verbi2Component
   ],
   imports: [
     BrowserModule,

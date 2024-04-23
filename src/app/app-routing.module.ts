@@ -8,6 +8,8 @@ import { BlogsComponent } from './components/blogs/blogs.component';
 import { SingleBlogComponent } from './components/single-blog/single-blog.component';
 import { MeetTheTeamComponent } from './components/meet-the-team/meet-the-team.component';
 import { GlobalInsightsComponent } from './components/global-insights/global-insights.component';
+import { Verbi1Component } from './components/verbi1/verbi1.component';
+import { Verbi2Component } from './components/verbi2/verbi2.component';
 
 const routes: Routes = [
   {
@@ -41,7 +43,16 @@ const routes: Routes = [
   {
     path: 'insights',
     component: GlobalInsightsComponent
+  },
+  {
+    path: 'verbi1',
+    component: Verbi1Component
+  },
+  {
+    path: 'verbi2',
+    component: Verbi2Component
   }
+  
 ];
 
 @NgModule({
