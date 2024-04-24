@@ -88,3 +88,40 @@
       margin: 0 auto;
     }
   }
+/*-------- slider section --------*/
+.slider-card{
+  max-width: 25rem;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+hr{
+  color: #008CBA;
+}
+
+.language-top{
+  display: flex;
+  flex-direction: row;
+  color: #B0181B;
+  margin-bottom: -20px;
+}
+
+.language-top h4{
+  margin-right: 0.8rem;
+}
+.button-shape{
+  color: white;
+  background-color:#B0181B;
+  padding: 5px 10px;
+  border-radius: 40px;
+  margin-right: 0.8rem;
+}
+
+
+/* card container */
+.card-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
