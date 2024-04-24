@@ -88,8 +88,16 @@
       margin: 0 auto;
     }
   }
+
+
+
+
+
+
 /*-------- slider section --------*/
+
 .slider-card{
+  margin: 5rem 0;
   max-width: 25rem;
   padding: 1rem 2rem;
   border-radius: 20px;
