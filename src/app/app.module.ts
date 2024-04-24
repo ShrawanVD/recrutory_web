@@ -43,6 +43,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { Verbi1Component } from './components/verbi1/verbi1.component';
 import { Verbi2Component } from './components/verbi2/verbi2.component';
 import { VerbiDemoComponent } from './components/verbi-demo/verbi-demo.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 
 @NgModule({
@@ -96,7 +97,8 @@ import { VerbiDemoComponent } from './components/verbi-demo/verbi-demo.component
       debug: true,
     }),
     ShareIconsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    SlickCarouselModule
   ],
   providers: [
     provideClientHydration(),

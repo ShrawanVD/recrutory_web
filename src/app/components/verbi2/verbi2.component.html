@@ -1,86 +1,91 @@
-
-
-
 <div class="container-fluid px-0">
-    <div class="row g-0">
-        <div class="col-12 col-md-5 left-side d-flex align-items-center justify-content-center">
-            <div class="content left-content">
-                <h1>Voice Process</h1>
-                <ul>
-                    <li>Resume screening</li>
-                    <li>Language Proficiency Test</li>
-                    <li>cultural Sensitivity Evaluation</li>
-                    <li>Voice Simulation</li>
-                    <li>Behavioural Interview</li>
-                </ul>
+  <div class="row g-0">
+    <div
+      class="col-12 col-md-5 left-side d-flex align-items-center justify-content-center"
+    >
+      <div class="content left-content">
+        <h1>Voice Process</h1>
+        <ul>
+          <li>Resume screening</li>
+          <li>Language Proficiency Test</li>
+          <li>cultural Sensitivity Evaluation</li>
+          <li>Voice Simulation</li>
+          <li>Behavioural Interview</li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="col-12 col-md-7 right-side d-flex align-items-center justify-content-center"
+    >
+      <div class="content right-content">
+        <h1>Non-Voice Process</h1>
+        <ul>
+          <li>Written Assessment</li>
+          <li>Data Analysis Test</li>
+          <li>Speed and Accuracy Assessment</li>
+          <li>Scenoria-Based Evaluation</li>
+          <li>Technical Assessment</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<!-- slider section -->
+
+<!-- <ngx-slick-carousel class="slider" [config]="slickConfig"></ngx-slick-carousel> -->
+
+<div class="card-container">
+
+    <ngx-slick-carousel class="slider" [config]="slickConfig">
+        <div class="slider-card" *ngFor="let card of cards">
+            <div class="language-top">
+              <h4>German-C1</h4>
+              <h4>Italain-B2</h4>
+              <h4>French-C1</h4>
             </div>
-        </div>
-        <div class="col-12 col-md-7 right-side d-flex align-items-center justify-content-center">
-            <div class="content right-content">
-                <h1>Non-Voice Process</h1>
-                <ul>
-                    <li>Written Assessment</li>
-                    <li>Data Analysis Test</li>
-                    <li>Speed and Accuracy Assessment </li>
-                    <li>Scenoria-Based Evaluation</li>
-                    <li>Technical Assessment</li>
-                </ul>  
+            <hr />
+            <h2>Prajakta</h2>
+            <p style="text-align: justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, dignissimos
+              earum consequatur eius maiores exercitationem accusantium, eos placeat
+              quaerat tempora pariatur, quam suscipit quidem quod provident recusandae
+              beatae ad nihil!
+            </p>
+            <div style="display: flex; flex-direction: row; margin-top: 20px">
+              <h5 class="button-shape">Voice</h5>
+              <h5 class="button-shape">Non-voice</h5>
+              <h5 class="button-shape">Translation</h5>
             </div>
-        </div>
-    </div>
-</div>
-<br/>
+          </div>
+    </ngx-slick-carousel>
 
+ 
 
-<div class="card-container" >
-<div class="slider-card">
-    <div class="language-top">
-        <h4>German-C1</h4>
-        <h4>Italain-B2</h4>
-        <h4>French-C1</h4>
-    </div>
-    <hr>
-    <h2>Prajakta</h2>
-    <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, dignissimos earum consequatur eius maiores
-        exercitationem accusantium, eos placeat quaerat tempora pariatur, quam suscipit quidem quod provident recusandae
-        beatae ad nihil!</p>
-    <div style="display: flex;  flex-direction: row; margin-top: 20px;">
-        <h5 class="button-shape">Voice</h5>
-        <h5 class="button-shape">Non-voice</h5>
-        <h5 class="button-shape">Translation</h5>
-    </div>
-</div>
+    <ngx-slick-carousel class="slider" [config]="slickConfig">
+        <div class="slider-card">
+            <div class="language-top">
+              <h4>French-C1</h4>
+            </div>
+            <hr />
+            <h2>Simran</h2>
+            <p style="text-align: justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, dignissimos
+              earum consequatur eius maiores exercitationem accusantium, eos placeat
+              quaerat tempora pariatur, quam suscipit quidem quod provident recusandae
+              beatae ad nihil!
+            </p>
+            <div style="display: flex; flex-direction: row; margin-top: 20px">
+              <h5 class="button-shape">Voice</h5>
+              <h5 class="button-shape">Non-voice</h5>
+              <h5 class="button-shape">Translation</h5>
+            </div>
+          </div>
+    </ngx-slick-carousel>
+  
 
-<div class="slider-card">
-    <div class="language-top">
-        <h4>German-C1</h4>
-    </div>
-    <hr/>
-    <h2>Vaikhee</h2>
-    <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, dignissimos earum consequatur eius maiores
-        exercitationem accusantium, eos placeat quaerat tempora pariatur, quam suscipit quidem quod provident recusandae
-        beatae ad nihil!</p>
-    <div style="display: flex;  flex-direction: row; margin-top: 20px;">
-        <h5 class="button-shape">Voice</h5>
-        <h5 class="button-shape">Non-voice</h5>
-        <h5 class="button-shape">Translation</h5>
-    </div>
-</div>
+  
 
-<div class="slider-card">
-    <div class="language-top">
-        <h4>French-C1</h4>
-    </div>
-    <hr/>
-    <h2>Simran</h2>
-    <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, dignissimos earum consequatur eius maiores
-        exercitationem accusantium, eos placeat quaerat tempora pariatur, quam suscipit quidem quod provident recusandae
-        beatae ad nihil!</p>
-    <div style="display: flex;  flex-direction: row; margin-top: 20px;">
-        <h5 class="button-shape">Voice</h5>
-        <h5 class="button-shape">Non-voice</h5>
-        <h5 class="button-shape">Translation</h5>
-    </div>
-</div>
-
+  
 </div>
