@@ -21,27 +21,49 @@
     padding-bottom: 5rem;
   "
 >
-<nav>
-  <div class="logo">
+  <nav>
+    <div class="logo">
       <a href="#"><img src="assets/logo.png" height="60px" width="200px" /></a>
-  </div>
-  <div class="navbar-links">
-    <ul>
-      <!-- <li class="whyactive">
+    </div>
+    <div class="navbar-links">
+      <ul>
+        <!-- <li class="whyactive">
         <a href="#">Why Recrutory ?</a>
       </li> -->
-      <li><a routerLink="/insights">Global Insights</a></li>
-      <li>
-        <a href="verbiq"
-          ><img src="assets/verbiq_logo.png" height="30px" width="85px"
-        /></a>
-      </li>
-      <li><a href="blogs">Blogs</a></li>
-    </ul>
-  </div>
-</nav>
+        <li><a routerLink="/insights">Global Insights</a></li>
+        <li>
+          <a href="verbiq"
+            ><img src="assets/verbiq_logo.png" height="30px" width="85px"
+          /></a>
+        </li>
+        <li><a href="blogs">Blogs</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- orientation="vertical"
+    labelPosition="bottom"
+    #stepper
+    id="verticalId"
+    animationDuration="1500" -->
 
   <!-- form starts -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <!---------------------------------------------------------- horizontal stepper -->
 
@@ -53,8 +75,8 @@
   >
     <!--  ------------------1st step---------------------- -->
 
-    <mat-step [stepControl]="firstFormGroup" >
-      <form [formGroup]="firstFormGroup" linear >
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup" linear>
         <ng-template matStepLabel
           ><label class="stepper-label">Candidature</label></ng-template
         >
@@ -291,9 +313,9 @@
           </mat-radio-group>
         </div>
 
-        <!-- next button -->  
-        <div  style="text-align: right;">
-          <button mat-button (click)="checkData1()" >Next</button>
+        <!-- next button -->
+        <div style="text-align: right">
+          <button mat-button (click)="checkData1()">Next</button>
         </div>
       </form>
     </mat-step>
@@ -758,8 +780,8 @@
           </mat-radio-group>
         </div>
         <div>
-          <mat-label>Upload CV</mat-label><br><br>
-          <input type="file" (change)="onFileSelected($event)">
+          <mat-label>Upload CV</mat-label><br /><br />
+          <input type="file" (change)="onFileSelected($event)" />
         </div>
       </form>
       <div>
@@ -774,8 +796,40 @@
     </mat-step>
   </mat-stepper>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!---------------------------------------------------------- vertical stepper -->
 
+
+
+<!---------------------------------------------------------- vertical stepper -->
+ 
   <mat-stepper
     orientation="vertical"
     labelPosition="bottom"
@@ -784,7 +838,7 @@
     animationDuration="1500"
   >
     <!--  ------------------1st step---------------------- -->
-
+ 
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
         <ng-template matStepLabel
@@ -801,7 +855,7 @@
               formControlName="name"
             />
           </mat-form-field>
-
+ 
           <!-- contact no -->
           <mat-form-field appearance="outline">
             <mat-label>Contact No</mat-label>
@@ -828,7 +882,7 @@
               formControlName="email"
             />
           </mat-form-field>
-
+ 
           <!-- location-->
           <mat-form-field appearance="outline">
             <mat-label>Current Location</mat-label>
@@ -853,7 +907,7 @@
               formControlName="companyName"
             />
           </mat-form-field>
-
+ 
           <!-- current role -->
           <mat-form-field appearance="outline">
             <mat-label>Current Role</mat-label>
@@ -866,7 +920,7 @@
             />
           </mat-form-field>
         </div>
-
+ 
         <!-- languages -->
         <mat-form-field appearance="outline" class="example-full-width">
           <mat-label appearance="outline"
@@ -879,9 +933,9 @@
             formControlName="langKnow"
           ></textarea>
         </mat-form-field>
-
+ 
         <!-- qualification -->
-
+ 
         <div class="language-qualifications">
           <p style="margin-top: 1rem">What is your language qualification?</p>
           <mat-chip-listbox
@@ -900,7 +954,7 @@
             >
           </mat-chip-listbox>
         </div>
-
+ 
         <!-- other qualification -->
         <mat-form-field appearance="outline" class="example-full-width">
           <mat-label appearance="outline"
@@ -912,7 +966,7 @@
             formControlName="otherlangQuali"
           ></textarea>
         </mat-form-field>
-
+ 
         <!-- language proficiency -->
         <div class="curr-proficiency radio">
           <p>Please rate your current proficiency?</p>
@@ -953,7 +1007,7 @@
             >
           </mat-radio-group>
         </div>
-
+ 
         <!-- language assessment -->
         <div class="language-assessment radio">
           <p>
@@ -972,7 +1026,7 @@
             >
           </mat-radio-group>
         </div>
-
+ 
         <!-- other's section -->
         <mat-form-field appearance="outline" class="example-full-width">
           <mat-label appearance="outline"
@@ -984,16 +1038,16 @@
             formControlName="otherPlatform"
           ></textarea>
         </mat-form-field>
-
+ 
         <!-- score - textarea -->
-
+ 
         <div class="textareas">
           <p>
             If you have taken a formal language assessment, Please state your
             score here along with the proficiency result for the said
             assessment.
           </p>
-
+ 
           <mat-form-field appearance="outline" class="example-full-width">
             <textarea
               rows="1"
@@ -1003,7 +1057,7 @@
             ></textarea>
           </mat-form-field>
         </div>
-
+ 
         <!-- dialects - textarea -->
         <div class="dialects radio" style="margin-bottom: 2rem">
           <p>
@@ -1022,16 +1076,16 @@
             >
           </mat-radio-group>
         </div>
-
+ 
         <!-- next button -->
         <div>
           <button mat-button matStepperNext>Next</button>
         </div>
       </form>
     </mat-step>
-
+ 
     <!--  ------------------2nd step---------------------- -->
-
+ 
     <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
       <form [formGroup]="secondFormGroup">
         <ng-template matStepLabel
@@ -1039,9 +1093,9 @@
             >Continuous Learning & Development</label
           ></ng-template
         >
-
+ 
         <!-- stay - updated -->
-
+ 
         <div class="stay-updated">
           <p style="margin-top: 1rem">
             How do you stay updated with language changes and developments?
@@ -1068,7 +1122,7 @@
             >
           </mat-chip-listbox>
         </div>
-
+ 
         <!-- workshops section -->
         <div class="workshops radio">
           <p>Do you participate in Language courses, Workshops or seminars?</p>
@@ -1102,7 +1156,7 @@
             >
           </mat-radio-group>
         </div>
-
+ 
         <!-- forums  -->
         <div class="forums radio">
           <p>Are you a part of language-related communities or forums?</p>
@@ -1118,7 +1172,7 @@
             >
           </mat-radio-group>
         </div>
-
+ 
         <!-- literature -->
         <div class="literature radio">
           <p>
@@ -1137,14 +1191,14 @@
             >
           </mat-radio-group>
         </div>
-
+ 
         <!-- new learned language - textarea -->
-
+ 
         <div class="textareas">
           <p>
             How do you incorporate newly learned language skills into your work?
           </p>
-
+ 
           <mat-form-field appearance="outline" class="example-full-width">
             <textarea
               rows="1"
@@ -1154,15 +1208,15 @@
             ></textarea>
           </mat-form-field>
         </div>
-
+ 
         <!-- staying updated - textarea -->
-
+ 
         <div class="textareas">
           <p>
             What are your methods of staying updated with language changes and
             developments?
           </p>
-
+ 
           <mat-form-field appearance="outline" class="example-full-width">
             <textarea
               rows="1"
@@ -1172,15 +1226,15 @@
             ></textarea>
           </mat-form-field>
         </div>
-
+ 
         <!-- grammar - textarea -->
-
+ 
         <div class="textareas">
           <p>
             Can you explain complex grammatical concepts in the languages you're
             proficient in?
           </p>
-
+ 
           <mat-form-field appearance="outline" class="example-full-width">
             <textarea
               rows="1"
@@ -1190,22 +1244,22 @@
             ></textarea>
           </mat-form-field>
         </div>
-
+ 
         <div>
           <button mat-button matStepperPrevious>Back</button>
           <button mat-button matStepperNext>Next</button>
         </div>
       </form>
     </mat-step>
-
+ 
     <!-- ------------------------- 3rd section ----------------  -->
-
+ 
     <mat-step [stepControl]="thirdFormGroup" label="Fill out your address">
       <form [formGroup]="thirdFormGroup">
         <ng-template matStepLabel
           ><label class="stepper-label">Tools & Resources</label></ng-template
         >
-
+ 
         <!-- tanslation tools -->
         <div class="tanslation-tools radio">
           <p>
@@ -1242,16 +1296,16 @@
             >
           </mat-radio-group>
         </div>
-
+ 
         <!-- other's section -->
-
+ 
         <mat-form-field appearance="outline" class="example-full-width">
           <mat-label appearance="outline"
             >If there are other tools, please mention here</mat-label
           >
           <textarea rows="1" matInput formControlName="totherTools"></textarea>
         </mat-form-field>
-
+ 
         <!-- translation - software section -->
         <div class="translation-software radio">
           <p>Are you proficient in using translation software or platforms?</p>
@@ -1267,7 +1321,7 @@
             >
           </mat-radio-group>
         </div>
-
+ 
         <!-- dictionaries section -->
         <div class="dictionaries radio">
           <p>
@@ -1286,7 +1340,7 @@
             >
           </mat-radio-group>
         </div>
-
+ 
         <!-- custom-tools section -->
         <div class="custom-tools radio">
           <p>
@@ -1305,7 +1359,7 @@
             >
           </mat-radio-group>
         </div>
-
+ 
         <!-- last-section -->
         <div class="last-section radio" style="margin-bottom: 2rem">
           <p>
@@ -1341,16 +1395,16 @@
             >
           </mat-radio-group>
         </div>
-
+ 
         <div>
           <button mat-button matStepperPrevious>Back</button>
           <button mat-button matStepperNext>Next</button>
         </div>
       </form>
     </mat-step>
-
+ 
     <!-- --------------------- 4th section ---------------- -->
-
+ 
     <mat-step [stepControl]="fourFormGroup" label="Fill out your address">
       <form [formGroup]="fourFormGroup">
         <ng-template matStepLabel
@@ -1358,7 +1412,7 @@
             >Specialization and Domain Expertise</label
           ></ng-template
         >
-
+ 
         <!-- first section -->
         <div class="first radio">
           <p>
@@ -1377,7 +1431,7 @@
             >
           </mat-radio-group>
         </div>
-
+ 
         <!-- second section -->
         <div class="second radio">
           <p>
@@ -1396,11 +1450,11 @@
             >
           </mat-radio-group>
         </div>
-
+ 
         <!-- third - textarea -->
         <div class="textareas">
           <p>Can you provide examples of your work in specialized areas?</p>
-
+ 
           <mat-form-field appearance="outline" class="example-full-width">
             <textarea
               rows="1"
@@ -1410,23 +1464,23 @@
             ></textarea>
           </mat-form-field>
         </div>
-
+ 
         <div>
           <button mat-button matStepperPrevious>Back</button>
           <button mat-button matStepperNext>Next</button>
         </div>
       </form>
     </mat-step>
-
+ 
     <!-- ------------------- 5th step -------------------- -->
-
+ 
     <mat-step>
       <ng-template matStepLabel
         ><label class="stepper-label"
           >Practical Demonstration</label
         ></ng-template
       >
-
+ 
       <form [formGroup]="fiveFormGroup">
         <!-- first section -->
         <div class="last-first radio" style="margin-bottom: 1.5rem">
@@ -1448,13 +1502,13 @@
             >
           </mat-radio-group>
         </div>
-
+ 
         <!-- second - textarea -->
         <div class="textareas">
           <p>
             How do you handle challenges or nuances in real-time conversations?
           </p>
-
+ 
           <mat-form-field appearance="outline" class="example-full-width">
             <textarea
               rows="1"
@@ -1464,7 +1518,7 @@
             ></textarea>
           </mat-form-field>
         </div>
-
+ 
         <!-- third section -->
         <div class="last-third radio" style="margin-bottom: 2rem">
           <p>
@@ -1505,6 +1559,151 @@
       </div>
     </mat-step>
   </mat-stepper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 </div>
 
@@ -1543,7 +1742,9 @@
           /></a>
         </p>
         <p>
-          <a href="team" class="text-reset text-decoration-none random">Meet our Team</a>
+          <a href="team" class="text-reset text-decoration-none random"
+            >Meet our Team</a
+          >
         </p>
         <p>
           <a href="#!" class="text-reset text-decoration-none random"

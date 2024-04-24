@@ -114,49 +114,6 @@ export class CandidateformComponent  implements OnInit{
 
   isLinear = false;
 
-  // candidateSubmit(){
-
-  //   this.formData = {
-  //     ...this.firstFormGroup.value,
-  //     ...this.secondFormGroup.value,
-  //     ...this.thirdFormGroup.value,
-  //     ...this.fourFormGroup.value,
-  //     ...this.fiveFormGroup.value
-  //   };
-
-  //   console.log(this.formData)
-  //   if(this.firstFormGroup.valid){
-  //     const config = new MatSnackBarConfig();
-  //         config.duration = 1000;
-  //         config.verticalPosition = 'top'; 
-  //         config.panelClass = ['custom-snackbar']; 
-  //         this._snackBar.open('Form Submitted Successfully', 'Close', config);
-  //         setTimeout(() => {
-  //           this.router.navigate(['']);
-  //         }, 1500);
-
-  //     this.candidate.candidateForm(this.formData).subscribe({
-  //       next: (val: any) => {
-  //         this._snackBar.open('Form Submitted Successfully', 'Close', {
-  //           duration: 3000,
-  //         });
-  //         window.location.reload();
-  //       },
-  //       error: (err: any) => {
-          
-  //       }
-  //     })
-  //   }
-  //   else{
-  //     const config = new MatSnackBarConfig();
-  //     config.duration = 1000;
-  //     config.verticalPosition = 'top'; 
-  //     config.panelClass = ['custom-snackbar']; 
-  //     this._snackBar.open('Please fill the form', 'Close', config);
-  //   }
-
-  // }
-
   candidateSubmit(){
     this.appendFormDataFields(this.firstFormGroup);
     this.appendFormDataFields(this.secondFormGroup);
@@ -201,6 +158,7 @@ export class CandidateformComponent  implements OnInit{
     if(this.firstFormGroup.valid){
       this.firstNext = true;
       this.stepper.next();
+      console.log("In first")
       // matStepperNext
     }else{
       const config = new MatSnackBarConfig();

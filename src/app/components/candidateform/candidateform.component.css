@@ -161,10 +161,15 @@ form {
   align-items: center;
 }
 
-
+/* for disabling the tabs clicking */
 ::ng-deep .mat-horizontal-stepper-header{
     pointer-events: none !important;
 }
+
+::ng-deep .mat-vertical-stepper-header {
+  pointer-events: none !important;
+}
+
 
 
 
@@ -201,6 +206,7 @@ form {
 @media screen and (max-width: 900px) {
   #verticalId {
     display: block;
+    margin: 2rem 0.5rem 0;
   }
 
   #horizontalId {
@@ -209,9 +215,6 @@ form {
 }
 
 @media screen and (max-width: 740px) {
-  #verticalId {
-    margin: 2rem 2rem 0;
-  }
 
   .row {
     display: flex;

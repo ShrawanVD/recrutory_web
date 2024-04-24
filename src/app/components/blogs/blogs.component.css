@@ -91,12 +91,21 @@ nav {
 }
 
 .loading-spinner{
+  margin: 0 auto;
   padding: 2rem 0rem 5rem;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
+  width:  3rem;
+  height: 3rem; 
+
 }
+
+/* .loading-spinner mat-spinner {
+  width: 30px; 
+  height: 30px; 
+} */
+
 
 /*--------------------- blogs container -----------------*/
 .blogs {
