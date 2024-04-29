@@ -788,3 +788,133 @@ footer {
     height: auto;
   }
 }
+
+
+/* verbiq vector section */
+.verbiq-vector{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding:1rem 0rem;
+  margin: 0rem 8.5rem;
+}
+
+.verbiq-vector-img-text{
+  text-align: center;
+}
+
+.verbiq-vector-img1{
+  height: 19vh;
+  width: 12vw;
+}
+.verbiq-vector-img-text h1{
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+.verbiq-vector-text{
+  margin: 5rem 0rem 0rem;
+}
+
+@media screen and ( max-width: 2500px){
+  .verbiq-vector-img1{
+    height: 20rem;
+    width: 27rem;
+}
+}
+@media screen and ( max-width: 2000px){
+  .verbiq-vector-img1{
+    height: 16rem;
+    width: 21rem;
+}
+}
+@media screen and ( max-width: 1800px){
+  .verbiq-vector-img1{
+    height: 14rem;
+    width: 19rem;
+}
+}
+@media screen and ( max-width: 1450px){
+  .verbiq-vector-img1{
+    height: 11rem;
+    width: 15rem;
+  }
+}
+@media screen and ( max-width: 1280px){
+  .verbiq-vector-img1{
+    height: 9rem;
+    width: 12rem;
+  }
+}
+@media screen and (max-width: 1100px){
+  .verbiq-vector{
+    margin: 0rem  5rem;
+  }
+}
+@media screen and (max-width: 880px){
+  .verbiq-vector{
+    margin: 0rem  4rem;
+  }
+  .verbiq-vector-text{
+    margin: 2rem 0rem 0rem;
+  }
+}
+@media screen and (max-width: 815px){
+  .verbiq-vector-img1{
+    height: 8rem;
+    width: 10rem;
+  }
+}
+@media screen and (max-width: 730px){
+  .verbiq-vector{
+    margin: 0rem  2rem;
+  }
+  .verbiq-vector-img1{
+    height: 7rem;
+    width: 8rem;
+  }
+}
+@media screen and (max-width: 680px){
+  .verbiq-vector-img1{
+    height: 6rem;
+    width: 7rem;
+  }
+}
+@media screen and (max-width: 800px){
+  .verbiq-vector{
+    margin: 0rem  5rem;
+  }
+  .verbiq-vector-text{
+    margin: 2rem 0rem 0rem;
+  }
+}
+@media screen and ( max-width: 600px){
+  .verbiq-vector{
+    margin: 0rem  5rem;
+    flex-direction: column;
+  }
+  .verbiq-vector-img-text{
+    margin-bottom: 3rem;
+  }
+  .verbiq-vector-img1{
+    height: 16rem;
+    width: 20rem;
+  }
+}
+@media screen and ( max-width: 461px){
+  .verbiq-vector-img1{
+    height: 14rem;
+    width: 18rem;
+  }
+}
+@media screen and ( max-width: 426px){
+  .verbiq-vector-img1{
+    height: 12rem;
+    width: 16rem;
+  }
+}
+@media screen and ( max-width: 407px){
+  .verbiq-vector-img1{
+    height: 9rem;
+    width: 12rem;
+  }
+}

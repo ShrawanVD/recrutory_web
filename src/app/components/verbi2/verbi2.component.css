@@ -1,9 +1,9 @@
-.left-side, .right-side {
-    height: 45vh; /* Full viewport height */
-    position: relative; /* Needed for absolute positioning inside */
+/* .left-side, .right-side {
+    height: 45vh; 
+    position: relative; 
     display: flex;
-    align-items: center; /* Vertical alignment */
-    justify-content: center; /* Horizontal alignment */
+    align-items: center; 
+    justify-content: center; 
   }
    
   .left-side::before, .right-side::before {
@@ -15,22 +15,22 @@
     right: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Ensure background is behind content */
+    z-index: -1; 
   }
    
   .left-side::before {
-    background: white; /* Left side color */
+    background: white; 
     clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
   }
    
   .right-side::before {
-    background: #B0181B; /* Right side color */
+    background: #B0181B; 
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 10% 100%);
   }
    
   .content {
-    z-index: 10; /* Ensures content is above the pseudo-element backgrounds */
-    text-align: center; /* Center text inside the content div */
+    z-index: 10; 
+    text-align: center; 
     padding: 20px;
     color: white;
   }
@@ -56,7 +56,7 @@
     padding-left: 13rem;
   }
    
-  @media (max-width: 768px) { /* Adjust for mobile devices */
+  @media (max-width: 768px) { 
     .left-side, .right-side {
         height: auto;
     }
@@ -66,7 +66,6 @@
   }
    
     .right-side::before {
-        /* clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%); */
         clip-path: none;
     }
    
@@ -89,7 +88,7 @@
     }
   }
 
-
+ */
 
 
 
@@ -98,7 +97,7 @@
 
 .slider-card{
   margin: 5rem 0;
-  max-width: 25rem;
+  max-width: 30rem;
   padding: 1rem 2rem;
   border-radius: 20px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
@@ -133,3 +132,4 @@ hr{
   flex-direction: row;
   justify-content: space-evenly;
 }
+
