@@ -73,7 +73,7 @@ nav {
 
 .coverpage {
   font-family: "Poppins", sans-serif;
-  padding: 5rem 10rem 9rem;
+  padding: 0rem 10rem 9rem;
   text-align: center;
 }
 
@@ -90,10 +90,10 @@ nav {
 }
 .coverpage p {
   font-style: italic;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 2.4rem;
-  font-weight: 600;
   margin-top: 5rem;
+  color: #02465b;
 }
 
 @media screen and (max-width: 1052px) {
@@ -340,6 +340,13 @@ footer {
   }
  */
 
+ .card-front-img-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+ }
+
 @media screen and (max-width: 1000px) {
   .card {
     width: calc(50% - 2rem);
@@ -383,7 +390,7 @@ footer {
   background: green;
 }
 .front h2 {
-  font-size: 1.6rem;
+  font-size: 18px;
   color: #b0181b;
 }
 .front img {
@@ -791,58 +798,83 @@ footer {
 
 
 /* verbiq vector section */
+
+
 .verbiq-vector{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding:1rem 0rem;
-  margin: 0rem 8.5rem;
+  margin: 0rem 14rem;
 }
 
 .verbiq-vector-img-text{
   text-align: center;
 }
-
-.verbiq-vector-img1{
-  height: 19vh;
-  width: 12vw;
+.vector-img-div{
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.verbiq-vector-img1{
+  height: 94px;
+  width: 170px;
+}
+.verbiq-vector-img2{
+  height: 147px;
+  width: 168px;
+}
+.verbiq-vector-img3{
+  height: 130px;
+  width: 160px;
+}
+
 .verbiq-vector-img-text h1{
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-size: 1.4rem;
 }
 .verbiq-vector-text{
-  margin: 5rem 0rem 0rem;
+  margin: 1rem 0rem 0rem;
 }
 
 @media screen and ( max-width: 2500px){
-  .verbiq-vector-img1{
-    height: 20rem;
-    width: 27rem;
-}
-}
-@media screen and ( max-width: 2000px){
-  .verbiq-vector-img1{
-    height: 16rem;
-    width: 21rem;
-}
-}
-@media screen and ( max-width: 1800px){
-  .verbiq-vector-img1{
-    height: 14rem;
-    width: 19rem;
-}
-}
-@media screen and ( max-width: 1450px){
-  .verbiq-vector-img1{
-    height: 11rem;
-    width: 15rem;
+  .verbiq-vector{
+    margin: 0rem 19rem;
   }
 }
-@media screen and ( max-width: 1280px){
-  .verbiq-vector-img1{
-    height: 9rem;
-    width: 12rem;
+@media screen and ( max-width: 2000px){
+  .verbiq-vector{
+    margin: 0rem 16rem;
+  }
+}
+@media screen and ( max-width: 1800px){
+  .verbiq-vector{
+    margin: 0rem 15rem;
+  }
+}
+/* @media screen and ( max-width: 1450px){
+
+} */
+@media screen and ( max-width: 1400px){
+  .verbiq-vector{
+    margin: 0rem 12rem;
+  }
+}
+@media screen and ( max-width: 1200px){
+  .verbiq-vector{
+    margin: 0rem 10rem;
+  }
+}
+@media screen and ( max-width: 1044px){
+  .verbiq-vector-img2{
+    height: 147px;
+    width: 168px;
+  }
+  .verbiq-vector-img3{
+    height: 135px;
+    width: 168px;
   }
 }
 @media screen and (max-width: 1100px){
@@ -857,64 +889,60 @@ footer {
   .verbiq-vector-text{
     margin: 2rem 0rem 0rem;
   }
-}
-@media screen and (max-width: 815px){
   .verbiq-vector-img1{
-    height: 8rem;
-    width: 10rem;
+    height: 89px;
+    width: 160px;
+  }
+  .verbiq-vector-img2{
+    height: 135px;
+    width: 160px;
+  }
+  .verbiq-vector-img3{
+    height: 118px;
+    width: 140px;
   }
 }
 @media screen and (max-width: 730px){
   .verbiq-vector{
     margin: 0rem  2rem;
   }
-  .verbiq-vector-img1{
-    height: 7rem;
-    width: 8rem;
-  }
-}
-@media screen and (max-width: 680px){
-  .verbiq-vector-img1{
-    height: 6rem;
-    width: 7rem;
-  }
-}
-@media screen and (max-width: 800px){
-  .verbiq-vector{
-    margin: 0rem  5rem;
-  }
-  .verbiq-vector-text{
-    margin: 2rem 0rem 0rem;
-  }
 }
 @media screen and ( max-width: 600px){
   .verbiq-vector{
-    margin: 0rem  5rem;
+    margin: 0rem  2rem;
     flex-direction: column;
   }
   .verbiq-vector-img-text{
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
   .verbiq-vector-img1{
-    height: 16rem;
-    width: 20rem;
+    height: 115px;
+    width: 200px;
+  }
+  .verbiq-vector-img2{
+    height: 170px;
+    width: 200px;
+  }
+  .verbiq-vector-img3{
+    height: 155px;
+    width: 190px;
   }
 }
 @media screen and ( max-width: 461px){
-  .verbiq-vector-img1{
+  /* .verbiq-vector-img1{
     height: 14rem;
     width: 18rem;
-  }
+  } */
 }
 @media screen and ( max-width: 426px){
-  .verbiq-vector-img1{
+  /* .verbiq-vector-img1{
     height: 12rem;
     width: 16rem;
-  }
+  } */
 }
 @media screen and ( max-width: 407px){
-  .verbiq-vector-img1{
+  /* .verbiq-vector-img1{
     height: 9rem;
     width: 12rem;
-  }
+  } */
 }
