@@ -72,6 +72,10 @@ nav {
   border-radius: 20%;
 }
 
+
+
+/* form content */
+
 .mat-stepper {
   display: flex;
   justify-content: center;
@@ -105,6 +109,10 @@ form {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.select-option-form{
+  width: 33%;
 }
 
 .mat-mdc-form-field {
@@ -225,6 +233,10 @@ form {
 
   .mat-mdc-form-field {
     max-width: 100%;
+  }
+
+  .select-option-form{
+    width: 100%;
   }
 
   #verticalId p {

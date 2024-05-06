@@ -1,10 +1,16 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CandidateService } from '../../services/candidate.service';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { MatStepper } from '@angular/material/stepper';
+
+// 1st, 2nd and 3rd select options
+interface Lang {
+  name: string;
+  value: string;
+}
 
 
 
@@ -14,6 +20,23 @@ import { MatStepper } from '@angular/material/stepper';
   styleUrl: './candidateform.component.css'
 })
 export class CandidateformComponent  implements OnInit{
+
+
+  // 1st required value select option
+  animalControl = new FormControl<Lang | null>(null, Validators.required);
+  selectFormControl = new FormControl('', Validators.required);
+  animals: Lang[] = [
+    {name: 'English', value: 'English'},
+    {name: 'German', value: 'German'},
+    {name: 'Spanish', value: 'Spanish'},
+    {name: 'French', value: 'French'},
+    {name: 'Japanese', value: 'Japanese'},
+    {name: 'Mandarin', value: 'Mandarin'},
+    {name: 'Portuguese', value: 'Portuguese'},
+    {name: 'Dutch', value: 'Dutch'},
+    {name: 'Korean', value: 'Korean'},
+    {name: 'ISL', value: 'ISL'},
+  ];
 
   formData: FormData = new FormData();
 
@@ -44,7 +67,10 @@ export class CandidateformComponent  implements OnInit{
       location: ['', Validators.required],
       companyName: ['', Validators.required],
       currRole: ['', Validators.required],
-      langKnow: ['', Validators.required],
+      lang1: ['', Validators.required],
+      lang2:[''],
+      lang3:[''],
+      langKnow: [''],
       langQuali: ['', Validators.required],
       otherlangQuali: ['', Validators.required],
       proficiency: ['', Validators.required],
@@ -120,7 +146,6 @@ export class CandidateformComponent  implements OnInit{
     this.appendFormDataFields(this.thirdFormGroup);
     this.appendFormDataFields(this.fourFormGroup);
     this.appendFormDataFields(this.fiveFormGroup);
-   
    
       if(this.formData.has('uploadPhoto')){
         const config = new MatSnackBarConfig();
