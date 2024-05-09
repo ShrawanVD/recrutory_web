@@ -221,7 +221,7 @@ nav {
 }
 
 .words-1 span{
-  position: absolute;
+  position: relative;
   opacity: 0;
   overflow: hidden;
   color: #ea2e2e;
@@ -255,22 +255,7 @@ nav {
   animation-delay: 9s; 
   color: #be2d2d;
 }
-/* .words-1 span:nth-child(5) { 
-  -webkit-animation-delay: 12s; 
-  -moz-animation-delay: 12s; 
-  -o-animation-delay: 12s; 
-  -ms-animation-delay: 12s; 
-  animation-delay: 12s; 
-  color: #E59F37;
-}
-.words-1 span:nth-child(6) { 
-  -webkit-animation-delay: 15s;
-  -moz-animation-delay: 15s; 
-  -o-animation-delay: 15s; 
-  -ms-animation-delay: 15s; 
-  animation-delay: 15s; 
-  color: #E59F37;
-} */
+
 @-webkit-keyframes rotateWord {
   0% { opacity: 0; }
   2% { opacity: 0; -webkit-transform: translateY(-30px); }

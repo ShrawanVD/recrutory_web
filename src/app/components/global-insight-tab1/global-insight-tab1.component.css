@@ -1,0 +1,12 @@
+.insight{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ins-left{
+    background: red;
+}
+.ins-right{
+    background: blue;
+}

@@ -11,6 +11,8 @@ import { GlobalInsightsComponent } from './components/global-insights/global-ins
 import { Verbi1Component } from './components/verbi1/verbi1.component';
 import { Verbi2Component } from './components/verbi2/verbi2.component';
 import { VerbiDemoComponent } from './components/verbi-demo/verbi-demo.component';
+import { GlobalInsightsTab2Component } from './components/global-insights-tab2/global-insights-tab2.component';
+import { GlobalInsightTab1Component } from './components/global-insight-tab1/global-insight-tab1.component';
 
 const routes: Routes = [
   {
@@ -42,10 +44,6 @@ const routes: Routes = [
     component: MeetTheTeamComponent
   },
   {
-    path: 'insights',
-    component: GlobalInsightsComponent
-  },
-  {
     path: 'verbi1',
     component: Verbi1Component
   },
@@ -56,6 +54,18 @@ const routes: Routes = [
   {
     path: 'verbiq',
     component: VerbiDemoComponent
+  },
+  {
+    path: 'insights',
+    component: GlobalInsightsComponent
+  },
+  {
+    path: 'tab1',
+    component: GlobalInsightTab1Component
+  },
+  {
+    path: 'tab2',
+    component: GlobalInsightsTab2Component
   }
   
 ];
