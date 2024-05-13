@@ -60,11 +60,11 @@ const routes: Routes = [
     component: GlobalInsightsComponent
   },
   {
-    path: 'tab1',
+    path: 'trends',
     component: GlobalInsightTab1Component
   },
   {
-    path: 'tab2',
+    path: 'industries',
     component: GlobalInsightsTab2Component
   }
   

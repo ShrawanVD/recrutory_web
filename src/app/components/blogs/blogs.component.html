@@ -16,14 +16,20 @@
     </div>
     <div class="navbar-links">
       <ul>
-        <!-- <li class="whyactive">
-                <a href="#">Why Recrutory ?</a>
-              </li> -->
-        <li><a routerLink="/insights">Global Insights</a></li>
-        <li>
-          <a href="verbiq"><img src="assets/verbiq_logo.png" height="30px" width="85px" /></a>
+        <li class="dropdown">
+          <a href="insights" class="dropbtn">Global Insights</a>
+          <div class="dropdown-content">
+            <a href="trends">Trends</a>
+            <a href="industries">Industries</a>
+            <!-- Add more insights as needed -->
+          </div>
         </li>
-        <li class="whyactive"><a href="blogs" >Blogs</a></li>
+        <li>
+          <a href="verbiq"
+            ><img src="assets/verbiq_logo.png" height="30px" width="85px"
+          /></a>
+        </li>
+        <li><a href="blogs">Blogs</a></li>
       </ul>
     </div>
   </nav>

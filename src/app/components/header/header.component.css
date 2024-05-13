@@ -7,17 +7,22 @@
   justify-content: center;
   align-items: center;
 } */
+
+
+
+/* navbar */
+
 nav {
   text-align: center;
   align-items: center;
   justify-content: center;
 
   /* position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #ffffff; */
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #ffffff; */
 }
 .logo {
   display: flex;
@@ -60,7 +65,7 @@ nav {
   .navbar-links ul {
     padding-left: 0px;
   }
-  .navbar-links ul li { 
+  .navbar-links ul li {
     padding: 0rem 3rem 0rem 1rem;
   }
 }
@@ -70,29 +75,66 @@ nav {
   }
   .navbar-links ul li {
     padding: 0rem 1.7rem 0rem 1rem;
-
   }
 }
 
 /* Apply styles for active link when clicked */
-/* .navbar-links ul li:hover,
-.navbar-links ul li:active {
+/* .navbar-links ul li a:hover {
+    padding: 0px 0px 10px;
+    border-bottom: 3px solid #022b41;
+    border-radius: 20%;
+  } */
+/* .navbar-links ul li a:hover {
   padding: 0px 0px 10px;
   border-bottom: 3px solid #022b41;
   border-radius: 20%;
 } */
-.navbar-links ul li a:hover {
+
+.whyactive a {
   padding: 0px 0px 10px;
   border-bottom: 3px solid #022b41;
   border-radius: 20%;
 }
 
 
-.whyactive a{
-  padding: 0px 0px 10px;
-  border-bottom: 3px solid #022b41;
-  border-radius: 20%;
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn {
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+
 
 
 /* ------cover page section ---------- */

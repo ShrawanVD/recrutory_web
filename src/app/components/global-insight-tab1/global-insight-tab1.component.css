@@ -73,7 +73,7 @@
   width: 100%;
   position: relative;
   margin-top: 4rem;
-  margin-bottom: 8rem;
+  margin-bottom: 9rem;
 }
 
 .right-ins-content ul {
@@ -472,10 +472,6 @@
 
 /* words-4 has 4 list items and words-1 has 5 list items so rotate word seconds are 12s and 15s resp. */
 
-.words {
-  /* display: inline; */
-  text-indent: 10px;
-}
 
 .clrblck li {
   color: black !important;
@@ -484,6 +480,13 @@
 .clrwhite li {
   color: white !important;
 }
+
+.words-1 {
+  list-style-type: none; 
+  list-style: none;
+
+}
+
 
 .words-1 li {
   position: absolute;
@@ -495,7 +498,7 @@
   -moz-animation: rotateWord 18s linear infinite 0s;
   -o-animation: rotateWord 18s linear infinite 0s;
   -ms-animation: rotateWord 18s linear infinite 0s;
-  animation: rotateWord 15s linear infinite 0s; /* rotate after 15s since 5 li */
+  animation: rotateWord 30s linear infinite 0s; /* rotate after 15s since 5 li */
 }
 
 .words-4 li {
@@ -508,7 +511,7 @@
   -moz-animation: rotateWord 18s linear infinite 0s;
   -o-animation: rotateWord 18s linear infinite 0s;
   -ms-animation: rotateWord 18s linear infinite 0s;
-  animation: rotateWord 24s linear infinite 0s; /* rotate after 12s since 4 li */
+  animation: rotateWord 18s linear infinite 0s; /* rotate after 12s since 4 li */
 }
 .words-1 li:nth-child(1),
 .words-4 li:nth-child(1) {
@@ -811,17 +814,61 @@ nav {
     border-bottom: 3px solid #022b41;
     border-radius: 20%;
   } */
-.navbar-links ul li a:hover {
+/* .navbar-links ul li a:hover {
   padding: 0px 0px 10px;
   border-bottom: 3px solid #022b41;
   border-radius: 20%;
-}
+} */
 
 .whyactive a {
   padding: 0px 0px 10px;
   border-bottom: 3px solid #022b41;
   border-radius: 20%;
 }
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn {
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
 
 /* footer  */
 
@@ -907,3 +954,5 @@ footer {
 #footer-address {
   text-align: justify;
 }
+
+
