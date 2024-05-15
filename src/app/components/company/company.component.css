@@ -277,7 +277,7 @@ nav {
 }
 
 .words-1 span{
-  position: relative;
+  position: absolute;
   opacity: 0;
   overflow: hidden;
   color: #ea2e2e;
