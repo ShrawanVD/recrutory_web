@@ -46,6 +46,7 @@ import { VerbiDemoComponent } from './components/verbi-demo/verbi-demo.component
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { GlobalInsightsTab2Component } from './components/global-insights-tab2/global-insights-tab2.component';
 import { GlobalInsightTab1Component } from './components/global-insight-tab1/global-insight-tab1.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -63,7 +64,8 @@ import { GlobalInsightTab1Component } from './components/global-insight-tab1/glo
     Verbi2Component,
     VerbiDemoComponent,
     GlobalInsightsTab2Component,
-    GlobalInsightTab1Component
+    GlobalInsightTab1Component,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
