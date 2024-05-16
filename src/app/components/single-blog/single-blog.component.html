@@ -68,6 +68,8 @@
     <div class="bubble"></div>
   </div>
 
+
+  <!-- content is here -->
   <div class="blogs-container">
     <div class="blog-list">
       <mat-card class="list-card">
@@ -107,7 +109,6 @@
         </button>
       </div>
       <img [src]="blogData.imageUrl" />
-      <!-- <h3 class="blogcontent">{{blogData.content}}</h3> -->
       <div [innerHTML]="blogData.content" style="text-align: justify"></div>
       <img
         [src]="blogData.imageUrl2"
@@ -134,6 +135,9 @@
       </share-buttons>
     </mat-card>
   </div>
+
+
+  
 
 </div>
 

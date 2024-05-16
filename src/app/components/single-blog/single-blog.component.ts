@@ -24,6 +24,7 @@ export class SingleBlogComponent implements OnInit{
 
   ngOnInit(): void {
 
+
     this.utterance = new SpeechSynthesisUtterance();  
 
 
@@ -80,30 +81,108 @@ export class SingleBlogComponent implements OnInit{
 
 
 
+  
 
 
 
   // -------------------- text to speech ---------------
 
 
-    // Method to start text-to-speech
-    speakBlogContent() {
-      console.log("in speak")
-      if (!this.utterance) return;
-      this.utterance.text = this.blogData.content; // Set the text to be spoken
-      window.speechSynthesis.speak(this.utterance); // Start speaking
-      this.isSpeaking = true; // Update speech state
+  speakBlogContent(): void {
+    if (!this.isSpeaking && this.blogData && this.blogData.content) {
+      this.isSpeaking = true;
+      const text = this.sanitizeContent(this.blogData.content); // Sanitize content
+
+      function isMobileDevice() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     }
-  
-    // Method to stop text-to-speech
-    stopSpeaking() {
-      console.log("in stop")
-      window.speechSynthesis.cancel(); // Stop speaking
-      this.isSpeaking = false; // Update speech state
-    }
-  
+
+      if ('speechSynthesis' in window) {
+        const synth = window.speechSynthesis;
+        synth.cancel(); // Cancel any current speech
+
+        synth.onvoiceschanged = () => {
+          // const voices = synth.getVoices();
+          // Rest of your logic to select a voice
+          // let selectedVoice = voices.find(voice => voice.lang === 'en-US' && /female/i.test(voice.name)) || 
+          //           voices.find(voice => /female/i.test(voice.name)) || 
+          //           voices.find(voice => voice.lang === 'en-US') || 
+          //           voices[0]; // Fallback to the first available voice if none found
+
+          let selectedVoice = 'Google US English';
+
+          if (isMobileDevice()) {
+            selectedVoice = 'Google US English';
+        } else {
+            selectedVoice = 'Google US English';
+        }
 
 
+
+          console.log("Selected voice is: ", selectedVoice);
+
+          if (selectedVoice) {
+            console.log("in the if")
+            this.utterance = new SpeechSynthesisUtterance(text);
+            // this.utterance.voice = selectedVoice
+          } else {
+            console.error("Suitable voice not available.");
+          }
+        };
+
+        this.utterance = new SpeechSynthesisUtterance(text);
+
+        this.utterance.onend = () => {
+          this.isSpeaking = false;
+        };
+
+        this.utterance.onerror = () => {
+          this.isSpeaking = false;
+        };
+
+        // Mobile-specific handling
+        this.utterance.onstart = () => {
+          //  alert("Insidd the mobile specific function ")
+          if (/Mobi|Android/i.test(navigator.userAgent)) {
+            alert("Inside the navigation function")
+            const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+            const oscillator = audioContext.createOscillator();
+            alert(oscillator)
+          
+            oscillator.connect(audioContext.destination);
+            oscillator.start(0);
+            oscillator.stop(0.1);
+          }
+        };
+
+        synth.speak(this.utterance);
+      } else {
+        console.error("Speech synthesis not supported in this browser.");
+        this.isSpeaking = false;
+      }
+    }
+  }
+
+
+sanitizeContent(content: string): string {
+    // Remove HTML tags and replace common HTML entities with their character equivalents
+    return content.replace(/<[^>]+>/g, '')
+                  .replace(/&nbsp;/g, ' ')
+                  .replace(/&amp;/g, '&')
+                  .replace(/&quot;/g, '"')
+                  .replace(/&#39;/g, "'")
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>')
+                  .replace(/&#?[a-z0-9]+;/g, ' ')
+                  .replace(/(\.|\?|\!)/g, '$1 ');
+}
+
+stopSpeaking(): void {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      this.isSpeaking = false;
+    }
+}
 
 
 
@@ -329,3 +408,84 @@ export class SingleBlogComponent implements OnInit{
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------------------------------
+
+
+// <div class="blogs-container">
+//     <div class="blog-list">
+//       <mat-card class="list-card">
+//         <h1>Explore More</h1>
+//         <ul *ngFor="let post of blogTitle">
+//           <li
+//             [class.active]="activePostId === post._id"
+//             (click)="openBlog(post._id)"
+//           >
+//             {{ post.title }}
+//           </li>
+//         </ul>
+//       </mat-card>
+//     </div>
+//     <mat-card class="blog-card">
+//       <h1>{{ blogData.title }}</h1>
+
+//       <!-- buttons for the text-to-speech -->
+//       <div class="row-for-speak">
+//         <h3 class="blogDate">{{ blogData.date }}</h3>
+//         <!-- Add a button to trigger text-to-speech -->
+//         <button
+//           *ngIf="!isSpeaking"
+//           (click)="speakBlogContent()"
+//           class="text-to-speech-button play"
+//         >
+//           Tap to Listen
+//         </button>
+
+//         <!-- Add a button to stop text-to-speech -->
+//         <button
+//           *ngIf="isSpeaking"
+//           (click)="stopSpeaking()"
+//           class="text-to-speech-button stop"
+//         >
+//           Stop
+//         </button>
+//       </div>
+//       <img [src]="blogData.imageUrl" />
+//       <!-- <h3 class="blogcontent">{{blogData.content}}</h3> -->
+//       <div [innerHTML]="blogData.content" style="text-align: justify"></div>
+//       <img
+//         [src]="blogData.imageUrl2"
+//         [style.display]="blogData.imageUrl2 ? 'block' : 'none'"
+//       />
+//       <h3 class="blogcontent">{{ blogData.content2 }}</h3>
+//       <share-buttons
+//         theme="material-dark"
+//         [include]="[
+//           'facebook',
+//           'whatsapp',
+//           'twitter',
+//           'linkedin',
+//           'telegram',
+//           'copy'
+//         ]"
+//         [url]="'https://recrutory.com/blogs/' + blogId"
+//         [autoSetMeta]="true"
+//         [title]="blogData.title"
+//         [description]="trimContent(blogData.intro, 160)"
+//         [image]="blogData.imageUrl"
+//         class="share-icon-button"
+//       >
+//       </share-buttons>
+//     </mat-card>
+//   </div>
