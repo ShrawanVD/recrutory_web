@@ -1,0 +1,36 @@
+<nav>
+    <div class="logo">
+        <a href="#"><img src="assets/logo.png" height="60px" width="200px" /></a>
+    </div>
+
+</nav>
+<div id='menu' (click)="toggleMenu()">
+    <div class='menu-line1' [ngClass]="{'rotate1': menuOpen, 'rotate': menuOpen}"></div>
+    <div class='menu-line2' [ngClass]="{'rotate2': menuOpen}"></div>
+</div>
+<div class='nav-page1' [ngClass]="{'transform': menuOpen}">
+    <div class="navbarContainerLeftRight">
+        <div class="navbarLeftSide">
+        <h1 class="navbarHeading">Social Media</h1>
+        <span ><a href="https://www.instagram.com/recrutory/?hl=en" target="_blank" class="socialMediaText">Instagram</a></span>
+        <span ><a href="https://www.facebook.com/profile.php?id=61556404210113" target="_blank" class="socialMediaText">Facebook</a></span>
+        <span ><a href="https://www.linkedin.com/company/recrutorycompany/" target="_blank" class="socialMediaText">Linkdin</a></span>
+        <span ><a href="#!" target="_blank" class="socialMediaText">Twitter</a></span>
+        <span ><a href="#!" target="_blank" class="socialMediaText">Google</a></span>
+        </div>
+        <div class="navbarRightSide">
+        <h1 class="navbarHeading">Menu</h1>
+        <span><a href="/" class="menuText">Home</a></span>
+        <span class="navbarVerbiqImg"><a href="verbiq"><img src="assets/verbiq_logo.png" height="35px" width="auto" /></a></span>
+        <span><a href="blogs" class="menuText">Blogs</a></span>
+        <span class="menuText">Global Insight</span>
+        <span><a href="trends" class="menuSubText">- Trends</a></span>
+        <span><a href="industries" class="menuSubText">- Industries</a></span>
+        </div>
+    </div>
+    <div class="navbarContactEmail">
+        <h5 class="navbarHeading">Get In Touch</h5>
+        <h4 ><a href="mailto:hr@recrutory.com" class="socialMediaText">hr&#64;recrutory.com</a></h4>
+    </div>
+</div>
+<!-- <div class='nav-page2' [ngClass]="{'transform': menuOpen}"></div> -->
