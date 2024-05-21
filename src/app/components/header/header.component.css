@@ -24,6 +24,12 @@
   color: lightblue;
 }
 
+@media screen and (max-width:926px){
+  .adv{
+    flex-direction: column;
+  }
+}
+
 /* ------cover page section ---------- */
 
 .coverpage {
