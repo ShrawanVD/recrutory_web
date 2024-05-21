@@ -1,3 +1,4 @@
+
 nav {
   text-align: center;
   align-items: center;
@@ -132,6 +133,24 @@ nav {
   font-family: "Raleway", sans-serif;
 }
 
+.socialMediaIconText{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  margin-top: -1.7rem;
+}
+
+.iconf {
+  color: #3b5998; 
+}
+.iconinsta {
+  color: #c13584; 
+}
+.iconlinkdin{
+  color: #0077b5;
+}
+
 .socialMediaText {
   text-decoration: none;
   color: black;
@@ -139,6 +158,8 @@ nav {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
 }
+
+
 
 .menuText {
   text-decoration: none;
@@ -155,6 +176,7 @@ nav {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   margin-left: 1rem;
+  margin-top: -5rem;
 }
 
 .navbarLeftSide {
@@ -167,10 +189,13 @@ nav {
 }
 .navbarContactEmail {
   text-align: left;
-  padding: 2rem 3rem 0rem;
+  padding: 2rem 4rem 0rem;
   width: 100%;
 }
 @media screen and (max-width: 800px) {
+  #menu{
+    position: absolute;
+  }
   .nav-page1 {
     width: 100%;
     top: 4.2rem;
@@ -180,6 +205,9 @@ nav {
   }
   .navbarLeftSide{
     display: none;
+  }
+  .navbarContactEmail {
+    margin-top: 2rem;
   }
   .navbarContainerLeftRight{
     text-align: left;
