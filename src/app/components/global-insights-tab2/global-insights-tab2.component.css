@@ -146,7 +146,7 @@ nav {
 
 .odd {
   display: grid;
-  grid-template-columns: 2fr 1.5fr;
+  grid-template-columns: 2fr 1fr;
 }
 
 .color {
@@ -174,7 +174,7 @@ nav {
 
 .even {
   display: grid;
-  grid-template-columns: 1.5fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 @media screen and (max-width: 1060px) {
@@ -310,7 +310,7 @@ nav {
 }
 
 .head {
-  font-weight: 500;
+  font-weight: 600;
   /* text-decoration: underline; */
 }
 
@@ -762,9 +762,9 @@ nav {
 
 /* footer section */
 
+
 footer {
   /* margin-top: -19rem; */
-  margin-top: 2rem;
   padding: 2rem 0;
   background-color: #bce1eb;
   font-size: 1rem;
@@ -802,6 +802,12 @@ footer {
 }
 .iconlinkdin {
   color: #0077b5;
+}
+
+.social-icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 995px) {
@@ -842,3 +848,4 @@ footer {
 #footer-address {
   text-align: justify;
 }
+
