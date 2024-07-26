@@ -8,10 +8,12 @@ import { Blogs } from '../models/blogs.model';
 })
 export class BlogsService {
 
+  url = "https://blogsbackend-d1a7.onrender.com"
+
   constructor(private http:HttpClient) { }
 
   getAllBlogs(){
-    return this.http.get<any>("https://blogsbackend-l09l.onrender.com/api/blogs").pipe(
+    return this.http.get<any>(`${this.url}/api/blogs`).pipe(
       map(response => {
         const postsArray: Blogs[] = [];
         for (const postId in response) {
@@ -35,7 +37,7 @@ export class BlogsService {
   }
 
   getOneBlog(id: any){
-    return this.http.get(`https://blogsbackend-l09l.onrender.com/api/blogs/${id}`);
+    return this.http.get(`${this.url}/api/blogs/${id}`);
   }
 
 }

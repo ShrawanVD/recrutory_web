@@ -6,14 +6,16 @@ import { Injectable } from '@angular/core';
 })
 export class CandidateService {
 
+  url = "https://backendrecrutory-qr5t.onrender.com"
+
   constructor(private http:HttpClient) { }
 
   candidateForm(data: any){
-    return this.http.post('https://backendrecrutory.onrender.com/candidate',data);
+    return this.http.post(`${this.url}/candidate`,data);
   }
 
   companyForm(data: any){
-    return this.http.post('https://backendrecrutory.onrender.com/company',data);
+    return this.http.post(`${this.url}/company`,data);
   }
   // sendEmail(){
 
