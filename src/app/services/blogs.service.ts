@@ -8,7 +8,8 @@ import { Blogs } from '../models/blogs.model';
 })
 export class BlogsService {
 
-  url = "https://blogsbackend-d1a7.onrender.com"
+  // url = "https://blogsbackend-d1a7.onrender.com"
+  url = "https://blogsbackend-1pb7.onrender.com"
 
   constructor(private http:HttpClient) { }
 

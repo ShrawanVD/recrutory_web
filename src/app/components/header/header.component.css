@@ -901,6 +901,11 @@ font-weight: bold;
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
   cursor: pointer;
 }
+.scroller a {
+  text-decoration: none;
+  color: white;
+  background-color: none;
+}
 
 .scroller__inner {
   padding-block: 1rem;
