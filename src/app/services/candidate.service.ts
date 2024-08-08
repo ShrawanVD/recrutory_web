@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class CandidateService {
 
   // url = "https://backendrecrutory-qr5t.onrender.com"
-  url = "https://backendrecrutory-g5az.onrender.com"
+  url = "https://recrutory-form-backend.onrender.com"
 
   constructor(private http:HttpClient) { }
 
